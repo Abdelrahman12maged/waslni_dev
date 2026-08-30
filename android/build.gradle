@@ -1,0 +1,46 @@
+ext.kotlin_version = '2.3.0'
+
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+
+subprojects {
+    if (project.name == 'flutter_localization') {
+        project.apply plugin: 'org.jetbrains.kotlin.android'
+    }
+}
+
+rootProject.buildDir = '../build'
+subprojects {
+    project.buildDir = "${rootProject.buildDir}/${project.name}"
+}
+subprojects {
+    project.evaluationDependsOn(':app')
+    project.configurations.all {
+        resolutionStrategy {
+            force 'androidx.core:core:1.15.0'
+            force 'androidx.core:core-ktx:1.15.0'
+            force 'org.jetbrains.kotlin:kotlin-stdlib:2.3.0'
+            force 'org.jetbrains.kotlin:kotlin-stdlib-jdk8:2.3.0'
+            force 'org.jetbrains.kotlin:kotlin-stdlib-jdk7:2.3.0'
+        }
+    }
+    tasks.configureEach { task ->
+        if (task.class.name.contains("CheckAarMetadata")) {
+            task.enabled = false
+        }
+        if (task.class.name.contains("KotlinCompile")) {
+            task.kotlinOptions {
+                languageVersion = "1.9"
+                apiVersion = "1.9"
+            }
+        }
+    }
+}
+
+tasks.register("clean", Delete) {
+    delete rootProject.buildDir
+}

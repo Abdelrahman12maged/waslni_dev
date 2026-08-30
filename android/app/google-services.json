@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "275045829119",
+    "project_id": "car-app-93a1c",
+    "storage_bucket": "car-app-93a1c.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:275045829119:android:ffbdddd1f22178ffca7fca",
+        "android_client_info": {
+          "package_name": "com.abdo.carapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBmMC3aJqZKwg01SPCANyqibJqst7YOryo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

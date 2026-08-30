@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/widget_background"
+    android:paddingLeft="12dp"
+    android:paddingRight="12dp"
+    android:paddingTop="9dp"
+    android:paddingBottom="9dp"
+    android:gravity="center_vertical">
+
+    <!-- Header Row: Icon + Name + Role Badge -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/widget_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🚗"
+            android:textSize="17sp"
+            android:paddingRight="6dp"
+            android:paddingEnd="6dp" />
+
+        <TextView
+            android:id="@+id/widget_user_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="تطبيق الرحلات"
+            android:textColor="#F8FAFC"
+            android:textSize="13.5sp"
+            android:textStyle="bold"
+            android:ellipsize="end"
+            android:maxLines="1" />
+
+        <TextView
+            android:id="@+id/widget_user_type_badge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="سائق"
+            android:textColor="#38BDF8"
+            android:textSize="10.5sp"
+            android:textStyle="bold"
+            android:background="@drawable/badge_background"
+            android:paddingLeft="7dp"
+            android:paddingRight="7dp"
+            android:paddingStart="7dp"
+            android:paddingEnd="7dp"
+            android:paddingTop="2dp"
+            android:paddingBottom="2dp" />
+
+    </LinearLayout>
+
+    <!-- Info Row Container -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@drawable/widget_pill_background"
+        android:paddingLeft="9dp"
+        android:paddingRight="9dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="7dp"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/widget_info_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="سجّل دخولك للاستمتاع بالتطبيق"
+            android:textColor="#E2E8F0"
+            android:textSize="11.5sp"
+            android:ellipsize="end"
+            android:maxLines="1" />
+
+    </LinearLayout>
+
+    <!-- Action Buttons Row -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <!-- Primary Button -->
+        <TextView
+            android:id="@+id/widget_btn_primary"
+            android:layout_width="0dp"
+            android:layout_height="32dp"
+            android:layout_weight="1"
+            android:text="فتح التطبيق"
+            android:textColor="#FFFFFF"
+            android:textSize="11.5sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:background="@drawable/btn_primary_background"
+            android:layout_marginRight="3dp"
+            android:layout_marginEnd="3dp" />
+
+        <!-- Secondary Button -->
+        <TextView
+            android:id="@+id/widget_btn_secondary"
+            android:layout_width="0dp"
+            android:layout_height="32dp"
+            android:layout_weight="1"
+            android:text="رحلة مشتركة"
+            android:textColor="#38BDF8"
+            android:textSize="11.5sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:background="@drawable/btn_secondary_background"
+            android:layout_marginLeft="3dp"
+            android:layout_marginStart="3dp"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+</LinearLayout>

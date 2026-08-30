@@ -1,0 +1,54 @@
+Total occurrences found: 51
+
+
+lib\core\services\notification_routing_service.dart:63: (data['title']?.toString().contains('رسالة') == true) ||
+lib\core\services\notification_routing_service.dart:64: (data['body']?.toString().contains('رسالة') == true) ||
+lib\core\services\notification_routing_service.dart:65: (data['message']?.toString().contains('رسالة') == true);
+lib\core\utils\date_formatter.dart:6: '٠': '0', '١': '1', '٢': '2', '٣': '3', '٤': '4',
+lib\core\utils\date_formatter.dart:7: '٥': '5', '٦': '6', '٧': '7', '٨': '8', '٩': '9',
+lib\core\utils\location_helper.dart:19: text = text.replaceAll('،', ',');
+lib\core\utils\location_helper.dart:54: return cleanedTokens.join('، ');
+lib\features\auth\data\datasources\auth_remote_data_source.dart:150: lowerMsg.contains('غير صحيح') ||
+lib\features\auth\data\datasources\auth_remote_data_source.dart:151: lowerMsg.contains('خطأ') ||
+lib\features\auth\data\datasources\auth_remote_data_source.dart:152: lowerMsg.contains('فشل') ||
+lib\features\map\data\services\map_service_impl.dart:38: message: 'خدمات الموقع غير مفعلة. يرجى تفعيل GPS للمتابعة.',
+lib\features\map\data\services\map_service_impl.dart:50: message: 'تم رفض إذن الوصول إلى الموقع.',
+lib\features\map\data\services\map_service_impl.dart:60: 'إذن الموقع مرفوض بشكل دائم. يرجى تفعيله من إعدادات الهاتف.',
+lib\features\map\data\services\map_service_impl.dart:73: return Left(ServerFailure(message: 'فشل الحصول على الموقع الحالي.'));
+lib\features\map\data\services\map_service_impl.dart:182: return Left(ServerFailure(message: 'لم يتم العثور على نتائج للبحث.'));
+lib\features\map\data\services\map_service_impl.dart:200: address: 'موقع محدد',
+lib\features\map\data\services\map_service_impl.dart:215: return Left(ServerFailure(message: 'فشل الحصول على تفاصيل المكان.'));
+lib\features\map\data\services\map_service_impl.dart:220: return Left(ServerFailure(message: 'خطأ: ${json['status']}'));
+lib\features\map\data\services\map_service_impl.dart:233: return Left(ServerFailure(message: 'فشل تحميل تفاصيل المكان.'));
+lib\features\map\data\services\map_service_impl.dart:359: return Left(ServerFailure(message: 'فشل الحصول على مسار الشارع.'));
+lib\features\notifications\presentation\screens\notifications_screen.dart:115: if (combined.contains('عرض') ||
+lib\features\notifications\presentation\screens\notifications_screen.dart:117: combined.contains('سعر') ||
+lib\features\notifications\presentation\screens\notifications_screen.dart:121: if (combined.contains('بدأت') ||
+lib\features\notifications\presentation\screens\notifications_screen.dart:123: combined.contains('وصل') ||
+lib\features\notifications\presentation\screens\notifications_screen.dart:125: combined.contains('في الطريق') ||
+lib\features\notifications\presentation\screens\notifications_screen.dart:129: if (combined.contains('اكتملت') ||
+lib\features\notifications\presentation\screens\notifications_screen.dart:130: combined.contains('إنهاء') ||
+lib\features\notifications\presentation\screens\notifications_screen.dart:135: if (combined.contains('إلغاء') ||
+lib\features\notifications\presentation\screens\notifications_screen.dart:136: combined.contains('ملغاة') ||
+lib\features\notifications\presentation\screens\notifications_screen.dart:140: if (combined.contains('رسالة') ||
+lib\features\notifications\presentation\screens\notifications_screen.dart:141: combined.contains('دردشة') ||
+lib\features\settings\presentation\passenger\screens\passenger_add_saved_location_screen.dart:148: .join('، ');
+lib\features\settings\presentation\passenger\screens\passenger_saved_locations_screen.dart:520: if (name.contains('منزل') ||
+lib\features\settings\presentation\passenger\screens\passenger_saved_locations_screen.dart:521: name.contains('بيت') ||
+lib\features\settings\presentation\passenger\screens\passenger_saved_locations_screen.dart:523: name.contains('دار')) {
+lib\features\settings\presentation\passenger\screens\passenger_saved_locations_screen.dart:526: if (name.contains('عمل') ||
+lib\features\settings\presentation\passenger\screens\passenger_saved_locations_screen.dart:527: name.contains('شغل') ||
+lib\features\settings\presentation\passenger\screens\passenger_saved_locations_screen.dart:528: name.contains('مكتب') ||
+lib\features\settings\presentation\passenger\screens\passenger_saved_locations_screen.dart:531: name.contains('شركة')) {
+lib\features\settings\presentation\passenger\screens\passenger_saved_locations_screen.dart:534: if (name.contains('جامعة') ||
+lib\features\settings\presentation\passenger\screens\passenger_saved_locations_screen.dart:535: name.contains('مدرسة') ||
+lib\features\settings\presentation\passenger\screens\passenger_saved_locations_screen.dart:536: name.contains('كلية') ||
+lib\features\settings\presentation\passenger\screens\passenger_saved_locations_screen.dart:541: if (name.contains('مول') ||
+lib\features\settings\presentation\passenger\screens\passenger_saved_locations_screen.dart:542: name.contains('سوق') ||
+lib\features\settings\presentation\passenger\screens\passenger_saved_locations_screen.dart:543: name.contains('متجر') ||
+lib\features\trips\data\datasources\trips_remote_datasource_impl.dart:224: 'فشل تقديم العرض';
+lib\features\trips\data\datasources\trips_remote_datasource_impl.dart:309: msg ?? 'فشل إنشاء الرحلة: استجابة السيرفر غير متوقعة', errorCode);
+lib\features\trips\presentation\driver\screens\driver_new_trips_accept_screen.dart:1278: text = text.replaceAll('،', ',');
+lib\features\trips\presentation\driver\screens\driver_new_trips_accept_screen.dart:1301: return cleanedTokens.join('، ');
+lib\features\trips\presentation\driver\screens\private\ongoing_private_trip_screen.dart:558: DriverLayoutCubit.get(context).changeBottomScreen(1); // 1 = Trips (صفحة الرحلات)
+lib\features\trips\presentation\driver\screens\shared\ongoing_shared_trip.dart:598: DriverLayoutCubit.get(context).changeBottomScreen(1); // 1 = Trips (صفحة الرحلات)

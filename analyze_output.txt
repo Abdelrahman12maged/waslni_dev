@@ -1,0 +1,818 @@
+﻿flutter : Package google_api_headers:ios references google_api_headers:ios as the default plugin, but it does not 
+provide an inline implementation.
+At line:1 char:1
++ flutter analyze lib/ 2>&1 | Out-File -FilePath "analyze_output.txt" - ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Package google_...implementation.:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+Ask the maintainers of google_api_headers to either avoid referencing a default implementation via `platforms: ios: 
+default_package: google_api_headers` or add an inline implementation to google_api_headers via `platforms: ios:` 
+`pluginClass` or `dartPluginClass`.
+
+Package google_api_headers:linux references google_api_headers:linux as the default plugin, but it does not provide an 
+inline implementation.
+Ask the maintainers of google_api_headers to either avoid referencing a default implementation via `platforms: linux: 
+default_package: google_api_headers` or add an inline implementation to google_api_headers via `platforms: linux:` 
+`pluginClass` or `dartPluginClass`.
+
+Package google_api_headers:macos references google_api_headers:macos as the default plugin, but it does not provide an 
+inline implementation.
+Ask the maintainers of google_api_headers to either avoid referencing a default implementation via `platforms: macos: 
+default_package: google_api_headers` or add an inline implementation to google_api_headers via `platforms: macos:` 
+`pluginClass` or `dartPluginClass`.
+
+Package google_api_headers:windows references google_api_headers:windows as the default plugin, but it does not 
+provide an inline implementation.
+Ask the maintainers of google_api_headers to either avoid referencing a default implementation via `platforms: 
+windows: default_package: google_api_headers` or add an inline implementation to google_api_headers via `platforms: 
+windows:` `pluginClass` or `dartPluginClass`.
+
+Package google_api_headers:ios references google_api_headers:ios as the default plugin, but it does not provide an 
+inline implementation.
+Ask the maintainers of google_api_headers to either avoid referencing a default implementation via `platforms: ios: 
+default_package: google_api_headers` or add an inline implementation to google_api_headers via `platforms: ios:` 
+`pluginClass` or `dartPluginClass`.
+
+Package google_api_headers:linux references google_api_headers:linux as the default plugin, but it does not provide an 
+inline implementation.
+Ask the maintainers of google_api_headers to either avoid referencing a default implementation via `platforms: linux: 
+default_package: google_api_headers` or add an inline implementation to google_api_headers via `platforms: linux:` 
+`pluginClass` or `dartPluginClass`.
+
+Package google_api_headers:macos references google_api_headers:macos as the default plugin, but it does not provide an 
+inline implementation.
+Ask the maintainers of google_api_headers to either avoid referencing a default implementation via `platforms: macos: 
+default_package: google_api_headers` or add an inline implementation to google_api_headers via `platforms: macos:` 
+`pluginClass` or `dartPluginClass`.
+
+Package google_api_headers:windows references google_api_headers:windows as the default plugin, but it does not 
+provide an inline implementation.
+Ask the maintainers of google_api_headers to either avoid referencing a default implementation via `platforms: 
+windows: default_package: google_api_headers` or add an inline implementation to google_api_headers via `platforms: 
+windows:` `pluginClass` or `dartPluginClass`.
+
+Package google_api_headers:ios references google_api_headers:ios as the default plugin, but it does not provide an 
+inline implementation.
+Ask the maintainers of google_api_headers to either avoid referencing a default implementation via `platforms: ios: 
+default_package: google_api_headers` or add an inline implementation to google_api_headers via `platforms: ios:` 
+`pluginClass` or `dartPluginClass`.
+
+Package google_api_headers:linux references google_api_headers:linux as the default plugin, but it does not provide an 
+inline implementation.
+Ask the maintainers of google_api_headers to either avoid referencing a default implementation via `platforms: linux: 
+default_package: google_api_headers` or add an inline implementation to google_api_headers via `platforms: linux:` 
+`pluginClass` or `dartPluginClass`.
+
+Package google_api_headers:macos references google_api_headers:macos as the default plugin, but it does not provide an 
+inline implementation.
+Ask the maintainers of google_api_headers to either avoid referencing a default implementation via `platforms: macos: 
+default_package: google_api_headers` or add an inline implementation to google_api_headers via `platforms: macos:` 
+`pluginClass` or `dartPluginClass`.
+
+Package google_api_headers:windows references google_api_headers:windows as the default plugin, but it does not 
+provide an inline implementation.
+Ask the maintainers of google_api_headers to either avoid referencing a default implementation via `platforms: 
+windows: default_package: google_api_headers` or add an inline implementation to google_api_headers via `platforms: 
+windows:` `pluginClass` or `dartPluginClass`.
+
+Package google_api_headers:ios references google_api_headers:ios as the default plugin, but it does not provide an 
+inline implementation.
+Ask the maintainers of google_api_headers to either avoid referencing a default implementation via `platforms: ios: 
+default_package: google_api_headers` or add an inline implementation to google_api_headers via `platforms: ios:` 
+`pluginClass` or `dartPluginClass`.
+
+Package google_api_headers:linux references google_api_headers:linux as the default plugin, but it does not provide an 
+inline implementation.
+Ask the maintainers of google_api_headers to either avoid referencing a default implementation via `platforms: linux: 
+default_package: google_api_headers` or add an inline implementation to google_api_headers via `platforms: linux:` 
+`pluginClass` or `dartPluginClass`.
+
+Package google_api_headers:macos references google_api_headers:macos as the default plugin, but it does not provide an 
+inline implementation.
+Ask the maintainers of google_api_headers to either avoid referencing a default implementation via `platforms: macos: 
+default_package: google_api_headers` or add an inline implementation to google_api_headers via `platforms: macos:` 
+`pluginClass` or `dartPluginClass`.
+
+Package google_api_headers:windows references google_api_headers:windows as the default plugin, but it does not 
+provide an inline implementation.
+Ask the maintainers of google_api_headers to either avoid referencing a default implementation via `platforms: 
+windows: default_package: google_api_headers` or add an inline implementation to google_api_headers via `platforms: 
+windows:` `pluginClass` or `dartPluginClass`.
+
+Analyzing lib...                                                
+
+   info - Missing type annotation - lib\core\router\navigation_manager.dart:4:19 - strict_top_level_inference
+   info - Missing type annotation - lib\core\router\navigation_manager.dart:4:28 - strict_top_level_inference
+   info - Missing type annotation - lib\core\router\navigation_manager.dart:12:30 - strict_top_level_inference
+   info - Missing type annotation - lib\core\router\navigation_manager.dart:12:39 - strict_top_level_inference
+   info - Missing type annotation - lib\core\router\navigation_manager.dart:20:33 - strict_top_level_inference
+   info - Missing type annotation - lib\core\router\navigation_manager.dart:20:42 - strict_top_level_inference
+   info - Missing type annotation - lib\core\router\navigation_manager.dart:30:10 - strict_top_level_inference
+   info - Missing type annotation - lib\core\storage\cache_helper.dart:6:10 - strict_top_level_inference
+   info - 'red' is deprecated and shouldn't be used. Use (*.r * 255.0).round().clamp(0, 255) - lib\core\theme\colors.dart:24:23 - deprecated_member_use
+   info - 'green' is deprecated and shouldn't be used. Use (*.g * 255.0).round().clamp(0, 255) - lib\core\theme\colors.dart:24:38 - deprecated_member_use
+   info - 'blue' is deprecated and shouldn't be used. Use (*.b * 255.0).round().clamp(0, 255) - lib\core\theme\colors.dart:24:55 - deprecated_member_use
+   info - Function literals shouldn't be passed to 'forEach' - lib\core\theme\colors.dart:29:13 - avoid_function_literals_in_foreach_calls
+   info - 'value' is deprecated and shouldn't be used. Use component accessors like .r or .g, or toARGB32 for an explicit conversion - lib\core\theme\colors.dart:38:30 - deprecated_member_use
+   info - The type parameter name 'Type' matches a visible type name - lib\core\usecases\usecase.dart:4:24 - avoid_types_as_parameter_names
+   info - The import of 'package:flutter/services.dart' is unnecessary because all of the used elements are also provided by the import of 'package:flutter/material.dart' - lib\core\widgets\components.dart:15:8 - unnecessary_import
+   info - Redundant initialization to 'null' - lib\core\widgets\components.dart:51:3 - avoid_init_to_null
+   info - Use a 'SizedBox' to add whitespace to a layout - lib\core\widgets\components.dart:121:5 - sized_box_for_whitespace
+   info - Missing type annotation - lib\core\widgets\components.dart:227:1 - strict_top_level_inference
+   info - Missing type annotation - lib\core\widgets\components.dart:228:1 - strict_top_level_inference
+   info - Missing type annotation - lib\core\widgets\components.dart:228:21 - strict_top_level_inference
+   info - Missing type annotation - lib\core\widgets\components.dart:228:30 - strict_top_level_inference
+   info - 'MaterialStatePropertyAll' is deprecated and shouldn't be used. Use WidgetStatePropertyAll instead. Moved to the Widgets layer to make code available outside of Material. This feature was deprecated after v3.19.0-0.3.pre - lib\core\widgets\components.dart:269:38 - deprecated_member_use
+   info - 'MaterialStatePropertyAll' is deprecated and shouldn't be used. Use WidgetStatePropertyAll instead. Moved to the Widgets layer to make code available outside of Material. This feature was deprecated after v3.19.0-0.3.pre - lib\core\widgets\components.dart:282:31 - deprecated_member_use
+   info - Missing type annotation - lib\core\widgets\components.dart:298:1 - strict_top_level_inference
+   info - The variable name 'RejectTripDialouge' isn't a lowerCamelCase identifier - lib\core\widgets\components.dart:298:1 - non_constant_identifier_names
+   info - Missing type annotation - lib\core\widgets\components.dart:298:20 - strict_top_level_inference
+   info - Missing type annotation - lib\core\widgets\components.dart:298:30 - strict_top_level_inference
+   info - Missing type annotation - lib\core\widgets\components.dart:298:34 - strict_top_level_inference
+   info - 'MaterialStatePropertyAll' is deprecated and shouldn't be used. Use WidgetStatePropertyAll instead. Moved to the Widgets layer to make code available outside of Material. This feature was deprecated after v3.19.0-0.3.pre - lib\core\widgets\components.dart:339:40 - deprecated_member_use
+   info - 'MaterialStatePropertyAll' is deprecated and shouldn't be used. Use WidgetStatePropertyAll instead. Moved to the Widgets layer to make code available outside of Material. This feature was deprecated after v3.19.0-0.3.pre - lib\core\widgets\components.dart:352:35 - deprecated_member_use
+   info - The variable name 'driver_rejected_trips' isn't a lowerCamelCase identifier - lib\core\widgets\components.dart:359:36 - non_constant_identifier_names
+   info - Unnecessary empty statement - lib\core\widgets\components.dart:360:31 - empty_statements
+   info - The variable name 'driver_rejected_trips2' isn't a lowerCamelCase identifier - lib\core\widgets\components.dart:370:44 - non_constant_identifier_names
+   info - Don't use 'BuildContext's across async gaps - lib\core\widgets\components.dart:387:35 - use_build_context_synchronously
+   info - Don't use 'BuildContext's across async gaps - lib\core\widgets\components.dart:388:35 - use_build_context_synchronously
+   info - Missing type annotation - lib\core\widgets\components.dart:413:1 - strict_top_level_inference
+   info - Missing type annotation - lib\core\widgets\components.dart:414:5 - strict_top_level_inference
+   info - Missing type annotation - lib\core\widgets\components.dart:414:14 - strict_top_level_inference
+   info - Missing type annotation - lib\core\widgets\components.dart:414:22 - strict_top_level_inference
+   info - Missing type annotation - lib\core\widgets\components.dart:414:32 - strict_top_level_inference
+   info - Missing type annotation - lib\core\widgets\components.dart:414:42 - strict_top_level_inference
+   info - Redundant initialization to 'null' - lib\core\widgets\components.dart:418:13 - avoid_init_to_null
+warning - The value of the local variable 'errorPassText' isn't used - lib\core\widgets\components.dart:418:13 - unused_local_variable
+   info - Redundant initialization to 'null' - lib\core\widgets\components.dart:419:13 - avoid_init_to_null
+warning - The value of the local variable 'errorConfPassText' isn't used - lib\core\widgets\components.dart:419:13 - unused_local_variable
+   info - The local variable '_currentRangeValues' starts with an underscore - lib\core\widgets\components.dart:426:21 - no_leading_underscores_for_local_identifiers
+   info - The variable name 'trip_id' isn't a lowerCamelCase identifier - lib\core\widgets\components.dart:430:13 - non_constant_identifier_names
+   info - Redundant initialization to 'null' - lib\core\widgets\components.dart:431:13 - avoid_init_to_null
+   info - Redundant initialization to 'null' - lib\core\widgets\components.dart:434:13 - avoid_init_to_null
+   info - The variable name 'percentage_added' isn't a lowerCamelCase identifier - lib\core\widgets\components.dart:434:13 - non_constant_identifier_names
+warning - The value of the local variable 'percentage_added' isn't used - lib\core\widgets\components.dart:434:13 - unused_local_variable
+   info - Use a 'SizedBox' to add whitespace to a layout - lib\core\widgets\components.dart:495:31 - sized_box_for_whitespace
+   info - Unnecessary instance of 'Container' - lib\core\widgets\components.dart:539:23 - avoid_unnecessary_containers
+   info - 'MaterialStatePropertyAll' is deprecated and shouldn't be used. Use WidgetStatePropertyAll instead. Moved to the Widgets layer to make code available outside of Material. This feature was deprecated after v3.19.0-0.3.pre - lib\core\widgets\components.dart:622:39 - deprecated_member_use
+   info - Missing type annotation - lib\core\widgets\components.dart:663:1 - strict_top_level_inference
+   info - Missing type annotation - lib\core\widgets\components.dart:663:28 - strict_top_level_inference
+   info - Redundant initialization to 'null' - lib\core\widgets\components.dart:667:13 - avoid_init_to_null
+warning - The value of the local variable 'errorPassText' isn't used - lib\core\widgets\components.dart:667:13 - unused_local_variable
+   info - Redundant initialization to 'null' - lib\core\widgets\components.dart:668:13 - avoid_init_to_null
+warning - The value of the local variable 'errorConfPassText' isn't used - lib\core\widgets\components.dart:668:13 - unused_local_variable
+   info - The local variable '_currentRangeValues' starts with an underscore - lib\core\widgets\components.dart:670:21 - no_leading_underscores_for_local_identifiers
+   info - Redundant initialization to 'null' - lib\core\widgets\components.dart:671:13 - avoid_init_to_null
+warning - The value of the local variable 'note' isn't used - lib\core\widgets\components.dart:671:13 - unused_local_variable
+   info - Redundant initialization to 'null' - lib\core\widgets\components.dart:672:13 - avoid_init_to_null
+warning - The value of the local variable 'price' isn't used - lib\core\widgets\components.dart:672:13 - unused_local_variable
+   info - Redundant initialization to 'null' - lib\core\widgets\components.dart:673:13 - avoid_init_to_null
+   info - The variable name 'percentage_added' isn't a lowerCamelCase identifier - lib\core\widgets\components.dart:673:13 - non_constant_identifier_names
+warning - The value of the local variable 'percentage_added' isn't used - lib\core\widgets\components.dart:673:13 - unused_local_variable
+   info - Use a 'SizedBox' to add whitespace to a layout - lib\core\widgets\components.dart:733:31 - sized_box_for_whitespace
+   info - Unnecessary instance of 'Container' - lib\core\widgets\components.dart:772:23 - avoid_unnecessary_containers
+   info - 'MaterialStatePropertyAll' is deprecated and shouldn't be used. Use WidgetStatePropertyAll instead. Moved to the Widgets layer to make code available outside of Material. This feature was deprecated after v3.19.0-0.3.pre - lib\core\widgets\components.dart:855:39 - deprecated_member_use
+   info - Missing type annotation - lib\core\widgets\components.dart:878:1 - strict_top_level_inference
+   info - Missing type annotation - lib\core\widgets\components.dart:878:26 - strict_top_level_inference
+   info - Missing type annotation - lib\core\widgets\components.dart:878:35 - strict_top_level_inference
+   info - Missing type annotation - lib\core\widgets\components.dart:878:51 - strict_top_level_inference
+   info - Missing type annotation - lib\core\widgets\components.dart:878:56 - strict_top_level_inference
+   info - Use a 'SizedBox' to add whitespace to a layout - lib\core\widgets\components.dart:892:19 - sized_box_for_whitespace
+   info - 'MaterialStatePropertyAll' is deprecated and shouldn't be used. Use WidgetStatePropertyAll instead. Moved to the Widgets layer to make code available outside of Material. This feature was deprecated after v3.19.0-0.3.pre - lib\core\widgets\components.dart:910:34 - deprecated_member_use
+   info - 'MaterialStatePropertyAll' is deprecated and shouldn't be used. Use WidgetStatePropertyAll instead. Moved to the Widgets layer to make code available outside of Material. This feature was deprecated after v3.19.0-0.3.pre - lib\core\widgets\components.dart:922:40 - deprecated_member_use
+   info - Don't use 'BuildContext's across async gaps - lib\core\widgets\components.dart:928:50 - use_build_context_synchronously
+   info - Don't use 'BuildContext's across async gaps - lib\core\widgets\components.dart:933:43 - use_build_context_synchronously
+   info - Don't use 'BuildContext's across async gaps - lib\core\widgets\components.dart:934:43 - use_build_context_synchronously
+   info - Don't use 'BuildContext's across async gaps - lib\core\widgets\components.dart:935:43 - use_build_context_synchronously
+   info - Don't use 'BuildContext's across async gaps - lib\core\widgets\components.dart:938:54 - use_build_context_synchronously
+   info - Missing type annotation - lib\core\widgets\components.dart:953:1 - strict_top_level_inference
+   info - Missing type annotation - lib\core\widgets\components.dart:953:22 - strict_top_level_inference
+   info - Missing type annotation - lib\core\widgets\components.dart:953:31 - strict_top_level_inference
+   info - Missing type annotation - lib\core\widgets\components.dart:953:47 - strict_top_level_inference
+   info - Missing type annotation - lib\core\widgets\components.dart:953:52 - strict_top_level_inference
+   info - 'MaterialStatePropertyAll' is deprecated and shouldn't be used. Use WidgetStatePropertyAll instead. Moved to the Widgets layer to make code available outside of Material. This feature was deprecated after v3.19.0-0.3.pre - lib\core\widgets\components.dart:994:40 - deprecated_member_use
+   info - 'MaterialStatePropertyAll' is deprecated and shouldn't be used. Use WidgetStatePropertyAll instead. Moved to the Widgets layer to make code available outside of Material. This feature was deprecated after v3.19.0-0.3.pre - lib\core\widgets\components.dart:1007:33 - deprecated_member_use
+   info - Missing type annotation - lib\core\widgets\components.dart:1025:1 - strict_top_level_inference
+   info - Missing type annotation - lib\core\widgets\components.dart:1025:16 - strict_top_level_inference
+   info - Missing type annotation - lib\core\widgets\components.dart:1025:25 - strict_top_level_inference
+   info - Missing type annotation - lib\core\widgets\components.dart:1122:1 - strict_top_level_inference
+   info - Missing type annotation - lib\core\widgets\components.dart:1122:21 - strict_top_level_inference
+   info - Use a 'SizedBox' to add whitespace to a layout - lib\core\widgets\components.dart:1137:19 - sized_box_for_whitespace
+   info - Missing type annotation - lib\core\widgets\components.dart:1167:1 - strict_top_level_inference
+   info - Missing type annotation - lib\core\widgets\components.dart:1167:24 - strict_top_level_inference
+   info - Use a 'SizedBox' to add whitespace to a layout - lib\core\widgets\components.dart:1181:19 - sized_box_for_whitespace
+   info - Missing type annotation - lib\core\widgets\components.dart:1211:1 - strict_top_level_inference
+   info - Missing type annotation - lib\core\widgets\components.dart:1211:22 - strict_top_level_inference
+   info - Use a 'SizedBox' to add whitespace to a layout - lib\core\widgets\components.dart:1225:19 - sized_box_for_whitespace
+   info - Missing type annotation - lib\core\widgets\components.dart:1255:1 - strict_top_level_inference
+   info - Missing type annotation - lib\core\widgets\components.dart:1255:20 - strict_top_level_inference
+   info - Use a 'SizedBox' to add whitespace to a layout - lib\core\widgets\components.dart:1271:23 - sized_box_for_whitespace
+   info - Don't use 'BuildContext's across async gaps - lib\core\widgets\components.dart:1292:46 - use_build_context_synchronously
+   info - Don't use 'BuildContext's across async gaps - lib\core\widgets\components.dart:1301:46 - use_build_context_synchronously
+   info - Missing type annotation - lib\core\widgets\components.dart:1334:1 - strict_top_level_inference
+   info - Missing type annotation - lib\core\widgets\components.dart:1335:5 - strict_top_level_inference
+   info - Missing type annotation - lib\core\widgets\components.dart:1335:14 - strict_top_level_inference
+   info - Missing type annotation - lib\core\widgets\components.dart:1335:31 - strict_top_level_inference
+   info - The variable name 'DialougeText' isn't a lowerCamelCase identifier - lib\core\widgets\components.dart:1335:31 - non_constant_identifier_names
+   info - Missing type annotation - lib\core\widgets\components.dart:1335:45 - strict_top_level_inference
+   info - The variable name 'DialougeAssetImage' isn't a lowerCamelCase identifier - lib\core\widgets\components.dart:1335:45 - non_constant_identifier_names
+   info - Missing type annotation - lib\core\widgets\components.dart:1336:6 - strict_top_level_inference
+   info - Missing type annotation - lib\core\widgets\components.dart:1405:1 - strict_top_level_inference
+   info - Missing type annotation - lib\core\widgets\components.dart:1405:27 - strict_top_level_inference
+   info - Missing type annotation - lib\core\widgets\components.dart:1473:1 - strict_top_level_inference
+   info - Missing type annotation - lib\core\widgets\components.dart:1473:36 - strict_top_level_inference
+   info - Missing type annotation - lib\core\widgets\components.dart:1473:45 - strict_top_level_inference
+   info - Missing type annotation - lib\core\widgets\components.dart:1511:1 - strict_top_level_inference
+   info - Missing type annotation - lib\core\widgets\components.dart:1511:30 - strict_top_level_inference
+   info - The 'child' argument should be last in widget constructor invocations - lib\core\widgets\components.dart:1999:9 - sort_child_properties_last
+   info - Use the '??' operator rather than '?:' when testing for 'null' - lib\core\widgets\components.dart:2005:18 - prefer_if_null_operators
+   info - Missing type annotation - lib\core\widgets\components.dart:2129:3 - strict_top_level_inference
+   info - Missing type annotation - lib\core\widgets\components.dart:2198:3 - strict_top_level_inference
+   info - The constant name 'SUCESS' isn't a lowerCamelCase identifier - lib\core\widgets\components.dart:2438:20 - constant_identifier_names
+   info - The constant name 'ERROR' isn't a lowerCamelCase identifier - lib\core\widgets\components.dart:2438:28 - constant_identifier_names
+   info - The constant name 'WARNING' isn't a lowerCamelCase identifier - lib\core\widgets\components.dart:2438:35 - constant_identifier_names
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\core\widgets\image_picker_dialog.dart:56:50 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\core\widgets\image_picker_dialog.dart:59:52 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\core\widgets\image_picker_dialog.dart:97:49 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\core\widgets\image_picker_dialog.dart:100:51 - deprecated_member_use
+warning - Unused import: 'package:flutter/foundation.dart' - lib\features\auth\data\datasources\auth_remote_data_source.dart:2:8 - unused_import
+   info - Don't use 'BuildContext's across async gaps - lib\features\auth\presentation\screens\login_screen.dart:325:51 - use_build_context_synchronously
+   info - The member 'toJson' overrides an inherited member but isn't annotated with '@override' - lib\features\home\data\models\nearby_trip_model.dart:40:24 - annotate_overrides
+   info - Missing type annotation - lib\features\home\presentation\cubit\driver_layout_cubit.dart:14:32 - strict_top_level_inference
+warning - Unused import: 'package:car_app/core/error/failures.dart' - lib\features\home\presentation\cubit\passenger_home_cubit.dart:3:8 - unused_import
+warning - The value of the field '_storage' isn't used - lib\features\home\presentation\cubit\passenger_home_cubit.dart:19:22 - unused_field
+   info - 'timeLimit' is deprecated and shouldn't be used. use settings parameter with AndroidSettings, AppleSettings, WebSettings, or LocationSettings - lib\features\home\presentation\cubit\passenger_home_cubit.dart:110:9 - deprecated_member_use
+   info - Missing type annotation - lib\features\home\presentation\cubit\user_layout_cubit.dart:11:30 - strict_top_level_inference
+warning - Unused import: 'package:car_app/features/trips/presentation/driver/screens/driver_new_trips_accept_screen.dart' - lib\features\home\presentation\screens\driver\driver_layout.dart:4:8 - unused_import
+   info - Redundant initialization to 'null' - lib\features\home\presentation\screens\driver\driver_layout.dart:22:34 - avoid_init_to_null
+   info - An uninitialized field should have an explicit type annotation - lib\features\home\presentation\screens\driver\driver_layout.dart:23:9 - prefer_typing_uninitialized_variables
+   info - Missing type annotation - lib\features\home\presentation\screens\driver\driver_layout.dart:23:9 - strict_top_level_inference
+   info - Use the '??' operator rather than '?:' when testing for 'null' - lib\features\home\presentation\screens\driver\driver_layout.dart:64:33 - prefer_if_null_operators
+warning - The operand can't be 'null', so the condition is always 'false' - lib\features\home\presentation\screens\driver\driver_layout.dart:71:33 - unnecessary_null_comparison
+warning - The operand can't be 'null', so the condition is always 'false' - lib\features\home\presentation\screens\driver\driver_layout.dart:98:35 - unnecessary_null_comparison
+   info - Use the '??' operator rather than '?:' when testing for 'null' - lib\features\home\presentation\screens\driver\driver_layout.dart:125:26 - prefer_if_null_operators
+warning - The operand can't be 'null', so the condition is always 'false' - lib\features\home\presentation\screens\driver\driver_layout.dart:125:44 - unnecessary_null_comparison
+   info - Missing type annotation - lib\features\home\presentation\screens\driver\driver_layout.dart:149:1 - strict_top_level_inference
+   info - Missing type annotation - lib\features\home\presentation\screens\driver\driver_layout.dart:149:11 - strict_top_level_inference
+   info - The local variable '_scaffoldkey' starts with an underscore - lib\features\home\presentation\screens\driver\driver_layout.dart:149:11 - no_leading_underscores_for_local_identifiers
+   info - Missing type annotation - lib\features\home\presentation\screens\driver\driver_layout.dart:149:25 - strict_top_level_inference
+warning - Unused import: 'package:car_app/features/auth/presentation/screens/login_screen.dart' - lib\features\home\presentation\screens\driver\driver_settings_tab_screen.dart:23:8 - unused_import
+warning - Unused import: 'package:car_app/features/trips/presentation/passenger/screens/shared/ongoing_shared_trip.dart' - lib\features\home\presentation\screens\passenger\passenger_nearby_trips_screen.dart:9:8 - unused_import
+warning - Unused import: 'package:car_app/features/auth/presentation/screens/login_screen.dart' - lib\features\home\presentation\screens\passenger\passenger_settings_tab_screen.dart:24:8 - unused_import
+   info - 'desiredAccuracy' is deprecated and shouldn't be used. use settings parameter with AndroidSettings, AppleSettings, WebSettings, or LocationSettings - lib\features\map\data\services\map_service_impl.dart:60:11 - deprecated_member_use
+   info - 'timeLimit' is deprecated and shouldn't be used. use settings parameter with AndroidSettings, AppleSettings, WebSettings, or LocationSettings - lib\features\map\data\services\map_service_impl.dart:61:11 - deprecated_member_use
+   info - 'setMapStyle' is deprecated and shouldn't be used. Use GoogleMap.style instead - lib\features\map\presentation\style\app_map_style.dart:24:24 - deprecated_member_use
+warning - Unused import: 'dart:async' - lib\features\map\presentation\widgets\location_search_field.dart:1:8 - unused_import
+   info - The variable name 'NotificationsList' isn't a lowerCamelCase identifier - lib\features\notifications\presentation\cubit\notifications_cubit.dart:25:12 - non_constant_identifier_names
+warning - Unused import: 'package:car_app/core/router/app_routes.dart' - lib\features\onboarding\presentation\screens\choose_lang_screen.dart:2:8 - unused_import
+warning - Unused import: 'package:go_router/go_router.dart' - lib\features\onboarding\presentation\screens\choose_lang_screen.dart:8:8 - unused_import
+warning - Unused import: 'package:car_app/core/error/failures.dart' - lib\features\trips\data\datasources\trips_remote_datasource_impl.dart:3:8 - unused_import
+warning - The value of the field '_client' isn't used - lib\features\trips\presentation\driver\cubit\driver_add_private_trip_cubit.dart:21:19 - unused_field
+warning - The value of the field '_storage' isn't used - lib\features\trips\presentation\driver\cubit\driver_add_private_trip_cubit.dart:22:22 - unused_field
+   info - Missing type annotation - lib\features\trips\presentation\driver\cubit\driver_add_private_trip_cubit.dart:49:40 - strict_top_level_inference
+   info - The variable name 'PassengersCountIn' isn't a lowerCamelCase identifier - lib\features\trips\presentation\driver\cubit\driver_add_private_trip_cubit.dart:53:7 - non_constant_identifier_names
+   info - The variable name 'OnGoingTripStatus' isn't a lowerCamelCase identifier - lib\features\trips\presentation\driver\cubit\driver_add_private_trip_cubit.dart:68:10 - non_constant_identifier_names
+   info - 'fromAssetImage' is deprecated and shouldn't be used. Use BitmapDescriptor.asset method instead - lib\features\trips\presentation\driver\cubit\driver_add_private_trip_cubit.dart:219:40 - deprecated_member_use
+   info - 'fromAssetImage' is deprecated and shouldn't be used. Use BitmapDescriptor.asset method instead - lib\features\trips\presentation\driver\cubit\driver_add_private_trip_cubit.dart:238:40 - deprecated_member_use
+warning - The receiver can't be 'null' because of short-circuiting, so the null-aware operator '?.' can't be used - lib\features\trips\presentation\driver\cubit\driver_add_private_trip_cubit.dart:275:59 - invalid_null_aware_operator
+warning - The '!' will have no effect because the receiver can't be null - lib\features\trips\presentation\driver\cubit\driver_add_private_trip_cubit.dart:276:43 - unnecessary_non_null_assertion
+warning - The receiver can't be 'null' because of short-circuiting, so the null-aware operator '?.' can't be used - lib\features\trips\presentation\driver\cubit\driver_add_private_trip_cubit.dart:278:64 - invalid_null_aware_operator
+warning - The '!' will have no effect because the receiver can't be null - lib\features\trips\presentation\driver\cubit\driver_add_private_trip_cubit.dart:279:49 - unnecessary_non_null_assertion
+warning - Unnecessary type check; the result is always 'true' - lib\features\trips\presentation\driver\cubit\driver_add_private_trip_cubit.dart:304:24 - unnecessary_type_check
+   info - The variable name 'trip_id' isn't a lowerCamelCase identifier - lib\features\trips\presentation\driver\cubit\driver_add_private_trip_cubit.dart:398:13 - non_constant_identifier_names
+   info - The variable name 'PassState' isn't a lowerCamelCase identifier - lib\features\trips\presentation\driver\cubit\driver_add_private_trip_cubit.dart:399:13 - non_constant_identifier_names
+   info - The variable name 'in_car' isn't a lowerCamelCase identifier - lib\features\trips\presentation\driver\cubit\driver_add_private_trip_cubit.dart:400:13 - non_constant_identifier_names
+   info - Missing type annotation - lib\features\trips\presentation\driver\cubit\driver_add_shared_trip_cubit.dart:35:39 - strict_top_level_inference
+   info - 'fromAssetImage' is deprecated and shouldn't be used. Use BitmapDescriptor.asset method instead - lib\features\trips\presentation\driver\cubit\driver_add_shared_trip_cubit.dart:171:40 - deprecated_member_use
+   info - 'fromAssetImage' is deprecated and shouldn't be used. Use BitmapDescriptor.asset method instead - lib\features\trips\presentation\driver\cubit\driver_add_shared_trip_cubit.dart:192:40 - deprecated_member_use
+warning - The receiver can't be 'null' because of short-circuiting, so the null-aware operator '?.' can't be used - lib\features\trips\presentation\driver\cubit\driver_add_shared_trip_cubit.dart:232:42 - invalid_null_aware_operator
+warning - The '!' will have no effect because the receiver can't be null - lib\features\trips\presentation\driver\cubit\driver_add_shared_trip_cubit.dart:233:47 - unnecessary_non_null_assertion
+warning - The receiver can't be 'null' because of short-circuiting, so the null-aware operator '?.' can't be used - lib\features\trips\presentation\driver\cubit\driver_add_shared_trip_cubit.dart:238:48 - invalid_null_aware_operator
+warning - The '!' will have no effect because the receiver can't be null - lib\features\trips\presentation\driver\cubit\driver_add_shared_trip_cubit.dart:239:53 - unnecessary_non_null_assertion
+   info - The variable name 'TripsListByTypePrivete' isn't a lowerCamelCase identifier - lib\features\trips\presentation\driver\cubit\driver_trips_cubit.dart:64:8 - non_constant_identifier_names
+   info - The variable name 'TripsListByTypeShared' isn't a lowerCamelCase identifier - lib\features\trips\presentation\driver\cubit\driver_trips_cubit.dart:65:8 - non_constant_identifier_names
+   info - The variable name 'TripsListByTypeCurrentPrivete' isn't a lowerCamelCase identifier - lib\features\trips\presentation\driver\cubit\driver_trips_cubit.dart:67:8 - non_constant_identifier_names
+   info - The variable name 'TripsListByTypeCompletedPrivete' isn't a lowerCamelCase identifier - lib\features\trips\presentation\driver\cubit\driver_trips_cubit.dart:68:8 - non_constant_identifier_names
+   info - The variable name 'TripsListByTypeSuspendedPrivete' isn't a lowerCamelCase identifier - lib\features\trips\presentation\driver\cubit\driver_trips_cubit.dart:69:8 - non_constant_identifier_names
+   info - The variable name 'TripsListByTypeCanceledPrivete' isn't a lowerCamelCase identifier - lib\features\trips\presentation\driver\cubit\driver_trips_cubit.dart:70:8 - non_constant_identifier_names
+   info - The variable name 'TripsListByTypeCurrentShared' isn't a lowerCamelCase identifier - lib\features\trips\presentation\driver\cubit\driver_trips_cubit.dart:72:8 - non_constant_identifier_names
+   info - The variable name 'TripsListByTypeCompletedShared' isn't a lowerCamelCase identifier - lib\features\trips\presentation\driver\cubit\driver_trips_cubit.dart:73:8 - non_constant_identifier_names
+   info - The variable name 'TripsListByTypeSuspendedShared' isn't a lowerCamelCase identifier - lib\features\trips\presentation\driver\cubit\driver_trips_cubit.dart:74:8 - non_constant_identifier_names
+   info - The variable name 'TripsListByTypeCanceledShared' isn't a lowerCamelCase identifier - lib\features\trips\presentation\driver\cubit\driver_trips_cubit.dart:75:8 - non_constant_identifier_names
+   info - The variable name 'TripsListByTypeTotals' isn't a lowerCamelCase identifier - lib\features\trips\presentation\driver\cubit\driver_trips_cubit.dart:77:7 - non_constant_identifier_names
+warning - The left operand can't be null, so the right operand is never executed - lib\features\trips\presentation\driver\cubit\driver_trips_cubit.dart:115:46 - dead_null_aware_expression
+   info - The variable name 'on_going_status' isn't a lowerCamelCase identifier - lib\features\trips\presentation\driver\cubit\driver_trips_cubit.dart:369:13 - non_constant_identifier_names
+   info - The variable name 'trip_id' isn't a lowerCamelCase identifier - lib\features\trips\presentation\driver\cubit\driver_trips_cubit.dart:404:18 - non_constant_identifier_names
+   info - The variable name 'percentage_added' isn't a lowerCamelCase identifier - lib\features\trips\presentation\driver\cubit\driver_trips_cubit.dart:407:13 - non_constant_identifier_names
+   info - The variable name 'OfferListUser' isn't a lowerCamelCase identifier - lib\features\trips\presentation\driver\cubit\driver_trips_cubit.dart:603:8 - non_constant_identifier_names
+warning - The left operand can't be null, so the right operand is never executed - lib\features\trips\presentation\driver\cubit\driver_trips_cubit.dart:621:47 - dead_null_aware_expression
+   info - The variable name 'PassState' isn't a lowerCamelCase identifier - lib\features\trips\presentation\driver\cubit\driver_trips_cubit.dart:646:13 - non_constant_identifier_names
+   info - The variable name 'PassState' isn't a lowerCamelCase identifier - lib\features\trips\presentation\driver\cubit\driver_trips_cubit.dart:663:13 - non_constant_identifier_names
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\trips\presentation\driver\screens\driver_chat_screen.dart:185:39 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\trips\presentation\driver\screens\driver_chat_screen.dart:196:89 - deprecated_member_use
+   info - The imported package 'hive' isn't a dependency of the importing package - lib\features\trips\presentation\driver\screens\driver_new_trips_accept_screen.dart:22:8 - depend_on_referenced_packages
+   info - The variable name 'driver_rejected_trips' isn't a lowerCamelCase identifier - lib\features\trips\presentation\driver\screens\driver_new_trips_accept_screen.dart:37:8 - non_constant_identifier_names
+   info - Missing type annotation - lib\features\trips\presentation\driver\screens\driver_new_trips_accept_screen.dart:52:3 - strict_top_level_inference
+   info - Missing type annotation - lib\features\trips\presentation\driver\screens\driver_new_trips_accept_screen.dart:63:3 - strict_top_level_inference
+   info - Missing type annotation - lib\features\trips\presentation\driver\screens\driver_new_trips_accept_screen.dart:63:17 - strict_top_level_inference
+   info - Use a 'SizedBox' to add whitespace to a layout - lib\features\trips\presentation\driver\screens\driver_new_trips_accept_screen.dart:146:27 - sized_box_for_whitespace
+   info - Use a 'SizedBox' to add whitespace to a layout - lib\features\trips\presentation\driver\screens\driver_new_trips_accept_screen.dart:172:35 - sized_box_for_whitespace
+   info - Don't use 'BuildContext's across async gaps - lib\features\trips\presentation\driver\screens\driver_new_trips_accept_screen.dart:228:70 - use_build_context_synchronously
+   info - Use a 'SizedBox' to add whitespace to a layout - lib\features\trips\presentation\driver\screens\driver_new_trips_accept_screen.dart:316:69 - sized_box_for_whitespace
+   info - Use a 'SizedBox' to add whitespace to a layout - lib\features\trips\presentation\driver\screens\driver_new_trips_accept_screen.dart:354:69 - sized_box_for_whitespace
+   info - Don't use 'BuildContext's across async gaps - lib\features\trips\presentation\driver\screens\driver_new_trips_accept_screen.dart:446:70 - use_build_context_synchronously
+   info - Use a 'SizedBox' to add whitespace to a layout - lib\features\trips\presentation\driver\screens\driver_new_trips_accept_screen.dart:539:69 - sized_box_for_whitespace
+   info - Use a 'SizedBox' to add whitespace to a layout - lib\features\trips\presentation\driver\screens\driver_new_trips_accept_screen.dart:577:69 - sized_box_for_whitespace
+   info - Missing type annotation - lib\features\trips\presentation\driver\screens\driver_new_trips_accept_screen.dart:696:1 - strict_top_level_inference
+   info - Missing type annotation - lib\features\trips\presentation\driver\screens\driver_new_trips_accept_screen.dart:696:16 - strict_top_level_inference
+   info - Missing type annotation - lib\features\trips\presentation\driver\screens\driver_new_trips_accept_screen.dart:696:25 - strict_top_level_inference
+   info - Missing type annotation - lib\features\trips\presentation\driver\screens\driver_new_trips_accept_screen.dart:696:33 - strict_top_level_inference
+   info - Missing type annotation - lib\features\trips\presentation\driver\screens\driver_new_trips_accept_screen.dart:696:43 - strict_top_level_inference
+   info - Missing type annotation - lib\features\trips\presentation\driver\screens\driver_new_trips_accept_screen.dart:696:53 - strict_top_level_inference
+   info - The local variable '_currentRangeValues' starts with an underscore - lib\features\trips\presentation\driver\screens\driver_new_trips_accept_screen.dart:705:21 - no_leading_underscores_for_local_identifiers
+   info - The variable name 'trip_id' isn't a lowerCamelCase identifier - lib\features\trips\presentation\driver\screens\driver_new_trips_accept_screen.dart:709:13 - non_constant_identifier_names
+   info - Redundant initialization to 'null' - lib\features\trips\presentation\driver\screens\driver_new_trips_accept_screen.dart:710:13 - avoid_init_to_null
+   info - Redundant initialization to 'null' - lib\features\trips\presentation\driver\screens\driver_new_trips_accept_screen.dart:712:13 - avoid_init_to_null
+   info - The variable name 'percentage_added' isn't a lowerCamelCase identifier - lib\features\trips\presentation\driver\screens\driver_new_trips_accept_screen.dart:712:13 - non_constant_identifier_names
+warning - The declaration '__mainColor' isn't referenced - lib\features\trips\presentation\driver\screens\private\driver_private_chat_screen.dart:9:13 - unused_element
+   info - The variable name 'm_id' isn't a lowerCamelCase identifier - lib\features\trips\presentation\driver\screens\private\driver_private_chat_screen.dart:14:10 - non_constant_identifier_names
+   info - The variable name 'chat_id' isn't a lowerCamelCase identifier - lib\features\trips\presentation\driver\screens\private\driver_private_chat_screen.dart:15:10 - non_constant_identifier_names
+   info - The variable name 'r_name' isn't a lowerCamelCase identifier - lib\features\trips\presentation\driver\screens\private\driver_private_chat_screen.dart:16:10 - non_constant_identifier_names
+   info - The variable name 'm_id' isn't a lowerCamelCase identifier - lib\features\trips\presentation\driver\screens\private\driver_private_chat_screen.dart:18:17 - non_constant_identifier_names
+   info - The variable name 'chat_id' isn't a lowerCamelCase identifier - lib\features\trips\presentation\driver\screens\private\driver_private_chat_screen.dart:19:17 - non_constant_identifier_names
+   info - The variable name 'r_name' isn't a lowerCamelCase identifier - lib\features\trips\presentation\driver\screens\private\driver_private_chat_screen.dart:20:17 - non_constant_identifier_names
+warning - The value of the field '_auth' isn't used - lib\features\trips\presentation\driver\screens\private\driver_private_chat_screen.dart:30:22 - unused_field
+   info - Don't use 'BuildContext's across async gaps - lib\features\trips\presentation\driver\screens\private\driver_private_chat_screen.dart:170:11 - use_build_context_synchronously
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\trips\presentation\driver\screens\private\new_privet_trip.dart:393:43 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\trips\presentation\driver\screens\private\new_privet_trip.dart:451:50 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\trips\presentation\driver\screens\private\new_privet_trip.dart:582:35 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\trips\presentation\driver\screens\private\new_privet_trip.dart:624:36 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\trips\presentation\driver\screens\private\new_privet_trip.dart:690:35 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\trips\presentation\driver\screens\private\new_privet_trip.dart:869:33 - deprecated_member_use
+   info - The variable name 'trip_datetime' isn't a lowerCamelCase identifier - lib\features\trips\presentation\driver\screens\private\private_canceled_trips_screen.dart:16:10 - non_constant_identifier_names
+   info - The variable name 'from_location_name' isn't a lowerCamelCase identifier - lib\features\trips\presentation\driver\screens\private\private_canceled_trips_screen.dart:17:10 - non_constant_identifier_names
+   info - The variable name 'to_location_name' isn't a lowerCamelCase identifier - lib\features\trips\presentation\driver\screens\private\private_canceled_trips_screen.dart:18:10 - non_constant_identifier_names
+   info - The variable name 'number_of_seats' isn't a lowerCamelCase identifier - lib\features\trips\presentation\driver\screens\private\private_canceled_trips_screen.dart:19:10 - non_constant_identifier_names
+   info - The variable name 'gender_preference' isn't a lowerCamelCase identifier - lib\features\trips\presentation\driver\screens\private\private_canceled_trips_screen.dart:20:10 - non_constant_identifier_names
+   info - The variable name 'driver_name' isn't a lowerCamelCase identifier - lib\features\trips\presentation\driver\screens\private\private_canceled_trips_screen.dart:22:10 - non_constant_identifier_names
+   info - The variable name 'trip_datetime' isn't a lowerCamelCase identifier - lib\features\trips\presentation\driver\screens\private\private_canceled_trips_screen.dart:26:17 - non_constant_identifier_names
+   info - The variable name 'from_location_name' isn't a lowerCamelCase identifier - lib\features\trips\presentation\driver\screens\private\private_canceled_trips_screen.dart:27:17 - non_constant_identifier_names
+   info - The variable name 'to_location_name' isn't a lowerCamelCase identifier - lib\features\trips\presentation\driver\screens\private\private_canceled_trips_screen.dart:28:17 - non_constant_identifier_names
+   info - The variable name 'number_of_seats' isn't a lowerCamelCase identifier - lib\features\trips\presentation\driver\screens\private\private_canceled_trips_screen.dart:29:17 - non_constant_identifier_names
+   info - The variable name 'gender_preference' isn't a lowerCamelCase identifier - lib\features\trips\presentation\driver\screens\private\private_canceled_trips_screen.dart:30:17 - non_constant_identifier_names
+   info - The variable name 'driver_name' isn't a lowerCamelCase identifier - lib\features\trips\presentation\driver\screens\private\private_canceled_trips_screen.dart:32:17 - non_constant_identifier_names
+   info - The variable name 'trip_datetime' isn't a lowerCamelCase identifier - lib\features\trips\presentation\driver\screens\private\private_completed_trips_screen.dart:16:10 - non_constant_identifier_names
+   info - The variable name 'from_location_name' isn't a lowerCamelCase identifier - lib\features\trips\presentation\driver\screens\private\private_completed_trips_screen.dart:17:10 - non_constant_identifier_names
+   info - The variable name 'to_location_name' isn't a lowerCamelCase identifier - lib\features\trips\presentation\driver\screens\private\private_completed_trips_screen.dart:18:10 - non_constant_identifier_names
+   info - The variable name 'number_of_seats' isn't a lowerCamelCase identifier - lib\features\trips\presentation\driver\screens\private\private_completed_trips_screen.dart:19:10 - non_constant_identifier_names
+   info - The variable name 'gender_preference' isn't a lowerCamelCase identifier - lib\features\trips\presentation\driver\screens\private\private_completed_trips_screen.dart:20:10 - non_constant_identifier_names
+   info - The variable name 'driver_name' isn't a lowerCamelCase identifier - lib\features\trips\presentation\driver\screens\private\private_completed_trips_screen.dart:22:10 - non_constant_identifier_names
+   info - The variable name 'trip_datetime' isn't a lowerCamelCase identifier - lib\features\trips\presentation\driver\screens\private\private_completed_trips_screen.dart:26:17 - non_constant_identifier_names
+   info - The variable name 'from_location_name' isn't a lowerCamelCase identifier - lib\features\trips\presentation\driver\screens\private\private_completed_trips_screen.dart:27:17 - non_constant_identifier_names
+   info - The variable name 'to_location_name' isn't a lowerCamelCase identifier - lib\features\trips\presentation\driver\screens\private\private_completed_trips_screen.dart:28:17 - non_constant_identifier_names
+   info - The variable name 'number_of_seats' isn't a lowerCamelCase identifier - lib\features\trips\presentation\driver\screens\private\private_completed_trips_screen.dart:29:17 - non_constant_identifier_names
+   info - The variable name 'gender_preference' isn't a lowerCamelCase identifier - lib\features\trips\presentation\driver\screens\private\private_completed_trips_screen.dart:30:17 - non_constant_identifier_names
+   info - The variable name 'driver_name' isn't a lowerCamelCase identifier - lib\features\trips\presentation\driver\screens\private\private_completed_trips_screen.dart:32:17 - non_constant_identifier_names
+   info - The variable name 'trip_datetime' isn't a lowerCamelCase identifier - lib\features\trips\presentation\driver\screens\private\private_suspended_screen.dart:23:10 - non_constant_identifier_names
+   info - The variable name 'from_location_name' isn't a lowerCamelCase identifier - lib\features\trips\presentation\driver\screens\private\private_suspended_screen.dart:24:10 - non_constant_identifier_names
+   info - The variable name 'to_location_name' isn't a lowerCamelCase identifier - lib\features\trips\presentation\driver\screens\private\private_suspended_screen.dart:25:10 - non_constant_identifier_names
+   info - The variable name 'driver_name' isn't a lowerCamelCase identifier - lib\features\trips\presentation\driver\screens\private\private_suspended_screen.dart:27:10 - non_constant_identifier_names
+   info - The variable name 'trip_datetime' isn't a lowerCamelCase identifier - lib\features\trips\presentation\driver\screens\private\private_suspended_screen.dart:32:17 - non_constant_identifier_names
+   info - The variable name 'from_location_name' isn't a lowerCamelCase identifier - lib\features\trips\presentation\driver\screens\private\private_suspended_screen.dart:33:17 - non_constant_identifier_names
+   info - The variable name 'to_location_name' isn't a lowerCamelCase identifier - lib\features\trips\presentation\driver\screens\private\private_suspended_screen.dart:34:17 - non_constant_identifier_names
+   info - The variable name 'driver_name' isn't a lowerCamelCase identifier - lib\features\trips\presentation\driver\screens\private\private_suspended_screen.dart:36:17 - non_constant_identifier_names
+warning - The declaration '_stoploading' isn't referenced - lib\features\trips\presentation\driver\screens\private\private_suspended_screen.dart:49:8 - unused_element
+   info - Missing type annotation - lib\features\trips\presentation\driver\screens\private\private_suspended_screen.dart:49:21 - strict_top_level_inference
+warning - The declaration '_setNewLoading' isn't referenced - lib\features\trips\presentation\driver\screens\private\private_suspended_screen.dart:56:8 - unused_element
+   info - Missing type annotation - lib\features\trips\presentation\driver\screens\private\private_suspended_screen.dart:56:23 - strict_top_level_inference
+   info - Missing type annotation - lib\features\trips\presentation\driver\screens\private\private_suspended_screen.dart:62:19 - strict_top_level_inference
+   info - Missing type annotation - lib\features\trips\presentation\driver\screens\private\private_suspended_screen.dart:62:34 - strict_top_level_inference
+warning - The declaration '__mainColor' isn't referenced - lib\features\trips\presentation\driver\screens\shared\driver_shared_chat_trips_screen.dart:9:13 - unused_element
+   info - The variable name 'm_id' isn't a lowerCamelCase identifier - lib\features\trips\presentation\driver\screens\shared\driver_shared_chat_trips_screen.dart:14:10 - non_constant_identifier_names
+   info - The variable name 'chat_id' isn't a lowerCamelCase identifier - lib\features\trips\presentation\driver\screens\shared\driver_shared_chat_trips_screen.dart:15:10 - non_constant_identifier_names
+   info - The variable name 'r_name' isn't a lowerCamelCase identifier - lib\features\trips\presentation\driver\screens\shared\driver_shared_chat_trips_screen.dart:16:10 - non_constant_identifier_names
+   info - The variable name 'm_id' isn't a lowerCamelCase identifier - lib\features\trips\presentation\driver\screens\shared\driver_shared_chat_trips_screen.dart:18:17 - non_constant_identifier_names
+   info - The variable name 'chat_id' isn't a lowerCamelCase identifier - lib\features\trips\presentation\driver\screens\shared\driver_shared_chat_trips_screen.dart:19:17 - non_constant_identifier_names
+   info - The variable name 'r_name' isn't a lowerCamelCase identifier - lib\features\trips\presentation\driver\screens\shared\driver_shared_chat_trips_screen.dart:20:17 - non_constant_identifier_names
+warning - The value of the field '_auth' isn't used - lib\features\trips\presentation\driver\screens\shared\driver_shared_chat_trips_screen.dart:30:22 - unused_field
+   info - Don't use 'BuildContext's across async gaps - lib\features\trips\presentation\driver\screens\shared\driver_shared_chat_trips_screen.dart:168:11 - use_build_context_synchronously
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\trips\presentation\driver\screens\shared\new_shared_trip.dart:497:43 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\trips\presentation\driver\screens\shared\new_shared_trip.dart:554:50 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\trips\presentation\driver\screens\shared\new_shared_trip.dart:729:35 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\trips\presentation\driver\screens\shared\new_shared_trip.dart:771:36 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\trips\presentation\driver\screens\shared\new_shared_trip.dart:837:35 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\trips\presentation\driver\screens\shared\new_shared_trip.dart:1016:33 - deprecated_member_use
+   info - The variable name 'trip_datetime' isn't a lowerCamelCase identifier - lib\features\trips\presentation\driver\screens\shared\shared_canceled_trips_screen.dart:18:10 - non_constant_identifier_names
+   info - The variable name 'from_location_name' isn't a lowerCamelCase identifier - lib\features\trips\presentation\driver\screens\shared\shared_canceled_trips_screen.dart:19:10 - non_constant_identifier_names
+   info - The variable name 'to_location_name' isn't a lowerCamelCase identifier - lib\features\trips\presentation\driver\screens\shared\shared_canceled_trips_screen.dart:20:10 - non_constant_identifier_names
+   info - The variable name 'number_of_seats' isn't a lowerCamelCase identifier - lib\features\trips\presentation\driver\screens\shared\shared_canceled_trips_screen.dart:21:10 - non_constant_identifier_names
+   info - The variable name 'gender_preference' isn't a lowerCamelCase identifier - lib\features\trips\presentation\driver\screens\shared\shared_canceled_trips_screen.dart:22:10 - non_constant_identifier_names
+   info - The variable name 'driver_name' isn't a lowerCamelCase identifier - lib\features\trips\presentation\driver\screens\shared\shared_canceled_trips_screen.dart:24:10 - non_constant_identifier_names
+   info - The variable name 'trip_datetime' isn't a lowerCamelCase identifier - lib\features\trips\presentation\driver\screens\shared\shared_canceled_trips_screen.dart:29:17 - non_constant_identifier_names
+   info - The variable name 'from_location_name' isn't a lowerCamelCase identifier - lib\features\trips\presentation\driver\screens\shared\shared_canceled_trips_screen.dart:30:17 - non_constant_identifier_names
+   info - The variable name 'to_location_name' isn't a lowerCamelCase identifier - lib\features\trips\presentation\driver\screens\shared\shared_canceled_trips_screen.dart:31:17 - non_constant_identifier_names
+   info - The variable name 'number_of_seats' isn't a lowerCamelCase identifier - lib\features\trips\presentation\driver\screens\shared\shared_canceled_trips_screen.dart:32:17 - non_constant_identifier_names
+   info - The variable name 'gender_preference' isn't a lowerCamelCase identifier - lib\features\trips\presentation\driver\screens\shared\shared_canceled_trips_screen.dart:33:17 - non_constant_identifier_names
+   info - The variable name 'driver_name' isn't a lowerCamelCase identifier - lib\features\trips\presentation\driver\screens\shared\shared_canceled_trips_screen.dart:35:17 - non_constant_identifier_names
+   info - The variable name 'trip_datetime' isn't a lowerCamelCase identifier - lib\features\trips\presentation\driver\screens\shared\shared_completed_trips_screen.dart:18:10 - non_constant_identifier_names
+   info - The variable name 'from_location_name' isn't a lowerCamelCase identifier - lib\features\trips\presentation\driver\screens\shared\shared_completed_trips_screen.dart:19:10 - non_constant_identifier_names
+   info - The variable name 'to_location_name' isn't a lowerCamelCase identifier - lib\features\trips\presentation\driver\screens\shared\shared_completed_trips_screen.dart:20:10 - non_constant_identifier_names
+   info - The variable name 'number_of_seats' isn't a lowerCamelCase identifier - lib\features\trips\presentation\driver\screens\shared\shared_completed_trips_screen.dart:21:10 - non_constant_identifier_names
+   info - The variable name 'gender_preference' isn't a lowerCamelCase identifier - lib\features\trips\presentation\driver\screens\shared\shared_completed_trips_screen.dart:22:10 - non_constant_identifier_names
+   info - The variable name 'driver_name' isn't a lowerCamelCase identifier - lib\features\trips\presentation\driver\screens\shared\shared_completed_trips_screen.dart:24:10 - non_constant_identifier_names
+   info - The variable name 'avg_total' isn't a lowerCamelCase identifier - lib\features\trips\presentation\driver\screens\shared\shared_completed_trips_screen.dart:25:10 - non_constant_identifier_names
+   info - The variable name 'precantage_per_each' isn't a lowerCamelCase identifier - lib\features\trips\presentation\driver\screens\shared\shared_completed_trips_screen.dart:26:10 - non_constant_identifier_names
+   info - The variable name 'trip_datetime' isn't a lowerCamelCase identifier - lib\features\trips\presentation\driver\screens\shared\shared_completed_trips_screen.dart:32:17 - non_constant_identifier_names
+   info - The variable name 'from_location_name' isn't a lowerCamelCase identifier - lib\features\trips\presentation\driver\screens\shared\shared_completed_trips_screen.dart:33:17 - non_constant_identifier_names
+   info - The variable name 'to_location_name' isn't a lowerCamelCase identifier - lib\features\trips\presentation\driver\screens\shared\shared_completed_trips_screen.dart:34:17 - non_constant_identifier_names
+   info - The variable name 'number_of_seats' isn't a lowerCamelCase identifier - lib\features\trips\presentation\driver\screens\shared\shared_completed_trips_screen.dart:35:17 - non_constant_identifier_names
+   info - The variable name 'gender_preference' isn't a lowerCamelCase identifier - lib\features\trips\presentation\driver\screens\shared\shared_completed_trips_screen.dart:36:17 - non_constant_identifier_names
+   info - The variable name 'driver_name' isn't a lowerCamelCase identifier - lib\features\trips\presentation\driver\screens\shared\shared_completed_trips_screen.dart:38:17 - non_constant_identifier_names
+   info - The variable name 'avg_total' isn't a lowerCamelCase identifier - lib\features\trips\presentation\driver\screens\shared\shared_completed_trips_screen.dart:39:17 - non_constant_identifier_names
+   info - The variable name 'precantage_per_each' isn't a lowerCamelCase identifier - lib\features\trips\presentation\driver\screens\shared\shared_completed_trips_screen.dart:40:17 - non_constant_identifier_names
+   info - The variable name 'trip_datetime' isn't a lowerCamelCase identifier - lib\features\trips\presentation\driver\screens\shared\shared_suspended_trips_screen.dart:21:12 - non_constant_identifier_names
+   info - The variable name 'from_location_name' isn't a lowerCamelCase identifier - lib\features\trips\presentation\driver\screens\shared\shared_suspended_trips_screen.dart:22:12 - non_constant_identifier_names
+   info - The variable name 'to_location_name' isn't a lowerCamelCase identifier - lib\features\trips\presentation\driver\screens\shared\shared_suspended_trips_screen.dart:23:12 - non_constant_identifier_names
+   info - The variable name 'number_of_seats' isn't a lowerCamelCase identifier - lib\features\trips\presentation\driver\screens\shared\shared_suspended_trips_screen.dart:24:12 - non_constant_identifier_names
+   info - The variable name 'gender_preference' isn't a lowerCamelCase identifier - lib\features\trips\presentation\driver\screens\shared\shared_suspended_trips_screen.dart:25:12 - non_constant_identifier_names
+   info - The variable name 'driver_name' isn't a lowerCamelCase identifier - lib\features\trips\presentation\driver\screens\shared\shared_suspended_trips_screen.dart:27:12 - non_constant_identifier_names
+   info - The variable name 'trip_datetime' isn't a lowerCamelCase identifier - lib\features\trips\presentation\driver\screens\shared\shared_suspended_trips_screen.dart:30:17 - non_constant_identifier_names
+   info - The variable name 'from_location_name' isn't a lowerCamelCase identifier - lib\features\trips\presentation\driver\screens\shared\shared_suspended_trips_screen.dart:31:17 - non_constant_identifier_names
+   info - The variable name 'to_location_name' isn't a lowerCamelCase identifier - lib\features\trips\presentation\driver\screens\shared\shared_suspended_trips_screen.dart:32:17 - non_constant_identifier_names
+   info - The variable name 'number_of_seats' isn't a lowerCamelCase identifier - lib\features\trips\presentation\driver\screens\shared\shared_suspended_trips_screen.dart:33:17 - non_constant_identifier_names
+   info - The variable name 'gender_preference' isn't a lowerCamelCase identifier - lib\features\trips\presentation\driver\screens\shared\shared_suspended_trips_screen.dart:34:17 - non_constant_identifier_names
+   info - The variable name 'driver_name' isn't a lowerCamelCase identifier - lib\features\trips\presentation\driver\screens\shared\shared_suspended_trips_screen.dart:36:17 - non_constant_identifier_names
+   info - The variable name 'OffersList' isn't a lowerCamelCase identifier - lib\features\trips\presentation\driver\screens\shared\shared_suspended_trips_screen.dart:46:8 - non_constant_identifier_names
+   info - The variable name 'AcceptedOffer' isn't a lowerCamelCase identifier - lib\features\trips\presentation\driver\screens\shared\shared_suspended_trips_screen.dart:47:7 - non_constant_identifier_names
+   info - Missing type annotation - lib\features\trips\presentation\driver\screens\shared\shared_suspended_trips_screen.dart:49:3 - strict_top_level_inference
+   info - Missing type annotation - lib\features\trips\presentation\driver\screens\shared\shared_suspended_trips_screen.dart:49:15 - strict_top_level_inference
+   info - The variable name 'NewOffersList' isn't a lowerCamelCase identifier - lib\features\trips\presentation\driver\screens\shared\shared_suspended_trips_screen.dart:49:15 - non_constant_identifier_names
+   info - Missing type annotation - lib\features\trips\presentation\driver\screens\shared\shared_suspended_trips_screen.dart:56:3 - strict_top_level_inference
+   info - Missing type annotation - lib\features\trips\presentation\driver\screens\shared\shared_suspended_trips_screen.dart:56:17 - strict_top_level_inference
+   info - Missing type annotation - lib\features\trips\presentation\driver\screens\shared\shared_suspended_trips_screen.dart:62:3 - strict_top_level_inference
+   info - The variable name 'PassState' isn't a lowerCamelCase identifier - lib\features\trips\presentation\driver\screens\shared\shared_suspended_trips_screen.dart:62:3 - non_constant_identifier_names
+   info - Missing type annotation - lib\features\trips\presentation\driver\screens\shared\shared_suspended_trips_screen.dart:63:5 - strict_top_level_inference
+   info - The variable name 'NewOffersList' isn't a lowerCamelCase identifier - lib\features\trips\presentation\driver\screens\shared\shared_suspended_trips_screen.dart:63:5 - non_constant_identifier_names
+   info - Missing type annotation - lib\features\trips\presentation\driver\screens\shared\shared_suspended_trips_screen.dart:64:5 - strict_top_level_inference
+   info - The variable name 'NewAcceptedOffer' isn't a lowerCamelCase identifier - lib\features\trips\presentation\driver\screens\shared\shared_suspended_trips_screen.dart:64:5 - non_constant_identifier_names
+   info - Use interpolation to compose strings and values - lib\features\trips\presentation\driver\screens\shared\shared_suspended_trips_screen.dart:221:32 - prefer_interpolation_to_compose_strings
+   info - Use a 'SizedBox' to add whitespace to a layout - lib\features\trips\presentation\driver\screens\shared\shared_suspended_trips_screen.dart:288:19 - sized_box_for_whitespace
+   info - Use interpolation to compose strings and values - lib\features\trips\presentation\driver\screens\shared\shared_suspended_trips_screen.dart:377:37 - prefer_interpolation_to_compose_strings
+   info - An uninitialized field should have an explicit type annotation - lib\features\trips\presentation\driver\screens\trips_list_screen.dart:67:7 - prefer_typing_uninitialized_variables
+   info - Missing type annotation - lib\features\trips\presentation\driver\screens\trips_list_screen.dart:67:7 - strict_top_level_inference
+   info - Missing type annotation - lib\features\trips\presentation\driver\screens\trips_list_screen.dart:69:3 - strict_top_level_inference
+   info - The variable name 'user_data' isn't a lowerCamelCase identifier - lib\features\trips\presentation\driver\screens\trips_list_screen.dart:71:9 - non_constant_identifier_names
+   info - Missing type annotation - lib\features\trips\presentation\driver\screens\trips_list_screen.dart:79:3 - strict_top_level_inference
+   info - Use a 'SizedBox' to add whitespace to a layout - lib\features\trips\presentation\driver\screens\trips_list_screen.dart:111:15 - sized_box_for_whitespace
+   info - Use a 'SizedBox' to add whitespace to a layout - lib\features\trips\presentation\driver\screens\trips_list_screen.dart:133:23 - sized_box_for_whitespace
+   info - Unnecessary instance of 'Container' - lib\features\trips\presentation\driver\screens\trips_list_screen.dart:174:23 - avoid_unnecessary_containers
+   info - Use a 'SizedBox' to add whitespace to a layout - lib\features\trips\presentation\driver\screens\trips_list_screen.dart:187:37 - sized_box_for_whitespace
+   info - Unnecessary instance of 'Container' - lib\features\trips\presentation\driver\screens\trips_list_screen.dart:235:37 - avoid_unnecessary_containers
+   info - Unnecessary instance of 'Container' - lib\features\trips\presentation\driver\screens\trips_list_screen.dart:243:45 - avoid_unnecessary_containers
+   info - Unnecessary instance of 'Container' - lib\features\trips\presentation\driver\screens\trips_list_screen.dart:305:45 - avoid_unnecessary_containers
+   info - Unnecessary instance of 'Container' - lib\features\trips\presentation\driver\screens\trips_list_screen.dart:375:45 - avoid_unnecessary_containers
+   info - Unnecessary instance of 'Container' - lib\features\trips\presentation\driver\screens\trips_list_screen.dart:444:45 - avoid_unnecessary_containers
+   info - Use a 'SizedBox' to add whitespace to a layout - lib\features\trips\presentation\driver\screens\trips_list_screen.dart:522:37 - sized_box_for_whitespace
+   info - Unnecessary instance of 'Container' - lib\features\trips\presentation\driver\screens\trips_list_screen.dart:570:37 - avoid_unnecessary_containers
+   info - Unnecessary instance of 'Container' - lib\features\trips\presentation\driver\screens\trips_list_screen.dart:579:45 - avoid_unnecessary_containers
+warning - The value of the local variable 'check' isn't used - lib\features\trips\presentation\driver\screens\trips_list_screen.dart:618:68 - unused_local_variable
+warning - Dead code - lib\features\trips\presentation\driver\screens\trips_list_screen.dart:650:70 - dead_code
+   info - Unnecessary instance of 'Container' - lib\features\trips\presentation\driver\screens\trips_list_screen.dart:763:45 - avoid_unnecessary_containers
+   info - Unnecessary instance of 'Container' - lib\features\trips\presentation\driver\screens\trips_list_screen.dart:844:45 - avoid_unnecessary_containers
+   info - Unnecessary instance of 'Container' - lib\features\trips\presentation\driver\screens\trips_list_screen.dart:928:45 - avoid_unnecessary_containers
+   info - Missing type annotation - lib\features\trips\presentation\driver\screens\trips_list_screen.dart:1031:1 - strict_top_level_inference
+   info - Missing type annotation - lib\features\trips\presentation\driver\screens\trips_list_screen.dart:1041:1 - strict_top_level_inference
+   info - Missing type annotation - lib\features\trips\presentation\driver\screens\trips_list_screen.dart:1041:8 - strict_top_level_inference
+warning - Dead code - lib\features\trips\presentation\driver\screens\trips_list_screen.dart:1043:3 - dead_code
+warning - The value of the field '_client' isn't used - lib\features\trips\presentation\passenger\cubit\passenger_add_private_trip_cubit.dart:20:19 - unused_field
+   info - Missing type annotation - lib\features\trips\presentation\passenger\cubit\passenger_add_private_trip_cubit.dart:48:43 - strict_top_level_inference
+   info - The variable name 'PassengersCountIn' isn't a lowerCamelCase identifier - lib\features\trips\presentation\passenger\cubit\passenger_add_private_trip_cubit.dart:52:7 - non_constant_identifier_names
+   info - The variable name 'OnGoingTripStatus' isn't a lowerCamelCase identifier - lib\features\trips\presentation\passenger\cubit\passenger_add_private_trip_cubit.dart:94:10 - non_constant_identifier_names
+   info - 'fromAssetImage' is deprecated and shouldn't be used. Use BitmapDescriptor.asset method instead - lib\features\trips\presentation\passenger\cubit\passenger_add_private_trip_cubit.dart:247:40 - deprecated_member_use
+   info - 'fromAssetImage' is deprecated and shouldn't be used. Use BitmapDescriptor.asset method instead - lib\features\trips\presentation\passenger\cubit\passenger_add_private_trip_cubit.dart:267:40 - deprecated_member_use
+   info - The variable name 'trip_id' isn't a lowerCamelCase identifier - lib\features\trips\presentation\passenger\cubit\passenger_add_private_trip_cubit.dart:444:13 - non_constant_identifier_names
+   info - The variable name 'PassState' isn't a lowerCamelCase identifier - lib\features\trips\presentation\passenger\cubit\passenger_add_private_trip_cubit.dart:445:13 - non_constant_identifier_names
+   info - The variable name 'in_car' isn't a lowerCamelCase identifier - lib\features\trips\presentation\passenger\cubit\passenger_add_private_trip_cubit.dart:446:13 - non_constant_identifier_names
+warning - The value of the field '_storage' isn't used - lib\features\trips\presentation\passenger\cubit\passenger_search_shared_trips_cubit.dart:25:22 - unused_field
+   info - The variable name 'TripsListByTypeCurrentPrivete' isn't a lowerCamelCase identifier - lib\features\trips\presentation\passenger\cubit\passenger_trips_cubit.dart:71:8 - non_constant_identifier_names
+   info - The variable name 'TripsListByTypeCompletedPrivete' isn't a lowerCamelCase identifier - lib\features\trips\presentation\passenger\cubit\passenger_trips_cubit.dart:72:8 - non_constant_identifier_names
+   info - The variable name 'TripsListByTypeSuspendedPrivete' isn't a lowerCamelCase identifier - lib\features\trips\presentation\passenger\cubit\passenger_trips_cubit.dart:73:8 - non_constant_identifier_names
+   info - The variable name 'TripsListByTypeCanceledPrivete' isn't a lowerCamelCase identifier - lib\features\trips\presentation\passenger\cubit\passenger_trips_cubit.dart:74:8 - non_constant_identifier_names
+   info - The variable name 'TripsListByTypeCurrentShared' isn't a lowerCamelCase identifier - lib\features\trips\presentation\passenger\cubit\passenger_trips_cubit.dart:76:8 - non_constant_identifier_names
+   info - The variable name 'TripsListByTypeCompletedShared' isn't a lowerCamelCase identifier - lib\features\trips\presentation\passenger\cubit\passenger_trips_cubit.dart:77:8 - non_constant_identifier_names
+   info - The variable name 'TripsListByTypeSuspendedShared' isn't a lowerCamelCase identifier - lib\features\trips\presentation\passenger\cubit\passenger_trips_cubit.dart:78:8 - non_constant_identifier_names
+   info - The variable name 'TripsListByTypeCanceledShared' isn't a lowerCamelCase identifier - lib\features\trips\presentation\passenger\cubit\passenger_trips_cubit.dart:79:8 - non_constant_identifier_names
+   info - The variable name 'OfferListUser' isn't a lowerCamelCase identifier - lib\features\trips\presentation\passenger\cubit\passenger_trips_cubit.dart:81:8 - non_constant_identifier_names
+   info - The variable name 'AcceptedOffer' isn't a lowerCamelCase identifier - lib\features\trips\presentation\passenger\cubit\passenger_trips_cubit.dart:82:7 - non_constant_identifier_names
+   info - The variable name 'TripId' isn't a lowerCamelCase identifier - lib\features\trips\presentation\passenger\cubit\passenger_trips_cubit.dart:248:18 - non_constant_identifier_names
+   info - The variable name 'PassState' isn't a lowerCamelCase identifier - lib\features\trips\presentation\passenger\cubit\passenger_trips_cubit.dart:262:13 - non_constant_identifier_names
+   info - The variable name 'trip_id' isn't a lowerCamelCase identifier - lib\features\trips\presentation\passenger\cubit\passenger_trips_cubit.dart:284:18 - non_constant_identifier_names
+   info - The variable name 'percentage_added' isn't a lowerCamelCase identifier - lib\features\trips\presentation\passenger\cubit\passenger_trips_cubit.dart:287:13 - non_constant_identifier_names
+   info - The variable name 'PassState' isn't a lowerCamelCase identifier - lib\features\trips\presentation\passenger\cubit\passenger_trips_cubit.dart:335:13 - non_constant_identifier_names
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\trips\presentation\passenger\screens\private\add_private_trip_screen.dart:209:45 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\trips\presentation\passenger\screens\private\add_private_trip_screen.dart:260:50 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\trips\presentation\passenger\screens\private\add_private_trip_screen.dart:392:35 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\trips\presentation\passenger\screens\private\add_private_trip_screen.dart:438:36 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\trips\presentation\passenger\screens\private\add_private_trip_screen.dart:523:35 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\trips\presentation\passenger\screens\private\add_private_trip_screen.dart:739:32 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\trips\presentation\passenger\screens\private\add_private_trip_screen.dart:788:43 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\trips\presentation\passenger\screens\private\add_private_trip_screen.dart:1221:32 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\trips\presentation\passenger\screens\private\add_private_trip_screen.dart:1268:37 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\trips\presentation\passenger\screens\private\add_private_trip_screen.dart:1502:33 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\trips\presentation\passenger\screens\private\add_private_trip_screen.dart:1555:27 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\trips\presentation\passenger\screens\private\add_private_trip_screen.dart:1591:40 - deprecated_member_use
+   info - 'activeColor' is deprecated and shouldn't be used. Use activeThumbColor instead. This feature was deprecated after v3.31.0-2.0.pre - lib\features\trips\presentation\passenger\screens\private\add_private_trip_screen.dart:1601:15 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\trips\presentation\passenger\screens\private\add_private_trip_screen.dart:1604:48 - deprecated_member_use
+warning - Unused import: 'package:geolocator/geolocator.dart' - lib\features\trips\presentation\passenger\screens\private\current_private_trip_screen.dart:26:8 - unused_import
+warning - The value of the field '_kDefaultCamera' isn't used - lib\features\trips\presentation\passenger\screens\private\current_private_trip_screen.dart:68:31 - unused_field
+   info - The private field _isSheetCollapsed could be 'final' - lib\features\trips\presentation\passenger\screens\private\current_private_trip_screen.dart:121:8 - prefer_final_fields
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\trips\presentation\passenger\screens\private\current_private_trip_screen.dart:550:30 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\trips\presentation\passenger\screens\private\current_private_trip_screen.dart:882:33 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\trips\presentation\passenger\screens\private\current_private_trip_screen.dart:902:39 - deprecated_member_use
+warning - The declaration '_price' isn't referenced - lib\features\trips\presentation\passenger\screens\private\current_private_trip_screen.dart:983:14 - unused_element
+   info - Unnecessary escape in string literal - lib\features\trips\presentation\passenger\screens\private\current_private_trip_screen.dart:1065:28 - unnecessary_string_escapes
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\trips\presentation\passenger\screens\private\current_private_trip_screen.dart:1145:53 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\trips\presentation\passenger\screens\private\current_private_trip_screen.dart:1229:63 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\trips\presentation\passenger\screens\private\current_private_trip_screen.dart:1320:41 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\trips\presentation\passenger\screens\private\current_private_trip_screen.dart:1347:41 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\trips\presentation\passenger\screens\private\current_private_trip_screen.dart:1497:61 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\trips\presentation\passenger\screens\private\current_private_trip_screen.dart:1569:27 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\trips\presentation\passenger\screens\private\current_private_trip_screen.dart:1571:46 - deprecated_member_use
+   info - The variable name 'trip_datetime' isn't a lowerCamelCase identifier - lib\features\trips\presentation\passenger\screens\private\private_canceled_trips_screen.dart:18:10 - non_constant_identifier_names
+   info - The variable name 'from_location_name' isn't a lowerCamelCase identifier - lib\features\trips\presentation\passenger\screens\private\private_canceled_trips_screen.dart:19:10 - non_constant_identifier_names
+   info - The variable name 'to_location_name' isn't a lowerCamelCase identifier - lib\features\trips\presentation\passenger\screens\private\private_canceled_trips_screen.dart:20:10 - non_constant_identifier_names
+   info - The variable name 'number_of_seats' isn't a lowerCamelCase identifier - lib\features\trips\presentation\passenger\screens\private\private_canceled_trips_screen.dart:21:10 - non_constant_identifier_names
+   info - The variable name 'gender_preference' isn't a lowerCamelCase identifier - lib\features\trips\presentation\passenger\screens\private\private_canceled_trips_screen.dart:22:10 - non_constant_identifier_names
+   info - The variable name 'driver_name' isn't a lowerCamelCase identifier - lib\features\trips\presentation\passenger\screens\private\private_canceled_trips_screen.dart:24:10 - non_constant_identifier_names
+   info - The variable name 'trip_datetime' isn't a lowerCamelCase identifier - lib\features\trips\presentation\passenger\screens\private\private_canceled_trips_screen.dart:29:17 - non_constant_identifier_names
+   info - The variable name 'from_location_name' isn't a lowerCamelCase identifier - lib\features\trips\presentation\passenger\screens\private\private_canceled_trips_screen.dart:30:17 - non_constant_identifier_names
+   info - The variable name 'to_location_name' isn't a lowerCamelCase identifier - lib\features\trips\presentation\passenger\screens\private\private_canceled_trips_screen.dart:31:17 - non_constant_identifier_names
+   info - The variable name 'number_of_seats' isn't a lowerCamelCase identifier - lib\features\trips\presentation\passenger\screens\private\private_canceled_trips_screen.dart:32:17 - non_constant_identifier_names
+   info - The variable name 'gender_preference' isn't a lowerCamelCase identifier - lib\features\trips\presentation\passenger\screens\private\private_canceled_trips_screen.dart:33:17 - non_constant_identifier_names
+   info - The variable name 'driver_name' isn't a lowerCamelCase identifier - lib\features\trips\presentation\passenger\screens\private\private_canceled_trips_screen.dart:35:17 - non_constant_identifier_names
+   info - The variable name 'trip_datetime' isn't a lowerCamelCase identifier - lib\features\trips\presentation\passenger\screens\private\private_completed_trips_screen.dart:18:10 - non_constant_identifier_names
+   info - The variable name 'from_location_name' isn't a lowerCamelCase identifier - lib\features\trips\presentation\passenger\screens\private\private_completed_trips_screen.dart:19:10 - non_constant_identifier_names
+   info - The variable name 'to_location_name' isn't a lowerCamelCase identifier - lib\features\trips\presentation\passenger\screens\private\private_completed_trips_screen.dart:20:10 - non_constant_identifier_names
+   info - The variable name 'number_of_seats' isn't a lowerCamelCase identifier - lib\features\trips\presentation\passenger\screens\private\private_completed_trips_screen.dart:21:10 - non_constant_identifier_names
+   info - The variable name 'gender_preference' isn't a lowerCamelCase identifier - lib\features\trips\presentation\passenger\screens\private\private_completed_trips_screen.dart:22:10 - non_constant_identifier_names
+   info - The variable name 'driver_name' isn't a lowerCamelCase identifier - lib\features\trips\presentation\passenger\screens\private\private_completed_trips_screen.dart:24:10 - non_constant_identifier_names
+   info - The variable name 'trip_datetime' isn't a lowerCamelCase identifier - lib\features\trips\presentation\passenger\screens\private\private_completed_trips_screen.dart:29:17 - non_constant_identifier_names
+   info - The variable name 'from_location_name' isn't a lowerCamelCase identifier - lib\features\trips\presentation\passenger\screens\private\private_completed_trips_screen.dart:30:17 - non_constant_identifier_names
+   info - The variable name 'to_location_name' isn't a lowerCamelCase identifier - lib\features\trips\presentation\passenger\screens\private\private_completed_trips_screen.dart:31:17 - non_constant_identifier_names
+   info - The variable name 'number_of_seats' isn't a lowerCamelCase identifier - lib\features\trips\presentation\passenger\screens\private\private_completed_trips_screen.dart:32:17 - non_constant_identifier_names
+   info - The variable name 'gender_preference' isn't a lowerCamelCase identifier - lib\features\trips\presentation\passenger\screens\private\private_completed_trips_screen.dart:33:17 - non_constant_identifier_names
+   info - The variable name 'driver_name' isn't a lowerCamelCase identifier - lib\features\trips\presentation\passenger\screens\private\private_completed_trips_screen.dart:35:17 - non_constant_identifier_names
+   info - The variable name 'trip_datetime' isn't a lowerCamelCase identifier - lib\features\trips\presentation\passenger\screens\private\private_current_screen_offers.dart:30:10 - non_constant_identifier_names
+   info - The variable name 'from_location_name' isn't a lowerCamelCase identifier - lib\features\trips\presentation\passenger\screens\private\private_current_screen_offers.dart:31:10 - non_constant_identifier_names
+   info - The variable name 'to_location_name' isn't a lowerCamelCase identifier - lib\features\trips\presentation\passenger\screens\private\private_current_screen_offers.dart:32:10 - non_constant_identifier_names
+   info - The variable name 'driver_name' isn't a lowerCamelCase identifier - lib\features\trips\presentation\passenger\screens\private\private_current_screen_offers.dart:34:10 - non_constant_identifier_names
+   info - The variable name 'proposed_fare' isn't a lowerCamelCase identifier - lib\features\trips\presentation\passenger\screens\private\private_current_screen_offers.dart:35:10 - non_constant_identifier_names
+   info - The variable name 'is_auto_accept' isn't a lowerCamelCase identifier - lib\features\trips\presentation\passenger\screens\private\private_current_screen_offers.dart:36:10 - non_constant_identifier_names
+   info - The variable name 'trip_datetime' isn't a lowerCamelCase identifier - lib\features\trips\presentation\passenger\screens\private\private_current_screen_offers.dart:40:17 - non_constant_identifier_names
+   info - The variable name 'from_location_name' isn't a lowerCamelCase identifier - lib\features\trips\presentation\passenger\screens\private\private_current_screen_offers.dart:42:17 - non_constant_identifier_names
+   info - The variable name 'to_location_name' isn't a lowerCamelCase identifier - lib\features\trips\presentation\passenger\screens\private\private_current_screen_offers.dart:43:17 - non_constant_identifier_names
+   info - The variable name 'driver_name' isn't a lowerCamelCase identifier - lib\features\trips\presentation\passenger\screens\private\private_current_screen_offers.dart:45:17 - non_constant_identifier_names
+   info - The variable name 'proposed_fare' isn't a lowerCamelCase identifier - lib\features\trips\presentation\passenger\screens\private\private_current_screen_offers.dart:46:17 - non_constant_identifier_names
+   info - The variable name 'is_auto_accept' isn't a lowerCamelCase identifier - lib\features\trips\presentation\passenger\screens\private\private_current_screen_offers.dart:47:17 - non_constant_identifier_names
+   info - Missing type annotation - lib\features\trips\presentation\passenger\screens\private\private_current_screen_offers.dart:164:21 - strict_top_level_inference
+   info - Missing type annotation - lib\features\trips\presentation\passenger\screens\private\private_current_screen_offers.dart:164:36 - strict_top_level_inference
+   info - Missing type annotation - lib\features\trips\presentation\passenger\screens\private\private_current_screen_offers.dart:193:19 - strict_top_level_inference
+   info - Missing type annotation - lib\features\trips\presentation\passenger\screens\private\private_current_screen_offers.dart:193:34 - strict_top_level_inference
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\trips\presentation\passenger\screens\private\private_current_screen_offers.dart:526:56 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\trips\presentation\passenger\screens\private\private_current_screen_offers.dart:600:53 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\trips\presentation\passenger\screens\private\private_current_screen_offers.dart:673:43 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\trips\presentation\passenger\screens\private\private_current_screen_offers.dart:728:42 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\trips\presentation\passenger\screens\private\private_current_screen_offers.dart:833:39 - deprecated_member_use
+   info - 'activeColor' is deprecated and shouldn't be used. Use activeThumbColor instead. This feature was deprecated after v3.31.0-2.0.pre - lib\features\trips\presentation\passenger\screens\private\private_current_screen_offers.dart:843:19 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\trips\presentation\passenger\screens\private\private_current_screen_offers.dart:844:60 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\trips\presentation\passenger\screens\private\private_current_screen_offers.dart:1040:33 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\trips\presentation\passenger\screens\private\private_current_screen_offers.dart:1070:43 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\trips\presentation\passenger\screens\private\private_current_screen_offers.dart:1160:56 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\trips\presentation\passenger\screens\private\private_current_screen_offers.dart:1359:37 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\trips\presentation\passenger\screens\private\private_current_screen_offers.dart:1366:37 - deprecated_member_use
+warning - Unused import: 'package:flutter_bloc/flutter_bloc.dart' - lib\features\trips\presentation\passenger\screens\private\private_suspended_screen.dart:11:8 - unused_import
+   info - The variable name 'trip_datetime' isn't a lowerCamelCase identifier - lib\features\trips\presentation\passenger\screens\private\private_suspended_screen.dart:21:10 - non_constant_identifier_names
+   info - The variable name 'from_location_name' isn't a lowerCamelCase identifier - lib\features\trips\presentation\passenger\screens\private\private_suspended_screen.dart:22:10 - non_constant_identifier_names
+   info - The variable name 'to_location_name' isn't a lowerCamelCase identifier - lib\features\trips\presentation\passenger\screens\private\private_suspended_screen.dart:23:10 - non_constant_identifier_names
+   info - The variable name 'driver_name' isn't a lowerCamelCase identifier - lib\features\trips\presentation\passenger\screens\private\private_suspended_screen.dart:25:10 - non_constant_identifier_names
+   info - The variable name 'trip_datetime' isn't a lowerCamelCase identifier - lib\features\trips\presentation\passenger\screens\private\private_suspended_screen.dart:30:17 - non_constant_identifier_names
+   info - The variable name 'from_location_name' isn't a lowerCamelCase identifier - lib\features\trips\presentation\passenger\screens\private\private_suspended_screen.dart:31:17 - non_constant_identifier_names
+   info - The variable name 'to_location_name' isn't a lowerCamelCase identifier - lib\features\trips\presentation\passenger\screens\private\private_suspended_screen.dart:32:17 - non_constant_identifier_names
+   info - The variable name 'driver_name' isn't a lowerCamelCase identifier - lib\features\trips\presentation\passenger\screens\private\private_suspended_screen.dart:34:17 - non_constant_identifier_names
+   info - 'MaterialStatePropertyAll' is deprecated and shouldn't be used. Use WidgetStatePropertyAll instead. Moved to the Widgets layer to make code available outside of Material. This feature was deprecated after v3.19.0-0.3.pre - lib\features\trips\presentation\passenger\screens\private\private_suspended_screen.dart:178:42 - deprecated_member_use
+   info - Don't use 'BuildContext's across async gaps - lib\features\trips\presentation\passenger\screens\private\private_suspended_screen.dart:182:50 - use_build_context_synchronously
+warning - Unused import: 'package:geolocator/geolocator.dart' - lib\features\trips\presentation\passenger\screens\shared\ongoing_shared_trip.dart:28:8 - unused_import
+warning - The value of the field '_kDefaultCamera' isn't used - lib\features\trips\presentation\passenger\screens\shared\ongoing_shared_trip.dart:70:31 - unused_field
+   info - The private field _isSheetCollapsed could be 'final' - lib\features\trips\presentation\passenger\screens\shared\ongoing_shared_trip.dart:123:8 - prefer_final_fields
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\trips\presentation\passenger\screens\shared\ongoing_shared_trip.dart:551:30 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\trips\presentation\passenger\screens\shared\ongoing_shared_trip.dart:930:33 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\trips\presentation\passenger\screens\shared\ongoing_shared_trip.dart:950:39 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\trips\presentation\passenger\screens\shared\ongoing_shared_trip.dart:1299:53 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\trips\presentation\passenger\screens\shared\ongoing_shared_trip.dart:1380:63 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\trips\presentation\passenger\screens\shared\ongoing_shared_trip.dart:1471:41 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\trips\presentation\passenger\screens\shared\ongoing_shared_trip.dart:1498:41 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\trips\presentation\passenger\screens\shared\ongoing_shared_trip.dart:1648:61 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\trips\presentation\passenger\screens\shared\ongoing_shared_trip.dart:1720:27 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\trips\presentation\passenger\screens\shared\ongoing_shared_trip.dart:1722:46 - deprecated_member_use
+   info - Unnecessary use of 'toList' in a spread - lib\features\trips\presentation\passenger\screens\shared\ongoing_shared_trip.dart:1837:16 - unnecessary_to_list_in_spreads
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\trips\presentation\passenger\screens\shared\passenger_add_shared_trip_screen.dart:212:45 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\trips\presentation\passenger\screens\shared\passenger_add_shared_trip_screen.dart:264:50 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\trips\presentation\passenger\screens\shared\passenger_add_shared_trip_screen.dart:396:35 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\trips\presentation\passenger\screens\shared\passenger_add_shared_trip_screen.dart:442:36 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\trips\presentation\passenger\screens\shared\passenger_add_shared_trip_screen.dart:508:35 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\trips\presentation\passenger\screens\shared\passenger_add_shared_trip_screen.dart:662:32 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\trips\presentation\passenger\screens\shared\passenger_add_shared_trip_screen.dart:711:43 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\trips\presentation\passenger\screens\shared\passenger_add_shared_trip_screen.dart:1154:32 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\trips\presentation\passenger\screens\shared\passenger_add_shared_trip_screen.dart:1201:37 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\trips\presentation\passenger\screens\shared\passenger_add_shared_trip_screen.dart:1543:35 - deprecated_member_use
+   info - 'activeColor' is deprecated and shouldn't be used. Use activeThumbColor instead. This feature was deprecated after v3.31.0-2.0.pre - lib\features\trips\presentation\passenger\screens\shared\passenger_add_shared_trip_screen.dart:1553:15 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\trips\presentation\passenger\screens\shared\passenger_add_shared_trip_screen.dart:1554:56 - deprecated_member_use
+warning - The declaration '_launchURL' isn't referenced - lib\features\trips\presentation\passenger\screens\shared\passenger_shared_trip_details_passengers_screen.dart:73:16 - unused_element
+   info - Use a 'SizedBox' to add whitespace to a layout - lib\features\trips\presentation\passenger\screens\shared\passenger_shared_trip_details_passengers_screen.dart:132:23 - sized_box_for_whitespace
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\trips\presentation\passenger\screens\shared\passenger_shared_trip_details_passengers_screen.dart:297:65 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\trips\presentation\passenger\screens\shared\passenger_shared_trip_details_passengers_screen.dart:378:76 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\trips\presentation\passenger\screens\shared\passenger_shared_trip_details_passengers_screen.dart:514:50 - deprecated_member_use
+   info - Missing type annotation - lib\features\trips\presentation\passenger\screens\shared\passenger_shared_trip_details_passengers_screen.dart:738:1 - strict_top_level_inference
+   info - Missing type annotation - lib\features\trips\presentation\passenger\screens\shared\passenger_shared_trip_details_passengers_screen.dart:738:16 - strict_top_level_inference
+   info - Missing type annotation - lib\features\trips\presentation\passenger\screens\shared\passenger_shared_trip_details_passengers_screen.dart:738:25 - strict_top_level_inference
+   info - Missing type annotation - lib\features\trips\presentation\passenger\screens\shared\passenger_shared_trip_details_passengers_screen.dart:738:33 - strict_top_level_inference
+   info - Missing type annotation - lib\features\trips\presentation\passenger\screens\shared\passenger_shared_trip_details_passengers_screen.dart:738:43 - strict_top_level_inference
+   info - Missing type annotation - lib\features\trips\presentation\passenger\screens\shared\passenger_shared_trip_details_passengers_screen.dart:738:53 - strict_top_level_inference
+   info - Redundant initialization to 'null' - lib\features\trips\presentation\passenger\screens\shared\passenger_shared_trip_details_passengers_screen.dart:742:13 - avoid_init_to_null
+warning - The value of the local variable 'errorPassText' isn't used - lib\features\trips\presentation\passenger\screens\shared\passenger_shared_trip_details_passengers_screen.dart:742:13 - unused_local_variable
+   info - Redundant initialization to 'null' - lib\features\trips\presentation\passenger\screens\shared\passenger_shared_trip_details_passengers_screen.dart:743:13 - avoid_init_to_null
+warning - The value of the local variable 'errorConfPassText' isn't used - lib\features\trips\presentation\passenger\screens\shared\passenger_shared_trip_details_passengers_screen.dart:743:13 - unused_local_variable
+   info - The local variable '_currentRangeValues' starts with an underscore - lib\features\trips\presentation\passenger\screens\shared\passenger_shared_trip_details_passengers_screen.dart:744:21 - no_leading_underscores_for_local_identifiers
+   info - The variable name 'trip_id' isn't a lowerCamelCase identifier - lib\features\trips\presentation\passenger\screens\shared\passenger_shared_trip_details_passengers_screen.dart:749:13 - non_constant_identifier_names
+warning - The value of the local variable 'trip_id' isn't used - lib\features\trips\presentation\passenger\screens\shared\passenger_shared_trip_details_passengers_screen.dart:749:13 - unused_local_variable
+   info - Redundant initialization to 'null' - lib\features\trips\presentation\passenger\screens\shared\passenger_shared_trip_details_passengers_screen.dart:752:13 - avoid_init_to_null
+   info - Redundant initialization to 'null' - lib\features\trips\presentation\passenger\screens\shared\passenger_shared_trip_details_passengers_screen.dart:753:13 - avoid_init_to_null
+   info - Redundant initialization to 'null' - lib\features\trips\presentation\passenger\screens\shared\passenger_shared_trip_details_passengers_screen.dart:754:13 - avoid_init_to_null
+   info - The variable name 'percentage_added' isn't a lowerCamelCase identifier - lib\features\trips\presentation\passenger\screens\shared\passenger_shared_trip_details_passengers_screen.dart:754:13 - non_constant_identifier_names
+   info - Use a 'SizedBox' to add whitespace to a layout - lib\features\trips\presentation\passenger\screens\shared\passenger_shared_trip_details_passengers_screen.dart:816:31 - sized_box_for_whitespace
+warning - The declaration '_launchURL' isn't referenced - lib\features\trips\presentation\passenger\screens\shared\passenger_shared_trip_details_screen.dart:31:16 - unused_element
+   info - Use a 'SizedBox' to add whitespace to a layout - lib\features\trips\presentation\passenger\screens\shared\passenger_shared_trip_details_screen.dart:122:25 - sized_box_for_whitespace
+   info - Unnecessary instance of 'Container' - lib\features\trips\presentation\passenger\screens\shared\passenger_shared_trip_details_screen.dart:163:25 - avoid_unnecessary_containers
+warning - The value of the local variable 'tripDetails' isn't used - lib\features\trips\presentation\passenger\screens\shared\passenger_shared_trip_details_screen.dart:343:59 - unused_local_variable
+   info - The variable name 'maximum_price' isn't a lowerCamelCase identifier - lib\features\trips\presentation\passenger\screens\shared\passenger_shared_trip_details_screen.dart:345:59 - non_constant_identifier_names
+   info - The variable name 'minimum_price' isn't a lowerCamelCase identifier - lib\features\trips\presentation\passenger\screens\shared\passenger_shared_trip_details_screen.dart:348:59 - non_constant_identifier_names
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\trips\presentation\passenger\screens\shared\passenger_shared_trip_details_screen.dart:421:52 - deprecated_member_use
+   info - Missing type annotation - lib\features\trips\presentation\passenger\screens\shared\passenger_shared_trip_details_screen.dart:651:1 - strict_top_level_inference
+   info - Missing type annotation - lib\features\trips\presentation\passenger\screens\shared\passenger_shared_trip_details_screen.dart:651:16 - strict_top_level_inference
+   info - Missing type annotation - lib\features\trips\presentation\passenger\screens\shared\passenger_shared_trip_details_screen.dart:651:25 - strict_top_level_inference
+   info - Missing type annotation - lib\features\trips\presentation\passenger\screens\shared\passenger_shared_trip_details_screen.dart:651:33 - strict_top_level_inference
+   info - Missing type annotation - lib\features\trips\presentation\passenger\screens\shared\passenger_shared_trip_details_screen.dart:651:43 - strict_top_level_inference
+   info - Missing type annotation - lib\features\trips\presentation\passenger\screens\shared\passenger_shared_trip_details_screen.dart:651:53 - strict_top_level_inference
+   info - Redundant initialization to 'null' - lib\features\trips\presentation\passenger\screens\shared\passenger_shared_trip_details_screen.dart:655:13 - avoid_init_to_null
+warning - The value of the local variable 'errorPassText' isn't used - lib\features\trips\presentation\passenger\screens\shared\passenger_shared_trip_details_screen.dart:655:13 - unused_local_variable
+   info - Redundant initialization to 'null' - lib\features\trips\presentation\passenger\screens\shared\passenger_shared_trip_details_screen.dart:656:13 - avoid_init_to_null
+warning - The value of the local variable 'errorConfPassText' isn't used - lib\features\trips\presentation\passenger\screens\shared\passenger_shared_trip_details_screen.dart:656:13 - unused_local_variable
+   info - The local variable '_currentRangeValues' starts with an underscore - lib\features\trips\presentation\passenger\screens\shared\passenger_shared_trip_details_screen.dart:657:21 - no_leading_underscores_for_local_identifiers
+   info - The variable name 'trip_id' isn't a lowerCamelCase identifier - lib\features\trips\presentation\passenger\screens\shared\passenger_shared_trip_details_screen.dart:662:13 - non_constant_identifier_names
+warning - The value of the local variable 'trip_id' isn't used - lib\features\trips\presentation\passenger\screens\shared\passenger_shared_trip_details_screen.dart:662:13 - unused_local_variable
+   info - Redundant initialization to 'null' - lib\features\trips\presentation\passenger\screens\shared\passenger_shared_trip_details_screen.dart:663:13 - avoid_init_to_null
+   info - Redundant initialization to 'null' - lib\features\trips\presentation\passenger\screens\shared\passenger_shared_trip_details_screen.dart:664:13 - avoid_init_to_null
+   info - Redundant initialization to 'null' - lib\features\trips\presentation\passenger\screens\shared\passenger_shared_trip_details_screen.dart:665:13 - avoid_init_to_null
+   info - The variable name 'percentage_added' isn't a lowerCamelCase identifier - lib\features\trips\presentation\passenger\screens\shared\passenger_shared_trip_details_screen.dart:665:13 - non_constant_identifier_names
+   info - Use a 'SizedBox' to add whitespace to a layout - lib\features\trips\presentation\passenger\screens\shared\passenger_shared_trip_details_screen.dart:727:31 - sized_box_for_whitespace
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\trips\presentation\passenger\screens\shared\passenger_shared_trips_screen.dart:62:39 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\trips\presentation\passenger\screens\shared\passenger_shared_trips_screen.dart:80:37 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\trips\presentation\passenger\screens\shared\passenger_shared_trips_screen.dart:104:41 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\trips\presentation\passenger\screens\shared\passenger_shared_trips_screen.dart:291:33 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\trips\presentation\passenger\screens\shared\passenger_shared_trips_screen.dart:334:56 - deprecated_member_use
+   info - The variable name 'trip_datetime' isn't a lowerCamelCase identifier - lib\features\trips\presentation\passenger\screens\shared\shared_canceled_trips_screen.dart:16:10 - non_constant_identifier_names
+   info - The variable name 'from_location_name' isn't a lowerCamelCase identifier - lib\features\trips\presentation\passenger\screens\shared\shared_canceled_trips_screen.dart:17:10 - non_constant_identifier_names
+   info - The variable name 'to_location_name' isn't a lowerCamelCase identifier - lib\features\trips\presentation\passenger\screens\shared\shared_canceled_trips_screen.dart:18:10 - non_constant_identifier_names
+   info - The variable name 'number_of_seats' isn't a lowerCamelCase identifier - lib\features\trips\presentation\passenger\screens\shared\shared_canceled_trips_screen.dart:19:10 - non_constant_identifier_names
+   info - The variable name 'gender_preference' isn't a lowerCamelCase identifier - lib\features\trips\presentation\passenger\screens\shared\shared_canceled_trips_screen.dart:20:10 - non_constant_identifier_names
+   info - The variable name 'driver_name' isn't a lowerCamelCase identifier - lib\features\trips\presentation\passenger\screens\shared\shared_canceled_trips_screen.dart:22:10 - non_constant_identifier_names
+   info - An uninitialized field should have an explicit type annotation - lib\features\trips\presentation\passenger\screens\shared\shared_canceled_trips_screen.dart:24:9 - prefer_typing_uninitialized_variables
+   info - Missing type annotation - lib\features\trips\presentation\passenger\screens\shared\shared_canceled_trips_screen.dart:24:9 - strict_top_level_inference
+   info - An uninitialized field should have an explicit type annotation - lib\features\trips\presentation\passenger\screens\shared\shared_canceled_trips_screen.dart:25:9 - prefer_typing_uninitialized_variables
+   info - Missing type annotation - lib\features\trips\presentation\passenger\screens\shared\shared_canceled_trips_screen.dart:25:9 - strict_top_level_inference
+   info - An uninitialized field should have an explicit type annotation - lib\features\trips\presentation\passenger\screens\shared\shared_canceled_trips_screen.dart:26:9 - prefer_typing_uninitialized_variables
+   info - Missing type annotation - lib\features\trips\presentation\passenger\screens\shared\shared_canceled_trips_screen.dart:26:9 - strict_top_level_inference
+   info - The variable name 'trip_datetime' isn't a lowerCamelCase identifier - lib\features\trips\presentation\passenger\screens\shared\shared_canceled_trips_screen.dart:26:9 - non_constant_identifier_names
+   info - An uninitialized field should have an explicit type annotation - lib\features\trips\presentation\passenger\screens\shared\shared_canceled_trips_screen.dart:27:9 - prefer_typing_uninitialized_variables
+   info - Missing type annotation - lib\features\trips\presentation\passenger\screens\shared\shared_canceled_trips_screen.dart:27:9 - strict_top_level_inference
+   info - The variable name 'from_location_name' isn't a lowerCamelCase identifier - lib\features\trips\presentation\passenger\screens\shared\shared_canceled_trips_screen.dart:27:9 - non_constant_identifier_names
+   info - An uninitialized field should have an explicit type annotation - lib\features\trips\presentation\passenger\screens\shared\shared_canceled_trips_screen.dart:28:9 - prefer_typing_uninitialized_variables
+   info - Missing type annotation - lib\features\trips\presentation\passenger\screens\shared\shared_canceled_trips_screen.dart:28:9 - strict_top_level_inference
+   info - The variable name 'to_location_name' isn't a lowerCamelCase identifier - lib\features\trips\presentation\passenger\screens\shared\shared_canceled_trips_screen.dart:28:9 - non_constant_identifier_names
+   info - An uninitialized field should have an explicit type annotation - lib\features\trips\presentation\passenger\screens\shared\shared_canceled_trips_screen.dart:29:9 - prefer_typing_uninitialized_variables
+   info - Missing type annotation - lib\features\trips\presentation\passenger\screens\shared\shared_canceled_trips_screen.dart:29:9 - strict_top_level_inference
+   info - The variable name 'number_of_seats' isn't a lowerCamelCase identifier - lib\features\trips\presentation\passenger\screens\shared\shared_canceled_trips_screen.dart:29:9 - non_constant_identifier_names
+   info - An uninitialized field should have an explicit type annotation - lib\features\trips\presentation\passenger\screens\shared\shared_canceled_trips_screen.dart:30:9 - prefer_typing_uninitialized_variables
+   info - Missing type annotation - lib\features\trips\presentation\passenger\screens\shared\shared_canceled_trips_screen.dart:30:9 - strict_top_level_inference
+   info - The variable name 'gender_preference' isn't a lowerCamelCase identifier - lib\features\trips\presentation\passenger\screens\shared\shared_canceled_trips_screen.dart:30:9 - non_constant_identifier_names
+   info - An uninitialized field should have an explicit type annotation - lib\features\trips\presentation\passenger\screens\shared\shared_canceled_trips_screen.dart:31:9 - prefer_typing_uninitialized_variables
+   info - Missing type annotation - lib\features\trips\presentation\passenger\screens\shared\shared_canceled_trips_screen.dart:31:9 - strict_top_level_inference
+   info - An uninitialized field should have an explicit type annotation - lib\features\trips\presentation\passenger\screens\shared\shared_canceled_trips_screen.dart:32:9 - prefer_typing_uninitialized_variables
+   info - Missing type annotation - lib\features\trips\presentation\passenger\screens\shared\shared_canceled_trips_screen.dart:32:9 - strict_top_level_inference
+   info - The variable name 'driver_name' isn't a lowerCamelCase identifier - lib\features\trips\presentation\passenger\screens\shared\shared_canceled_trips_screen.dart:32:9 - non_constant_identifier_names
+   info - The variable name 'trip_datetime' isn't a lowerCamelCase identifier - lib\features\trips\presentation\passenger\screens\shared\shared_completed_trips_screen.dart:19:10 - non_constant_identifier_names
+   info - The variable name 'from_location_name' isn't a lowerCamelCase identifier - lib\features\trips\presentation\passenger\screens\shared\shared_completed_trips_screen.dart:20:10 - non_constant_identifier_names
+   info - The variable name 'to_location_name' isn't a lowerCamelCase identifier - lib\features\trips\presentation\passenger\screens\shared\shared_completed_trips_screen.dart:21:10 - non_constant_identifier_names
+   info - The variable name 'number_of_seats' isn't a lowerCamelCase identifier - lib\features\trips\presentation\passenger\screens\shared\shared_completed_trips_screen.dart:22:10 - non_constant_identifier_names
+   info - The variable name 'gender_preference' isn't a lowerCamelCase identifier - lib\features\trips\presentation\passenger\screens\shared\shared_completed_trips_screen.dart:23:10 - non_constant_identifier_names
+   info - The variable name 'driver_name' isn't a lowerCamelCase identifier - lib\features\trips\presentation\passenger\screens\shared\shared_completed_trips_screen.dart:25:10 - non_constant_identifier_names
+   info - The variable name 'trip_datetime' isn't a lowerCamelCase identifier - lib\features\trips\presentation\passenger\screens\shared\shared_completed_trips_screen.dart:30:17 - non_constant_identifier_names
+   info - The variable name 'from_location_name' isn't a lowerCamelCase identifier - lib\features\trips\presentation\passenger\screens\shared\shared_completed_trips_screen.dart:31:17 - non_constant_identifier_names
+   info - The variable name 'to_location_name' isn't a lowerCamelCase identifier - lib\features\trips\presentation\passenger\screens\shared\shared_completed_trips_screen.dart:32:17 - non_constant_identifier_names
+   info - The variable name 'number_of_seats' isn't a lowerCamelCase identifier - lib\features\trips\presentation\passenger\screens\shared\shared_completed_trips_screen.dart:33:17 - non_constant_identifier_names
+   info - The variable name 'gender_preference' isn't a lowerCamelCase identifier - lib\features\trips\presentation\passenger\screens\shared\shared_completed_trips_screen.dart:34:17 - non_constant_identifier_names
+   info - The variable name 'driver_name' isn't a lowerCamelCase identifier - lib\features\trips\presentation\passenger\screens\shared\shared_completed_trips_screen.dart:36:17 - non_constant_identifier_names
+   info - The variable name 'trip_datetime' isn't a lowerCamelCase identifier - lib\features\trips\presentation\passenger\screens\shared\shared_current_trips_screen.dart:30:10 - non_constant_identifier_names
+   info - The variable name 'from_location_name' isn't a lowerCamelCase identifier - lib\features\trips\presentation\passenger\screens\shared\shared_current_trips_screen.dart:31:10 - non_constant_identifier_names
+   info - The variable name 'to_location_name' isn't a lowerCamelCase identifier - lib\features\trips\presentation\passenger\screens\shared\shared_current_trips_screen.dart:32:10 - non_constant_identifier_names
+   info - The variable name 'number_of_seats' isn't a lowerCamelCase identifier - lib\features\trips\presentation\passenger\screens\shared\shared_current_trips_screen.dart:33:10 - non_constant_identifier_names
+   info - The variable name 'gender_preference' isn't a lowerCamelCase identifier - lib\features\trips\presentation\passenger\screens\shared\shared_current_trips_screen.dart:34:10 - non_constant_identifier_names
+   info - The variable name 'driver_name' isn't a lowerCamelCase identifier - lib\features\trips\presentation\passenger\screens\shared\shared_current_trips_screen.dart:36:10 - non_constant_identifier_names
+   info - The variable name 'proposed_fare' isn't a lowerCamelCase identifier - lib\features\trips\presentation\passenger\screens\shared\shared_current_trips_screen.dart:37:10 - non_constant_identifier_names
+   info - The variable name 'is_auto_accept' isn't a lowerCamelCase identifier - lib\features\trips\presentation\passenger\screens\shared\shared_current_trips_screen.dart:38:10 - non_constant_identifier_names
+   info - The variable name 'trip_datetime' isn't a lowerCamelCase identifier - lib\features\trips\presentation\passenger\screens\shared\shared_current_trips_screen.dart:43:17 - non_constant_identifier_names
+   info - The variable name 'from_location_name' isn't a lowerCamelCase identifier - lib\features\trips\presentation\passenger\screens\shared\shared_current_trips_screen.dart:44:17 - non_constant_identifier_names
+   info - The variable name 'to_location_name' isn't a lowerCamelCase identifier - lib\features\trips\presentation\passenger\screens\shared\shared_current_trips_screen.dart:45:17 - non_constant_identifier_names
+   info - The variable name 'number_of_seats' isn't a lowerCamelCase identifier - lib\features\trips\presentation\passenger\screens\shared\shared_current_trips_screen.dart:46:17 - non_constant_identifier_names
+   info - The variable name 'gender_preference' isn't a lowerCamelCase identifier - lib\features\trips\presentation\passenger\screens\shared\shared_current_trips_screen.dart:47:17 - non_constant_identifier_names
+   info - The variable name 'driver_name' isn't a lowerCamelCase identifier - lib\features\trips\presentation\passenger\screens\shared\shared_current_trips_screen.dart:49:17 - non_constant_identifier_names
+   info - The variable name 'proposed_fare' isn't a lowerCamelCase identifier - lib\features\trips\presentation\passenger\screens\shared\shared_current_trips_screen.dart:50:17 - non_constant_identifier_names
+   info - The variable name 'is_auto_accept' isn't a lowerCamelCase identifier - lib\features\trips\presentation\passenger\screens\shared\shared_current_trips_screen.dart:51:17 - non_constant_identifier_names
+   info - Missing type annotation - lib\features\trips\presentation\passenger\screens\shared\shared_current_trips_screen.dart:173:21 - strict_top_level_inference
+   info - Missing type annotation - lib\features\trips\presentation\passenger\screens\shared\shared_current_trips_screen.dart:173:36 - strict_top_level_inference
+   info - Missing type annotation - lib\features\trips\presentation\passenger\screens\shared\shared_current_trips_screen.dart:201:19 - strict_top_level_inference
+   info - Missing type annotation - lib\features\trips\presentation\passenger\screens\shared\shared_current_trips_screen.dart:201:34 - strict_top_level_inference
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\trips\presentation\passenger\screens\shared\shared_current_trips_screen.dart:586:57 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\trips\presentation\passenger\screens\shared\shared_current_trips_screen.dart:655:43 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\trips\presentation\passenger\screens\shared\shared_current_trips_screen.dart:716:42 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\trips\presentation\passenger\screens\shared\shared_current_trips_screen.dart:832:39 - deprecated_member_use
+   info - 'activeColor' is deprecated and shouldn't be used. Use activeThumbColor instead. This feature was deprecated after v3.31.0-2.0.pre - lib\features\trips\presentation\passenger\screens\shared\shared_current_trips_screen.dart:842:19 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\trips\presentation\passenger\screens\shared\shared_current_trips_screen.dart:843:60 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\trips\presentation\passenger\screens\shared\shared_current_trips_screen.dart:885:44 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\trips\presentation\passenger\screens\shared\shared_current_trips_screen.dart:1061:33 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\trips\presentation\passenger\screens\shared\shared_current_trips_screen.dart:1066:58 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\trips\presentation\passenger\screens\shared\shared_current_trips_screen.dart:1092:43 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\trips\presentation\passenger\screens\shared\shared_current_trips_screen.dart:1182:56 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\trips\presentation\passenger\screens\shared\shared_current_trips_screen.dart:1344:37 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\trips\presentation\passenger\screens\shared\shared_current_trips_screen.dart:1351:37 - deprecated_member_use
+   info - The variable name 'trip_datetime' isn't a lowerCamelCase identifier - lib\features\trips\presentation\passenger\screens\shared\shared_suspended_screen.dart:20:10 - non_constant_identifier_names
+   info - The variable name 'from_location_name' isn't a lowerCamelCase identifier - lib\features\trips\presentation\passenger\screens\shared\shared_suspended_screen.dart:21:10 - non_constant_identifier_names
+   info - The variable name 'to_location_name' isn't a lowerCamelCase identifier - lib\features\trips\presentation\passenger\screens\shared\shared_suspended_screen.dart:22:10 - non_constant_identifier_names
+   info - The variable name 'number_of_seats' isn't a lowerCamelCase identifier - lib\features\trips\presentation\passenger\screens\shared\shared_suspended_screen.dart:23:10 - non_constant_identifier_names
+   info - The variable name 'gender_preference' isn't a lowerCamelCase identifier - lib\features\trips\presentation\passenger\screens\shared\shared_suspended_screen.dart:24:10 - non_constant_identifier_names
+   info - The variable name 'driver_name' isn't a lowerCamelCase identifier - lib\features\trips\presentation\passenger\screens\shared\shared_suspended_screen.dart:26:10 - non_constant_identifier_names
+   info - The variable name 'trip_datetime' isn't a lowerCamelCase identifier - lib\features\trips\presentation\passenger\screens\shared\shared_suspended_screen.dart:30:17 - non_constant_identifier_names
+   info - The variable name 'from_location_name' isn't a lowerCamelCase identifier - lib\features\trips\presentation\passenger\screens\shared\shared_suspended_screen.dart:31:17 - non_constant_identifier_names
+   info - The variable name 'to_location_name' isn't a lowerCamelCase identifier - lib\features\trips\presentation\passenger\screens\shared\shared_suspended_screen.dart:32:17 - non_constant_identifier_names
+   info - The variable name 'number_of_seats' isn't a lowerCamelCase identifier - lib\features\trips\presentation\passenger\screens\shared\shared_suspended_screen.dart:33:17 - non_constant_identifier_names
+   info - The variable name 'gender_preference' isn't a lowerCamelCase identifier - lib\features\trips\presentation\passenger\screens\shared\shared_suspended_screen.dart:34:17 - non_constant_identifier_names
+   info - The variable name 'driver_name' isn't a lowerCamelCase identifier - lib\features\trips\presentation\passenger\screens\shared\shared_suspended_screen.dart:36:17 - non_constant_identifier_names
+warning - The value of the field '_offersList' isn't used - lib\features\trips\presentation\passenger\screens\shared\shared_suspended_screen.dart:45:8 - unused_field
+warning - The value of the field '_acceptedOffer' isn't used - lib\features\trips\presentation\passenger\screens\shared\shared_suspended_screen.dart:46:7 - unused_field
+   info - Missing type annotation - lib\features\trips\presentation\passenger\screens\shared\shared_suspended_screen.dart:48:21 - strict_top_level_inference
+   info - Missing type annotation - lib\features\trips\presentation\passenger\screens\shared\shared_suspended_screen.dart:54:19 - strict_top_level_inference
+   info - Missing type annotation - lib\features\trips\presentation\passenger\screens\shared\shared_suspended_screen.dart:54:34 - strict_top_level_inference
+   info - An uninitialized field should have an explicit type annotation - lib\features\trips\presentation\passenger\screens\trips_list_screen.dart:43:7 - prefer_typing_uninitialized_variables
+   info - Missing type annotation - lib\features\trips\presentation\passenger\screens\trips_list_screen.dart:43:7 - strict_top_level_inference
+   info - Missing type annotation - lib\features\trips\presentation\passenger\screens\trips_list_screen.dart:45:3 - strict_top_level_inference
+   info - The variable name 'user_data' isn't a lowerCamelCase identifier - lib\features\trips\presentation\passenger\screens\trips_list_screen.dart:47:9 - non_constant_identifier_names
+   info - Missing type annotation - lib\features\trips\presentation\passenger\screens\trips_list_screen.dart:55:3 - strict_top_level_inference
+   info - The member 'build' overrides an inherited member but isn't annotated with '@override' - lib\features\trips\presentation\passenger\screens\trips_list_screen.dart:64:10 - annotate_overrides
+   info - Use a 'SizedBox' to add whitespace to a layout - lib\features\trips\presentation\passenger\screens\trips_list_screen.dart:92:19 - sized_box_for_whitespace
+   info - Use a 'SizedBox' to add whitespace to a layout - lib\features\trips\presentation\passenger\screens\trips_list_screen.dart:114:27 - sized_box_for_whitespace
+   info - Unnecessary instance of 'Container' - lib\features\trips\presentation\passenger\screens\trips_list_screen.dart:155:27 - avoid_unnecessary_containers
+   info - Use a 'SizedBox' to add whitespace to a layout - lib\features\trips\presentation\passenger\screens\trips_list_screen.dart:168:41 - sized_box_for_whitespace
+   info - Unnecessary instance of 'Container' - lib\features\trips\presentation\passenger\screens\trips_list_screen.dart:221:41 - avoid_unnecessary_containers
+   info - Unnecessary instance of 'Container' - lib\features\trips\presentation\passenger\screens\trips_list_screen.dart:229:49 - avoid_unnecessary_containers
+warning - The value of the local variable 'check' isn't used - lib\features\trips\presentation\passenger\screens\trips_list_screen.dart:255:72 - unused_local_variable
+   info - Unnecessary instance of 'Container' - lib\features\trips\presentation\passenger\screens\trips_list_screen.dart:313:49 - avoid_unnecessary_containers
+   info - Unnecessary instance of 'Container' - lib\features\trips\presentation\passenger\screens\trips_list_screen.dart:377:49 - avoid_unnecessary_containers
+   info - Use a 'SizedBox' to add whitespace to a layout - lib\features\trips\presentation\passenger\screens\trips_list_screen.dart:453:41 - sized_box_for_whitespace
+   info - Unnecessary instance of 'Container' - lib\features\trips\presentation\passenger\screens\trips_list_screen.dart:506:41 - avoid_unnecessary_containers
+   info - Unnecessary instance of 'Container' - lib\features\trips\presentation\passenger\screens\trips_list_screen.dart:515:49 - avoid_unnecessary_containers
+warning - The value of the local variable 'check' isn't used - lib\features\trips\presentation\passenger\screens\trips_list_screen.dart:538:72 - unused_local_variable
+   info - Unnecessary instance of 'Container' - lib\features\trips\presentation\passenger\screens\trips_list_screen.dart:601:49 - avoid_unnecessary_containers
+   info - Unnecessary instance of 'Container' - lib\features\trips\presentation\passenger\screens\trips_list_screen.dart:664:49 - avoid_unnecessary_containers
+   info - Unnecessary instance of 'Container' - lib\features\trips\presentation\passenger\screens\trips_list_screen.dart:757:49 - avoid_unnecessary_containers
+   info - Missing type annotation - lib\features\trips\presentation\passenger\screens\trips_list_screen.dart:847:1 - strict_top_level_inference
+   info - Missing type annotation - lib\features\trips\presentation\passenger\screens\trips_list_screen.dart:857:1 - strict_top_level_inference
+   info - Missing type annotation - lib\features\trips\presentation\passenger\screens\trips_list_screen.dart:857:8 - strict_top_level_inference
+warning - Dead code - lib\features\trips\presentation\passenger\screens\trips_list_screen.dart:859:3 - dead_code
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\trips\presentation\shared_widgets\offer_card_widget.dart:151:22 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\trips\presentation\shared_widgets\trip_card_widget.dart:141:22 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\trips\presentation\shared_widgets\trip_card_widget.dart:143:41 - deprecated_member_use
+   info - Missing type annotation - lib\generated\intl\messages_ar.dart:23:20 - strict_top_level_inference
+   info - Missing type annotation - lib\generated\intl\messages_ar.dart:23:26 - strict_top_level_inference
+   info - Missing type annotation - lib\generated\intl\messages_ar.dart:26:20 - strict_top_level_inference
+   info - Missing type annotation - lib\generated\intl\messages_ar.dart:28:20 - strict_top_level_inference
+   info - Missing type annotation - lib\generated\intl\messages_ar.dart:30:20 - strict_top_level_inference
+   info - Missing type annotation - lib\generated\intl\messages_ar.dart:33:52 - strict_top_level_inference
+   info - Missing type annotation - lib\generated\intl\messages_en.dart:23:20 - strict_top_level_inference
+   info - Missing type annotation - lib\generated\intl\messages_en.dart:23:26 - strict_top_level_inference
+   info - Missing type annotation - lib\generated\intl\messages_en.dart:26:20 - strict_top_level_inference
+   info - Missing type annotation - lib\generated\intl\messages_en.dart:28:20 - strict_top_level_inference
+   info - Missing type annotation - lib\generated\intl\messages_en.dart:30:20 - strict_top_level_inference
+   info - Missing type annotation - lib\generated\intl\messages_en.dart:33:52 - strict_top_level_inference
+
+712 issues found. (ran in 3.6s)

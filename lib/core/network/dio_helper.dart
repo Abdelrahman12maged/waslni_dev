@@ -8,7 +8,7 @@
 //   static init() {
 //     dio = Dio(
 //       BaseOptions(
-//         baseUrl: 'https://drivers.aqdeveloper.com/',
+//         baseUrl: ApiEndpoints.baseUrl,
 //         receiveDataWhenStatusError: true,
 //       ),
 //     );

@@ -72,6 +72,6 @@
 		<key>NSPhotoLibraryAddUsageDescription</key>
 		<string>نحتاج إلى إذن لحفظ الصور في مكتبة الصور الخاصة بك.</string>
 		<key>GOOGLE_MAPS_IOS_API_KEY</key>
-		<string>AIzaSyADkGCLVutJYCCFBUeevyx4-UQnOEEz5c8</string>
+		<string>$(GOOGLE_MAPS_API_KEY)</string>
 	</dict>
 </plist>

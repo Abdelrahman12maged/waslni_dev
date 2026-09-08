@@ -9,8 +9,9 @@ import GoogleMaps
     didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?
   ) -> Bool {
     // Read Maps API key from Info.plist → GOOGLE_MAPS_IOS_API_KEY
-    // To update the key: change the value in ios/Runner/Info.plist only.
-    if let apiKey = Bundle.main.object(forInfoDictionaryKey: "GOOGLE_MAPS_IOS_API_KEY") as? String {
+    if let apiKey = Bundle.main.object(forInfoDictionaryKey: "GOOGLE_MAPS_IOS_API_KEY") as? String,
+       !apiKey.isEmpty,
+       !apiKey.starts(with: "$(") {
       GMSServices.provideAPIKey(apiKey)
     }
     GeneratedPluginRegistrant.register(with: self)

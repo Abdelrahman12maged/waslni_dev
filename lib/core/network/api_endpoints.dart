@@ -3,7 +3,6 @@ import 'package:flutter_dotenv/flutter_dotenv.dart';
 /// All API endpoint paths in one place.
 /// No magic strings scattered across Cubits.
 abstract class ApiEndpoints {
-  static const String _base = 'https://drivers.aqdeveloper.com/';
 
   // ── Auth ────────────────────────────────────
   static const String register = 'api/register';
@@ -63,12 +62,56 @@ abstract class ApiEndpoints {
   // ── Wallet ──────────────────────────────────────────────────────────────────
   static const String updateWallet = 'api/update_wallet/'; // {trip_id}
 
-  static String get baseUrl => _base;
+  /// Resolves the base backend API URL from .env or compile-time environment.
+  static String get baseUrl {
+    if (dotenv.isInitialized) {
+      final url = dotenv.maybeGet('BASE_URL');
+      if (url != null && url.trim().isNotEmpty) {
+        final trimmed = url.trim();
+        return trimmed.endsWith('/') ? trimmed : '$trimmed/';
+      }
+    }
+    const envDefineUrl = String.fromEnvironment('BASE_URL');
+    if (envDefineUrl.isNotEmpty) {
+      final trimmed = envDefineUrl.trim();
+      return trimmed.endsWith('/') ? trimmed : '$trimmed/';
+    }
+    throw StateError(
+      'BASE_URL is not set.\n'
+      'Please configure BASE_URL in your .env file:\n'
+      '  BASE_URL=https://your-api-domain.com/\n',
+    );
+  }
 
   /// Same origin as [baseUrl] but without the trailing slash.
   /// Use this when building media/image paths that already include a leading slash,
   /// e.g.  '$mediaBaseUrl/uploads/images/filename.jpg'
-  static String get mediaBaseUrl => _base.endsWith('/') ? _base.substring(0, _base.length - 1) : _base;
+  static String get mediaBaseUrl {
+    final base = baseUrl;
+    return base.endsWith('/') ? base.substring(0, base.length - 1) : base;
+  }
+
+  /// Resolves company website URL from .env
+  static String get companyWebsite {
+    if (dotenv.isInitialized) {
+      final site = dotenv.maybeGet('COMPANY_WEBSITE');
+      if (site != null && site.trim().isNotEmpty) return site.trim();
+    }
+    const envDefine = String.fromEnvironment('COMPANY_WEBSITE');
+    if (envDefine.isNotEmpty) return envDefine;
+    return '';
+  }
+
+  /// Resolves support email from .env
+  static String get supportEmail {
+    if (dotenv.isInitialized) {
+      final email = dotenv.maybeGet('SUPPORT_EMAIL');
+      if (email != null && email.trim().isNotEmpty) return email.trim();
+    }
+    const envDefine = String.fromEnvironment('SUPPORT_EMAIL');
+    if (envDefine.isNotEmpty) return envDefine;
+    return '';
+  }
 
   /// Safely resolves any relative or absolute image path to a full URL.
   /// Handles null, empty, http/https, leading slashes (/storage/, /uploads/, etc.)

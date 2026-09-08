@@ -1,9 +1,28 @@
+import java.io.FileInputStream
+import java.util.Properties
+
 plugins {
     id("com.android.application")
     id("kotlin-android")
     // The Flutter Gradle Plugin must be applied after the Android and Kotlin Gradle plugins.
     id("dev.flutter.flutter-gradle-plugin")
 }
+
+val envProperties = Properties()
+val envFile = File(rootDir.parentFile, ".env")
+if (envFile.exists()) {
+    FileInputStream(envFile).use { envProperties.load(it) }
+}
+
+val localProperties = Properties()
+val localPropertiesFile = File(rootDir, "local.properties")
+if (localPropertiesFile.exists()) {
+    FileInputStream(localPropertiesFile).use { localProperties.load(it) }
+}
+
+val googleMapsApiKey: String = envProperties.getProperty("GOOGLE_MAPS_API_KEY")
+    ?: localProperties.getProperty("GOOGLE_MAPS_API_KEY")
+    ?: ""
 
 android {
     namespace = "com.abdo.carapp"
@@ -28,6 +47,7 @@ android {
         targetSdk = flutter.targetSdkVersion
         versionCode = flutter.versionCode
         versionName = flutter.versionName
+        manifestPlaceholders["mapsApiKey"] = googleMapsApiKey
     }
 
     buildTypes {

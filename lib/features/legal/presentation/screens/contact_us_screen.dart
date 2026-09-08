@@ -1,4 +1,5 @@
 import 'package:car_app/generated/l10n.dart';
+import 'package:car_app/core/network/api_endpoints.dart';
 import 'package:car_app/core/theme/app_colors.dart';
 import 'package:car_app/core/widgets/components.dart';
 import 'package:flutter/material.dart';
@@ -56,18 +57,24 @@ class ContactUsScreen extends StatelessWidget {
               ),
             ),
             GestureDetector(
-              onTap: () => _launchURL(context, 'https://aqdeveloper.com/'),
+              onTap: () {
+                final website = ApiEndpoints.companyWebsite;
+                if (website.isNotEmpty) _launchURL(context, website);
+              },
               child: contactListTile(
                 titleText: S.of(context).website,
-                subtitleText: 'https://aqdeveloper.com/',
+                subtitleText: ApiEndpoints.companyWebsite,
                 leadingIcon: Icons.blur_circular,
               ),
             ),
             GestureDetector(
-              onTap: () => _launchURL(context, 'mailto:support@aqdeveloper.com'),
+              onTap: () {
+                final email = ApiEndpoints.supportEmail;
+                if (email.isNotEmpty) _launchURL(context, 'mailto:$email');
+              },
               child: contactListTile(
                 titleText: S.of(context).email,
-                subtitleText: 'support@aqdeveloper.com',
+                subtitleText: ApiEndpoints.supportEmail,
                 leadingIcon: Icons.email_outlined,
               ),
             ),

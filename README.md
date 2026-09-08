@@ -1,4 +1,4 @@
-# 🚗 Car App (تطبيق إدارة وحجز الرحلات)
+# 🚗 Wasslni (Ride Booking & Management App)
 
 <div align="center">
 
@@ -9,87 +9,87 @@
 ![Firebase](https://img.shields.io/badge/Firebase-Core%20%7C%20Firestore%20%7C%20FCM-FFCA28?style=for-the-badge&logo=firebase&logoColor=black)
 ![Google Maps](https://img.shields.io/badge/Google%20Maps-Places%20%26%20Tracking-4285F4?style=for-the-badge&logo=googlemaps&logoColor=white)
 
-**منصة متكاملة لحجز الرحلات الخاصة والتشاركية (Carpooling) وإدارتها في الوقت الفعلي بين الركاب والسائقين.**
+**A complete platform for booking and managing private and shared (carpooling) trips in real time between passengers and drivers.**
 
-[المميزات](#-المميزات-الرئيسية) • [البنية المعمارية](#-البنية-المعمارية-architecture) • [هيكل المشروع](#-هيكل-المشروع-project-structure) • [التثبيت والتشغيل](#-التثبيت-والتشغيل) • [إعداد البيئة](#-إعداد-متغيرات-البيئة-env) • [معايير الكود](#-معايير-البرمجة-coding-guidelines)
+[Features](#-key-features) • [Architecture](#-architecture) • [Project Structure](#-project-structure) • [Installation & Setup](#-installation--setup) • [Environment Setup](#-environment-variables-env) • [Coding Guidelines](#-coding-guidelines)
 
 </div>
 
 ---
 
-## 📖 جدول المحتويات
-1. [نبذة عن المشروع](#-نبذة-عن-المشروع)
-2. [المميزات الرئيسية](#-المميزات-الرئيسية)
-   - [واجهة وتجربة الراكب (Passenger)](#1-واجهة-الراكب-passenger)
-   - [واجهة وتجربة السائق (Driver)](#2-واجهة-السائق-driver)
-   - [الميزات المشتركة والخدمات المساندة](#3-الميزات-المشتركة-والأنظمة-المساندة)
-3. [البنية المعمارية والتقنيات المستخدمة](#-البنية-المعمارية-architecture)
-4. [هيكل المشروع (Project Structure)](#-هيكل-المشروع-project-structure)
-5. [التثبيت والتشغيل](#-التثبيت-والتشغيل)
-6. [إعداد متغيرات البيئة (.env)](#-إعداد-متغيرات-البيئة-env)
-7. [معايير البرمجة وإرشادات الكود (Coding Guidelines)](#-معايير-البرمجة-coding-guidelines)
-8. [الواجهات البرمجية (API Endpoints Overview)](#-الواجهات-البرمجية-api-overview)
+## 📖 Table of Contents
+1. [About the Project](#-about-the-project)
+2. [Key Features](#-key-features)
+   - [Passenger Experience](#1-passenger-experience)
+   - [Driver Experience](#2-driver-experience)
+   - [Shared Features & Supporting Systems](#3-shared-features--supporting-systems)
+3. [Architecture & Tech Stack](#-architecture)
+4. [Project Structure](#-project-structure)
+5. [Installation & Setup](#-installation--setup)
+6. [Environment Variables (.env)](#-environment-variables-env)
+7. [Coding Guidelines](#-coding-guidelines)
+8. [API Endpoints Overview](#-api-endpoints-overview)
 
 ---
 
-## 🌟 نبذة عن المشروع
+## 🌟 About the Project
 
-**Car App** هو تطبيق هاتف متقدم متعدد المنصات (Flutter) يربط بين **الركاب** و**السائقين**، حيث يتيح طلب الرحلات بأسلوبين:
-- **الرحلات الخاصة (Private Trips):** رحلة مباشرة من نقطة الانطلاق إلى نقطة الوصول مع إمكانية تقديم وتفاوض عروض الأسعار (Bidding / Offers) في الوقت الفعلي.
-- **الرحلات التشاركية (Shared Trips / Carpooling):** إمكانية مشاركة مسار الرحلة بين أكثر من راكب لتقليل التكلفة واستهلاك الوقود.
-- **الرحلات المجدولة (Scheduled Trips):** حجز رحلات مستقبلية في وقت وتاريخ محددين مسبقاً.
+**Wasslni** is an advanced, cross-platform mobile application (Flutter) that connects **passengers** with **drivers**, offering two ways to request a ride:
+- **Private Trips:** A direct ride from pickup to drop-off, with the ability to submit and negotiate price offers (bidding) in real time.
+- **Shared Trips / Carpooling:** Passengers can share a trip route with other riders to reduce cost and fuel consumption.
+- **Scheduled Trips:** Book future rides for a specific date and time in advance.
 
-يعتمد التطبيق على معمارية برمجية صارمة (**Clean Architecture**) بنظام طبقات مفصول تماماً لتسهيل التوسع والاختبار والصيانة، مع إدارة حالة باستخدام **BLoC / Cubit** ومزامنة فورية عبر **Firebase** وخرائط **Google Maps**.
-
----
-
-## ✨ المميزات الرئيسية
-
-### 1. واجهة الراكب (Passenger)
-* **طلب رحلة خاصة (Private Ride):** تحديد نقطة الانطلاق والوصول على الخريطة عبر البحث أو نظام تحديد المواقع (GPS).
-* **نظام عروض الأسعار (Driver Bidding System):** استقبال عروض أسعار تنافسية من السائقين القريبين واختيار العرض الأنسب بناءً على السعر، تقييم السائق، ونوع السيارة.
-* **الرحلات المشتركة (Carpooling):** البحث عن الرحلات المشتركة المتاحة بالقرب من الموقع والانضمام إليها، أو طلب رحلة مشتركة جديدة.
-* **التتبع المباشر (Live Tracking):** مشاهدة موقع السائق على الخريطة لحظياً وتحديث المسار والمسافة والوقت المتوقع للوصول (ETA).
-* **إدارة الرحلات الجارية والسابقة:** استعراض سجل الرحلات المكتملة وتفاصيل الرحلة الحالية.
-* **الأماكن المحفوظة (Saved Locations):** حفظ العناوين المتكررة (مثل المنزل، العمل) لسرعة الاختيار بنقرة واحدة.
-* **تقييم السائق (Ratings & Reviews):** تقييم تجربة الرحلة وإضافة ملاحظات فور انتهاء المشوار.
-
-### 2. واجهة السائق (Driver)
-* **تصفح الطلبات القريبة (Nearby Trips):** استعراض خريطة وقائمة بطلبات الركاب المتاحة في المنطقة.
-* **تقديم عروض الأسعار (Make Offers):** إرسال عروض أسعار مخصصة للركاب وتحديث حالة العرض.
-* **إدارة مسار الرحلة (Turn-by-Turn Navigation):** تتبع مسار الرحلة على الخريطة مع تحديد نقاط الركوب والنزول.
-* **دورة حياة الرحلة (Trip Lifecycle):**
-  * إشعار الوصول إلى نقطة الالتقاء (Driver Arrived).
-  * بدء الرحلة (Start Trip).
-  * إدارة ركوب الركاب في الرحلات التشاركية (Passenger In-Car Status).
-  * إنهاء الرحلة بنجاح (End Trip).
-* **توثيق حساب السائق (Driver KYC & Documents):**
-  * رفع مستندات الهوية الوطنية (National ID).
-  * رفع شهادة خلو السوابق (Criminal Record).
-  * رفع رخصة القيادة ورخصة المركبة (Vehicle & Driving License).
-  * متابعة حالة المراجعة والموافقة على الحساب.
-* **لوحة الإحصائيات والأرباح (Driver Dashboard):** عرض إجمالي الرحلات المنجزة، التقييم العام، ومجموع الأرباح.
-
-### 3. الميزات المشتركة والأنظمة المساندة
-* **محادثة فورية مباشرة (Real-Time Chat):** نظام محادثة مدمج مدعوم بـ Cloud Firestore للتواصل الفوري بين الراكب والسائق، مع تضمين بيانات الرحلة في رأس المحادثة وتنبيهات تأكيد العروض.
-* **نظام إشعارات ذكي (Push Notifications & Deep Linking):**
-  * إشعارات Firebase Cloud Messaging (FCM) تعمل في الخلفية وأثناء فتح التطبيق.
-  * لافتات تنبيهية تفاعلية داخل التطبيق (In-App Notification Banners).
-  * توجيه ذكي مباشر (Deep Linking) ينقل المستخدم فور النقر على الإشعار إلى شاشة الرحلة أو المحادثة المعنية.
-* **ويجت الشاشة الرئيسية (Home Screen Widget):** دعم ويجت أندرويد عبر حزمة `home_widget` للاطلاع السريع على حالة الرحلة بنقرة واحدة.
-* **نظام الأمان والتحقق:**
-  * تسجيل الدخول عبر رقم الهاتف وكلمة المرور.
-  * كود التحقق (OTP Verification) وإمكانية إعادة إرسال الكود واستعادة كلمة المرور.
-  * تخزين آمن لبيانات الاعتماد والرموز (Tokens) عبر `FlutterSecureStorage`.
-* **دعم اللغتين العربية والإنجليزية (Full Localization):**
-  * دعم كامل للغة العربية (RTL) والإنجليزية (LTR).
-  * التبديل السريع بين اللغات من داخل الإعدادات مع الحفظ التلقائي لاختيار المستخدم.
+The app is built on a strict **Clean Architecture**, with fully separated layers to make it easy to scale, test, and maintain. State is managed with **BLoC / Cubit**, with real-time sync powered by **Firebase** and **Google Maps**.
 
 ---
 
-## 🏗 البنية المعمارية (Architecture)
+## ✨ Key Features
 
-تم بناء المشروع بالاعتماد على **Clean Architecture** مع تقسيم واضح للمسؤوليات (Separation of Concerns):
+### 1. Passenger Experience
+* **Request a Private Ride:** Set pickup and drop-off points on the map via search or GPS.
+* **Driver Bidding System:** Receive competitive price offers from nearby drivers and pick the best offer based on price, driver rating, and vehicle type.
+* **Carpooling:** Search for available shared trips nearby and join one, or request a new shared trip.
+* **Live Tracking:** Watch the driver's location on the map in real time, with live updates to route, distance, and estimated time of arrival (ETA).
+* **Manage Current & Past Trips:** Browse completed trip history and view current trip details.
+* **Saved Locations:** Save frequently used addresses (e.g. Home, Work) for one-tap selection.
+* **Driver Ratings & Reviews:** Rate the trip experience and leave feedback right after the ride ends.
+
+### 2. Driver Experience
+* **Browse Nearby Trips:** View a map and list of available passenger requests in the area.
+* **Make Offers:** Send custom price offers to passengers and update offer status.
+* **Turn-by-Turn Navigation:** Track the trip route on the map, with defined pickup and drop-off points.
+* **Trip Lifecycle:**
+  * Notify arrival at the meeting point (Driver Arrived).
+  * Start Trip.
+  * Manage passenger boarding status on shared trips (Passenger In-Car Status).
+  * Successfully End Trip.
+* **Driver KYC & Documents:**
+  * Upload National ID documents.
+  * Upload criminal record clearance certificate.
+  * Upload driving license and vehicle license.
+  * Track review and account approval status.
+* **Driver Dashboard:** View total completed trips, overall rating, and total earnings.
+
+### 3. Shared Features & Supporting Systems
+* **Real-Time Chat:** Built-in chat system powered by Cloud Firestore for instant communication between passenger and driver, including trip details in the chat header and offer-confirmation alerts.
+* **Smart Notifications (Push Notifications & Deep Linking):**
+  * Firebase Cloud Messaging (FCM) notifications that work in the background and while the app is open.
+  * Interactive in-app notification banners.
+  * Smart deep linking that takes the user straight to the relevant trip or chat screen when a notification is tapped.
+* **Home Screen Widget:** Android widget support via the `home_widget` package for a quick, one-tap view of trip status.
+* **Security & Verification System:**
+  * Login via phone number and password.
+  * OTP verification with code resend and password recovery options.
+  * Secure storage of credentials and tokens via `FlutterSecureStorage`.
+* **Full Arabic & English Localization:**
+  * Full support for Arabic (RTL) and English (LTR).
+  * Quick language switching from within settings, with the user's choice saved automatically.
+
+---
+
+## 🏗 Architecture
+
+The project is built on **Clean Architecture** with a clear separation of concerns:
 
 ```
 ┌─────────────────────────────────────────────────────────┐
@@ -110,191 +110,191 @@
 └─────────────────────────────────────────────────────────┘
 ```
 
-### حزمة التقنيات (Tech Stack):
-| المجال | التقنية المستخدمة | الوصف |
+### Tech Stack:
+| Area | Technology | Description |
 |---|---|---|
-| **Framework** | Flutter 3.10+ / Dart 3.0+ | تطوير تطبيق عالي الأداء لكافة المنصات |
-| **State Management** | `flutter_bloc` / `bloc` | إدارة حالة تفاعلية ومستقرة عبر Cubits |
-| **Navigation & Routing**| `go_router` | نظام توجيه تصريحي (Declarative Routing) يدعم الـ Deep Links |
-| **Networking** | `dio` | عميل HTTP قوي يدعم الـ Interceptors والتعامل المركزي مع الأخطاء |
-| **Realtime & Cloud** | `firebase_core`, `cloud_firestore`, `firebase_messaging` | قواعد بيانات الوقت الفعلي، المحادثات، والإشعارات الفورية |
-| **Maps & Geo** | `google_maps_flutter`, `geolocator`, `geocoding` | عرض الخرائط، تتبع الموقع، وحساب المسارات |
-| **Local Storage** | `flutter_secure_storage`, `shared_preferences`, `hive` | تخزين آمن لـ JWT Tokens والبيانات المحلية والإعدادات |
-| **Dependency Injection**| `get_it` | حقن التبعيات كـ Singletons وFactories عبر حاوية مركزية |
-| **Internationalization**| `flutter_localizations`, `intl` | تعريب كامل للنصوص بتنسيقات ARB |
-| **App Widget** | `home_widget` | ودجة شاشة البداية لنظام Android |
+| **Framework** | Flutter 3.10+ / Dart 3.0+ | High-performance cross-platform app development |
+| **State Management** | `flutter_bloc` / `bloc` | Reactive, stable state management via Cubits |
+| **Navigation & Routing**| `go_router` | Declarative routing system with Deep Link support |
+| **Networking** | `dio` | Powerful HTTP client with interceptors and centralized error handling |
+| **Realtime & Cloud** | `firebase_core`, `cloud_firestore`, `firebase_messaging` | Real-time database, chat, and instant notifications |
+| **Maps & Geo** | `google_maps_flutter`, `geolocator`, `geocoding` | Map display, location tracking, and route calculation |
+| **Local Storage** | `flutter_secure_storage`, `shared_preferences`, `hive` | Secure storage for JWT tokens, local data, and settings |
+| **Dependency Injection**| `get_it` | Dependency injection as Singletons and Factories via a central container |
+| **Internationalization**| `flutter_localizations`, `intl` | Full text localization using ARB formats |
+| **App Widget** | `home_widget` | Home screen widget for Android |
 
 ---
 
-## 📁 هيكل المشروع (Project Structure)
+## 📁 Project Structure
 
 ```text
 lib/
-├── core/                         # العناصر المشتركة والأساسية للتطبيق
-│   ├── data/                     # نماذج البيانات العامة
-│   ├── di/                       # حقن التبعيات (injection_container.dart)
-│   ├── error/                    # التعامل مع الأخطاء والاستثناءات (Failures & Exceptions)
-│   ├── formatters/               # أدوات تنسيق النصوص والتواريخ
-│   ├── network/                  # عميل الشبكة (ApiClient, ApiEndpoints, Interceptors)
-│   ├── resources/                # الموارد العامة (Strings, Assets, Styles)
-│   ├── router/                   # التوجيه المركزي (AppRouter, AppRoutes)
-│   ├── services/                 # خدمات النظام (Location, HomeWidget, Routing)
-│   ├── storage/                  # وحدات التخزين المحلية والآمنة (LocalStorage, SecureStorage)
-│   ├── theme/                    # الألوان والسمات الموحدة (AppColors, AppTheme)
-│   ├── usecases/                 # الواجهة المعيارية للـ UseCase
-│   ├── utils/                    # دوال ومساعدات برمجية (BlocObserver, FCMService)
-│   └── widgets/                  # المكونات والـ Widgets المشتركة على مستوى التطبيق
+├── core/                         # Shared, core building blocks of the app
+│   ├── data/                     # General-purpose data models
+│   ├── di/                       # Dependency injection (injection_container.dart)
+│   ├── error/                    # Error handling (Failures & Exceptions)
+│   ├── formatters/               # Text and date formatting utilities
+│   ├── network/                  # Network client (ApiClient, ApiEndpoints, Interceptors)
+│   ├── resources/                # Shared resources (Strings, Assets, Styles)
+│   ├── router/                   # Centralized routing (AppRouter, AppRoutes)
+│   ├── services/                 # System services (Location, HomeWidget, Routing)
+│   ├── storage/                  # Local and secure storage modules (LocalStorage, SecureStorage)
+│   ├── theme/                    # Unified colors and themes (AppColors, AppTheme)
+│   ├── usecases/                 # Standard UseCase interface
+│   ├── utils/                    # Helper functions and utilities (BlocObserver, FCMService)
+│   └── widgets/                  # App-wide shared components and widgets
 │
-├── features/                     # ميزات التطبيق (Features Modularity)
-│   ├── auth/                     # المصادقة، تسجيل الدخول، إنشاء الحساب، التحقق OTP
-│   ├── chat/                     # المحادثة المباشرة بين الراكب والسائق
-│   ├── driver_documents/         # رفع وتوثيق مستندات السائق (KYC)
-│   ├── home/                     # الشاشات الرئيسية والقوائم للراكب والسائق
-│   ├── legal/                    # الشروط والأحكام وسياسة الخصوصية
-│   ├── map/                      # خدمات الخرائط، المسارات، والـ Geocoding
-│   ├── notifications/            # شاشة وإدارة سجل الإشعارات
-│   ├── onboarding/               # شاشات الترحيب والتعريف بالتطبيق
-│   ├── ratings/                  # نظام التقييمات والمراجعات
-│   ├── settings/                 # إعدادات الحساب، اللغة، والأماكن المحفوظة
-│   └── trips/                    # إدارة الرحلات (الخاصة، المشتركة، المجدولة، والتتبع)
-│       ├── data/                 # مصادر البيانات والمستودعات ونماذج الـ Trips
-│       ├── domain/               # الـ Entities وحالات الاستخدام (UseCases)
-│       └── presentation/         # واجهات المستخدم والـ Cubits للراكب والسائق
+├── features/                     # App features (feature modularity)
+│   ├── auth/                     # Authentication, login, signup, OTP verification
+│   ├── chat/                     # Real-time chat between passenger and driver
+│   ├── driver_documents/         # Driver document upload and verification (KYC)
+│   ├── home/                     # Home screens and menus for passenger and driver
+│   ├── legal/                    # Terms & conditions and privacy policy
+│   ├── map/                      # Map services, routing, and geocoding
+│   ├── notifications/            # Notification history screen and management
+│   ├── onboarding/               # Welcome and app-introduction screens
+│   ├── ratings/                  # Ratings and reviews system
+│   ├── settings/                 # Account settings, language, and saved locations
+│   └── trips/                    # Trip management (private, shared, scheduled, and tracking)
+│       ├── data/                 # Data sources, repositories, and trip models
+│       ├── domain/               # Entities and use cases
+│       └── presentation/         # UI screens and Cubits for passenger and driver
 │
-├── generated/                    # الملفات المولدة آلياً للترجمة (intl)
-├── l10n/                         # ملفات اللغات (intl_ar.arb, intl_en.arb)
-├── firebase_options.dart         # إعدادات منصات Firebase
-└── main.dart                     # نقطة انطلاق التطبيق وإعداد الخدمات
+├── generated/                    # Auto-generated translation files (intl)
+├── l10n/                         # Language files (intl_ar.arb, intl_en.arb)
+├── firebase_options.dart         # Firebase platform configuration
+└── main.dart                     # App entry point and service setup
 ```
 
 ---
 
-## 🚀 التثبيت والتشغيل
+## 🚀 Installation & Setup
 
-### المتطلبات الأساسية (Prerequisites):
-- [Flutter SDK](https://docs.flutter.dev/get-started/install) الإصدار `3.10.0` أو أحدث.
-- [Dart SDK](https://dart.dev/get-dart) الإصدار `3.0.0` أو أحدث.
-- [Android Studio](https://developer.android.com/studio) أو [VS Code](https://code.visualstudio.com/) مع إضافات Flutter & Dart.
-- هاتف فعلي أو محاكي (Emulator) يحتوي على خدمات Google Play لتشغيل الخرائط.
+### Prerequisites:
+- [Flutter SDK](https://docs.flutter.dev/get-started/install) version `3.10.0` or newer.
+- [Dart SDK](https://dart.dev/get-dart) version `3.0.0` or newer.
+- [Android Studio](https://developer.android.com/studio) or [VS Code](https://code.visualstudio.com/) with the Flutter & Dart extensions.
+- A physical device or emulator with Google Play Services installed to run the maps.
 
-### خطوات الإعداد:
+### Setup Steps:
 
-1. **استنساخ المستودع (Clone Repository):**
+1. **Clone the repository:**
    ```bash
    git clone <REPOSITORY_URL>
-   cd car_app
+   cd wasslni
    ```
 
-2. **تثبيت التبعيات (Install Dependencies):**
+2. **Install dependencies:**
    ```bash
    flutter pub get
    ```
 
-3. **إعداد متغيرات البيئة (.env):**
-   قم بنسخ ملف النموذج `.env.example` إلى `.env`:
+3. **Set up environment variables (.env):**
+   Copy the template file `.env.example` to `.env`:
    ```bash
    cp .env.example .env
    ```
-   ثم افتح ملف `.env` وضع مفتاح Google Maps API الخاص بك:
+   Then open the `.env` file and add your Google Maps API key:
    ```env
    GOOGLE_MAPS_API_KEY=YOUR_ACTUAL_GOOGLE_MAPS_API_KEY
    ```
 
-4. **توليد ملفات الترجمة (إذا لزم الأمر):**
+4. **Generate translation files (if needed):**
    ```bash
    flutter pub run intl_utils:generate
    ```
 
-5. **تشغيل التطبيق في وضع التطوير (Run App):**
+5. **Run the app in development mode:**
    ```bash
    flutter run
    ```
 
 ---
 
-## ⚙️ إعداد متغيرات البيئة (.env)
+## ⚙️ Environment Variables (.env)
 
-يستخدم التطبيق حزمة `flutter_dotenv` لإدارة المفاتيح الحساسة بأمان بعيداً عن الكود المصدري.
+The app uses the `flutter_dotenv` package to securely manage sensitive keys outside of the source code.
 
-يحتوي ملف `.env` على المتغيرات التالية:
+The `.env` file contains the following variables:
 
-| المتغير | الوصف | إلزامي؟ |
+| Variable | Description | Required? |
 |---|---|:---:|
-| `GOOGLE_MAPS_API_KEY` | مفتاح Google Cloud الخاص بـ (Maps SDK, Places API, Directions API) | ✅ نعم |
+| `GOOGLE_MAPS_API_KEY` | Google Cloud key for (Maps SDK, Places API, Directions API) | ✅ Yes |
 
-> ⚠️ **تنبيه هام:** لا تقم برفع ملف `.env` إلى مستودعات Git العامة. تأكد دائماً من وجوده داخل ملف `.gitignore`.
-
----
-
-## 📐 معايير البرمجة (Coding Guidelines)
-
-المشروع ملتزم بمعايير برمجية صارمة ومحددة في دليل التطوير [`CODING_GUIDELINES.md`](CODING_GUIDELINES.md):
-
-1. **إدارة الحالة (BLoC / Cubit فقط):**
-   - يُمنع استخدام `setState` قطعياً.
-   - بناء الشاشات يعتمد على `StatelessWidget` وتُدار الحالة عبر `BlocBuilder` أو `BlocConsumer`.
-2. **فصل المكونات وإعادة الاستخدام (Clean Widget Extraction):**
-   - تقسيم الواجهات الطويلة إلى كلاسات ويدجت مستقلة (`Extract as Widget`).
-   - تجنب استخدام دوال مساعدة تعيد ويدجت (مثل `Widget _buildRow()`).
-   - حفظ الودجات المخصصة لكل ميزة داخل مجلد `widgets/` الخاص بها، والودجات العامة داخل `core/widgets/`.
-3. **عدم كتابة نصوص ثابتة (Strict Localization):**
-   - يُمنع وضع نصوص صلبة (Hardcoded Strings) في الواجهة. يتم استدعاء جميع النصوص من نظام التوطين: `S.of(context).key`.
-4. **التوجيه التصريحي (Declarative Navigation):**
-   - الاعتماد حصرياً على `GoRouter` عبر `context.go()` أو `context.push()` وتفادي `Navigator.push`.
-5. **السمات والألوان المركزية (Centralized Theming):**
-   - استخدام الألوان والأنماط المعرفة في `AppColors` و`Theme.of(context)` بدلاً من الألوان المباشرة `Colors.red` أو `Color(...)`.
+> ⚠️ **Important Notice:** Do not push the `.env` file to public Git repositories. Always make sure it is listed in `.gitignore`.
 
 ---
 
-## 🔌 الواجهات البرمجية (API Overview)
+## 📐 Coding Guidelines
 
-يتم تنظيم جميع المسارات ونقاط النهاية عبر الكلاس المركزي [`ApiEndpoints`](lib/core/network/api_endpoints.dart):
+The project follows strict coding standards defined in the development guide [`CODING_GUIDELINES.md`](CODING_GUIDELINES.md):
 
-* **المصادقة (Auth):**
+1. **State Management (BLoC / Cubit only):**
+   - Using `setState` is strictly prohibited.
+   - Screens are built as `StatelessWidget`, with state managed via `BlocBuilder` or `BlocConsumer`.
+2. **Component Separation & Reusability (Clean Widget Extraction):**
+   - Break long UIs into independent widget classes (Extract as Widget).
+   - Avoid helper functions that return widgets (e.g. `Widget _buildRow()`).
+   - Keep feature-specific widgets inside that feature's own `widgets/` folder, and shared widgets inside `core/widgets/`.
+3. **No Hardcoded Strings (Strict Localization):**
+   - Hardcoded strings in the UI are prohibited. All text must be pulled from the localization system: `S.of(context).key`.
+4. **Declarative Navigation:**
+   - Rely exclusively on `GoRouter` via `context.go()` or `context.push()`, and avoid `Navigator.push`.
+5. **Centralized Theming & Colors:**
+   - Use the colors and styles defined in `AppColors` and `Theme.of(context)` instead of hardcoded colors like `Colors.red` or `Color(...)`.
+
+---
+
+## 🔌 API Endpoints Overview
+
+All routes and endpoints are organized through the central [`ApiEndpoints`](lib/core/network/api_endpoints.dart) class:
+
+* **Authentication (Auth):**
   * `api/login` & `api/register`
-  * `api/chack-code-user-ajax` (التحقق من كود الـ OTP)
-  * `api/reset-password-request-ajax` (استعادة كلمة المرور)
-* **الرحلات (Trips):**
-  * `api/trips/nearme` (الرحلات المتاحة في النطاق الجغرافي)
-  * `api/trips/create` (إنشاء رحلة جديدة خاصة أو مشتركة)
-  * `api/trips/changeStatus/{id}` (تحديث حالة الرحلة)
-* **العروض (Offers):**
-  * `api/offers/store` (تقديم عرض سعر من السائق)
-  * `api/offers/{trip_id}` (استعراض عروض السائقين للرحلة)
-  * `api/update-offer-status/{id}` (قبول أو رفض العرض)
-* **مستندات السائق (Driver KYC):**
-  * `api/driver/documents` (رفع وفحص حالة المستندات)
-* **التقييمات والإشعارات (Ratings & Notifications):**
+  * `api/chack-code-user-ajax` (OTP code verification)
+  * `api/reset-password-request-ajax` (password recovery)
+* **Trips:**
+  * `api/trips/nearme` (available trips in the surrounding geographic range)
+  * `api/trips/create` (create a new private or shared trip)
+  * `api/trips/changeStatus/{id}` (update trip status)
+* **Offers:**
+  * `api/offers/store` (driver submits a price offer)
+  * `api/offers/{trip_id}` (view driver offers for a trip)
+  * `api/update-offer-status/{id}` (accept or reject an offer)
+* **Driver Documents (KYC):**
+  * `api/driver/documents` (upload and check document status)
+* **Ratings & Notifications:**
   * `api/ratings/store`
   * `api/get-notification`
-  * `api/update-device-token` (تسجيل رمز الـ FCM)
+  * `api/update-device-token` (register FCM token)
 
 ---
 
-## 📦 إنشاء نسخ الإنتاج (Release Builds)
+## 📦 Release Builds
 
-### بناء حزمة أندرويد (APK):
+### Build Android package (APK):
 ```bash
 flutter build apk --release
 ```
 
-### بناء حزمة متجر جوجل بلاي (App Bundle):
+### Build Google Play Store bundle (App Bundle):
 ```bash
 flutter build appbundle --release
 ```
 
 ---
 
-## 👥 المساهمة والتطوير (Contributing)
+## 👥 Contributing
 
-1. أنشئ فرعاً جديداً لميزتك: `git checkout -b feature/your-feature-name`
-2. التزم بمعايير الكود الموضحة أعلاه وتأكد من فحص الأخطاء: `flutter analyze`
-3. قم بعمل Commit لتغييراتك: `git commit -m "feat: add your feature description"`
-4. ادفع الفرع: `git push origin feature/your-feature-name`
-5. افتح طلب دمج (Pull Request).
+1. Create a new branch for your feature: `git checkout -b feature/your-feature-name`
+2. Follow the coding standards outlined above and make sure to run: `flutter analyze`
+3. Commit your changes: `git commit -m "feat: add your feature description"`
+4. Push the branch: `git push origin feature/your-feature-name`
+5. Open a Pull Request.
 
 ---
 
 <div align="center">
-  <sub>صنع بإتقان عبر فريق تطوير التطبيق • Car App © 2026</sub>
+  <sub>Crafted with care by the app development team • Wasslni © 2026</sub>
 </div>

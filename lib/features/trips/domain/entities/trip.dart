@@ -1,3 +1,5 @@
+import 'dart:convert';
+import 'package:car_app/core/utils/location_helper.dart';
 import 'package:car_app/features/trips/domain/entities/offer.dart';
 import 'package:car_app/features/trips/domain/entities/trip_driver.dart';
 import 'package:car_app/features/trips/domain/entities/trip_passenger.dart';
@@ -113,6 +115,246 @@ class Trip {
     this.matchDistanceOriginKm,
     this.matchDistanceDestinationKm,
   });
+
+  factory Trip.fromMap(Map<String, dynamic> json) {
+    Map<String, dynamic>? parsedTripDetails;
+    if (json['trip_details'] != null) {
+      if (json['trip_details'] is Map) {
+        parsedTripDetails = json['trip_details'] as Map<String, dynamic>;
+      } else if (json['trip_details'] is String) {
+        try {
+          parsedTripDetails =
+              jsonDecode(json['trip_details']) as Map<String, dynamic>;
+        } catch (_) {}
+      }
+    }
+
+    double parseDouble(dynamic value) {
+      if (value == null) return 0.0;
+      if (value is double) return value;
+      if (value is int) return value.toDouble();
+      return double.tryParse(value.toString()) ?? 0.0;
+    }
+
+    int parseInt(dynamic value) {
+      if (value == null) return 0;
+      if (value is int) return value;
+      return int.tryParse(value.toString()) ?? 0;
+    }
+
+    GenderPreference parseGender(String? value) {
+      switch (value) {
+        case 'male':
+        case 'male_only':
+          return GenderPreference.male;
+        case 'female':
+        case 'female_only':
+          return GenderPreference.female;
+        default:
+          return GenderPreference.noPreference;
+      }
+    }
+
+    TripStatus parseStatus(String? value) {
+      switch (value) {
+        case 'open':
+          return TripStatus.open;
+        case 'accepted':
+          return TripStatus.accepted;
+        case 'completed':
+          return TripStatus.completed;
+        case 'canceled':
+          return TripStatus.canceled;
+        case 'suspended':
+          return TripStatus.suspended;
+        case 'closed':
+          return TripStatus.closed;
+        default:
+          return TripStatus.open;
+      }
+    }
+
+    Map<String, dynamic>? rawDriver = json['driver'] as Map<String, dynamic>?;
+    final rawCar = json['car'];
+    if (rawDriver != null && rawCar is List && rawCar.isNotEmpty) {
+      final firstCar = rawCar.first;
+      if (firstCar is Map<String, dynamic>) {
+        rawDriver = {...rawDriver, 'car': firstCar};
+      }
+    }
+    final parsedDriver =
+        rawDriver != null ? TripDriver.fromMap(rawDriver) : null;
+
+    final rawCreator = json['creator'] is Map<String, dynamic>
+        ? json['creator'] as Map<String, dynamic>
+        : (parsedTripDetails?['creator'] is Map<String, dynamic>
+            ? parsedTripDetails!['creator'] as Map<String, dynamic>
+            : (json['user'] is Map<String, dynamic>
+                ? json['user'] as Map<String, dynamic>
+                : null));
+    final parsedCreator =
+        rawCreator != null ? TripDriver.fromMap(rawCreator) : null;
+
+    final int resolvedDriverId = parseInt(json['driver_id'] ??
+        json['driverId'] ??
+        parsedDriver?.id ??
+        (json['creation_type'] == 'driver' || json['user_type'] == 'driver'
+            ? parsedCreator?.id
+            : null));
+
+    final rawPassengers = json['passengers'] as List? ??
+        parsedTripDetails?['passengers'] as List?;
+    final parsedPassengers = rawPassengers
+            ?.whereType<Map>()
+            .map((p) => TripPassenger.fromMap(Map<String, dynamic>.from(p)))
+            .where((p) => resolvedDriverId == 0 || p.id != resolvedDriverId)
+            .toList() ??
+        [];
+
+    final int resolvedRequestedSeats = parsedPassengers.isNotEmpty
+        ? parsedPassengers.first.seats
+        : parseInt(json['seats'] ?? 1);
+
+    final int resolvedTotalSeats = parseInt(json['total_seats'] ??
+        parsedDriver?.car?.seats ??
+        (rawCar is List && rawCar.isNotEmpty && rawCar.first is Map
+            ? rawCar.first['seats']
+            : null) ??
+        4);
+
+    final int resolvedJoinedCount = parsedPassengers.length;
+
+    final int resolvedReservedSeats = parsedPassengers.isNotEmpty
+        ? parsedPassengers.fold<int>(
+            0, (sum, p) => sum + (p.seats > 0 ? p.seats : 1))
+        : 0;
+
+    final int resolvedAvailableSeats = (resolvedTotalSeats - resolvedReservedSeats)
+        .clamp(0, resolvedTotalSeats);
+
+    final rawOffers = json['offers'] as List? ??
+        json['driver_offers'] as List? ??
+        json['user_offers'] as List? ??
+        json['trip_offers'] as List? ??
+        (json['offer'] is Map ? [json['offer']] : null) ??
+        (json['accepted_offer'] is Map ? [json['accepted_offer']] : null) ??
+        parsedTripDetails?['offers'] as List? ??
+        parsedTripDetails?['driver_offers'] as List?;
+    final parsedOffers = rawOffers
+            ?.whereType<Map>()
+            .map((o) => Offer.fromMap(Map<String, dynamic>.from(o)))
+            .toList() ??
+        [];
+
+    final rawApproved = json['approved_price'] ??
+        json['accepted_price'] ??
+        json['price'] ??
+        json['offer_price'] ??
+        json['agreed_price'] ??
+        json['fare'] ??
+        json['total_fare'] ??
+        json['driver_price'] ??
+        json['accepted_offer_price'] ??
+        (json['offer'] is Map ? (json['offer'] as Map)['price'] : null) ??
+        (json['accepted_offer'] is Map ? (json['accepted_offer'] as Map)['price'] : null) ??
+        (json['driver'] is Map ? (json['driver'] as Map)['price'] : null) ??
+        (json['driver'] is Map ? (json['driver'] as Map)['offer_price'] : null) ??
+        parsedTripDetails?['approved_price'] ??
+        parsedTripDetails?['price'];
+
+    double? resolvedApprovedPrice;
+    if (rawApproved != null && parseDouble(rawApproved) > 0) {
+      resolvedApprovedPrice = parseDouble(rawApproved);
+    } else if (parsedOffers.isNotEmpty) {
+      for (final o in parsedOffers) {
+        if (o.status == OfferStatus.accepted ||
+            o.effectiveStatus == 'accepted' ||
+            o.effectiveStatus == 'approved') {
+          resolvedApprovedPrice = o.price;
+          break;
+        }
+      }
+    }
+
+    return Trip(
+      id: parseInt(json['id']),
+      driverId: json['driver_id'] != null ? parseInt(json['driver_id']) : null,
+      createdBy: parseInt(json['created_by'] ??
+          json['user_id'] ??
+          json['creator_id'] ??
+          json['client_id'] ??
+          parsedCreator?.id),
+      fromLatitude: parseDouble(json['from_latitude']),
+      fromLongitude: parseDouble(json['from_longitude']),
+      toLatitude: parseDouble(json['to_latitude']),
+      toLongitude: parseDouble(json['to_longitude']),
+      fromLocationName: cleanLocationName(json['from_location_name']?.toString() ?? ''),
+      toLocationName: cleanLocationName(json['to_location_name']?.toString() ?? ''),
+      numberOfSeats: resolvedRequestedSeats,
+      genderPreference: parseGender(json['gender_preference']?.toString()),
+      tripDatetime: json['trip_datetime']?.toString() ?? '',
+      status: parseStatus(json['status']?.toString()),
+      type: (json['type']?.toString().toLowerCase() == 'shared' ||
+              parsedTripDetails?['type']?.toString().toLowerCase() == 'shared')
+          ? TripType.shared
+          : TripType.private,
+      minimumPrice: parseDouble(json['minimum_price'] ??
+          json['min_price'] ??
+          parsedTripDetails?['minimum_price'] ??
+          parsedTripDetails?['min_price'] ??
+          json['price']),
+      maximumPrice: parseDouble(json['maximum_price'] ??
+          json['max_price'] ??
+          parsedTripDetails?['maximum_price'] ??
+          parsedTripDetails?['max_price'] ??
+          json['price']),
+      approvedPrice: resolvedApprovedPrice,
+      distance:
+          json['distance'] != null ? parseDouble(json['distance']) : null,
+      tripDetails: json['trip_details']?.toString(),
+      driver: parsedDriver,
+      creator: parsedCreator,
+      onGoingStatus: json['on_going_status']?.toString() ??
+          parsedTripDetails?['on_going_status']?.toString(),
+      passengers: parsedPassengers,
+      offers: parsedOffers,
+      totalSeats: resolvedTotalSeats,
+      joinedPassengersCount: resolvedJoinedCount,
+      reservedSeats: resolvedReservedSeats,
+      availableSeats: resolvedAvailableSeats,
+      isStale: json['is_stale'] == true || json['is_stale'] == 1,
+      matchDistanceOriginKm: (json['match_distance_origin_km'] ??
+              json['match_distance_origin'] ??
+              json['distance_from_origin'] ??
+              json['origin_distance'] ??
+              json['distance_origin'] ??
+              json['distance_km'] ??
+              json['distance']) !=
+          null
+          ? parseDouble(json['match_distance_origin_km'] ??
+              json['match_distance_origin'] ??
+              json['distance_from_origin'] ??
+              json['origin_distance'] ??
+              json['distance_origin'] ??
+              json['distance_km'] ??
+              json['distance'])
+          : null,
+      matchDistanceDestinationKm: (json['match_distance_destination_km'] ??
+              json['match_distance_destination'] ??
+              json['distance_from_destination'] ??
+              json['destination_distance'] ??
+              json['distance_destination'] ??
+              json['to_distance']) !=
+          null
+          ? parseDouble(json['match_distance_destination_km'] ??
+              json['match_distance_destination'] ??
+              json['distance_from_destination'] ??
+              json['destination_distance'] ??
+              json['distance_destination'] ??
+              json['to_distance'])
+          : null,
+    );
+  }
 
   /// Convenience: is this trip currently active (open or accepted)?
   bool get isActive =>

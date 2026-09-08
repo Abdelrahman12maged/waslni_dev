@@ -362,9 +362,7 @@ class AppRouter {
               final tripId = trip?.id ??
                   _parseInt(extra['trip_id'] ??
                       extra['tripId'] ??
-                      extra['id'] ??
-                      extra['tripDetails']?['id'] ??
-                      extra['tripDetails']?['trip_id']) ??
+                      extra['id']) ??
                   storedTrip?.id;
               return PrivateCurrentScreenCleanoffers(
                 trip: trip,

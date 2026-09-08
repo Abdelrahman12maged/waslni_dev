@@ -515,4 +515,23 @@ class TripsRemoteDataSourceImpl implements TripsRemoteDataSource {
       );
     }
   }
+
+  @override
+  Future<void> updateTripPrice(int tripId, double newPrice, String token) async {
+    final result = await _client.post(
+      url: 'passenger/trips/$tripId/update-price',
+      token: token,
+      data: {
+        'price': newPrice,
+        'minimum_price': newPrice,
+        'maximum_price': newPrice,
+        'proposed_fare': newPrice,
+      },
+    );
+
+    return result.fold(
+      (failure) => throw ServerException(failure.message),
+      (_) => null,
+    );
+  }
 }

@@ -6,11 +6,9 @@ import 'package:geolocator/geolocator.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:intl/intl.dart';
 
-import 'package:car_app/core/network/api_client.dart';
 import 'package:car_app/core/storage/local_storage.dart';
 import 'package:car_app/features/trips/domain/entities/trip.dart';
 import 'package:car_app/features/trips/domain/entities/offer.dart';
-import 'package:car_app/features/trips/data/models/trip_model.dart';
 import 'package:car_app/features/trips/domain/usecases/change_offer_status_usecase.dart';
 import 'package:car_app/features/trips/domain/usecases/change_trip_status_usecase.dart';
 import 'package:car_app/features/trips/domain/usecases/create_trip_usecase.dart';
@@ -41,7 +39,6 @@ class DriverTripsCubit extends Cubit<DriverTripsState> {
   final MakeOfferUseCase _makeOffer;
   final GetOffersByTripUseCase? _getOffersByTrip;
   final LocalStorage _storage;
-  final ApiClient _client;
 
   DriverTripsCubit({
     required GetDriverTripsUseCase getDriverTrips,
@@ -53,7 +50,6 @@ class DriverTripsCubit extends Cubit<DriverTripsState> {
     required MakeOfferUseCase makeOffer,
     GetOffersByTripUseCase? getOffersByTrip,
     required LocalStorage storage,
-    required ApiClient client,
   })  : _getDriverTrips = getDriverTrips,
         _changeTripStatus = changeTripStatus,
         _changeOfferStatus = changeOfferStatus,
@@ -63,7 +59,6 @@ class DriverTripsCubit extends Cubit<DriverTripsState> {
         _makeOffer = makeOffer,
         _getOffersByTrip = getOffersByTrip,
         _storage = storage,
-        _client = client,
         super(const DriverTripsInitial());
 
   static DriverTripsCubit of(BuildContext context) =>
@@ -1097,9 +1092,7 @@ class DriverTripsCubit extends Cubit<DriverTripsState> {
         res.fold((_) {}, (trip) {
           // Use TripModel.toJson() to get a map (stays in data layer, not entity).
           // The offers/passengers are already embedded in the trip map from the server.
-          final tripMap = trip is TripModel
-              ? trip.toJson()
-              : {'offers': trip.passengers ?? []};
+          final tripMap = trip.toJson();
           OfferListUser = (tripMap['offers'] ??
               tripMap['driver_offers'] ??
               tripMap['user_offers'] ??
@@ -1153,13 +1146,6 @@ class DriverTripsCubit extends Cubit<DriverTripsState> {
             offerId: offerId,
             status: status,
             userId: userId,
-          );
-        } else {
-          final token = _storage.read(key: 'token') ?? '';
-          await _client.put(
-            url: '${ApiEndpoints.changeOfferStatus}$offerId',
-            token: token,
-            data: {'status': status},
           );
         }
       } catch (_) {}

@@ -270,6 +270,23 @@ class TripsRepositoryImpl implements TripsRepository {
       ));
     }
   }
+
+  @override
+  Future<Either<Failure, void>> updateTripPrice({
+    required int tripId,
+    required double newPrice,
+  }) async {
+    try {
+      await _remoteDataSource.updateTripPrice(tripId, newPrice, _token);
+      return const Right(null);
+    } on ServerException catch (e) {
+      log(e.toString(), name: 'TripsRepositoryImpl.updateTripPrice');
+      return Left(ServerFailure(
+        message: e.message ?? 'Failed to update trip price',
+        errorCode: e.errorCode,
+      ));
+    }
+  }
 }
 
 

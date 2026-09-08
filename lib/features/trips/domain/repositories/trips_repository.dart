@@ -87,4 +87,10 @@ abstract class TripsRepository {
     double destinationRadiusKm = 2.0,
     double timeWindowHours = 1.0,
   });
+
+  /// Updates the proposed price for a trip.
+  Future<Either<Failure, void>> updateTripPrice({
+    required int tripId,
+    required double newPrice,
+  });
 }

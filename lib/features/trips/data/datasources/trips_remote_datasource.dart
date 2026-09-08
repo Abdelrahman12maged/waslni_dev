@@ -30,4 +30,5 @@ abstract class TripsRemoteDataSource {
     double timeWindowHours = 1.0,
     required String token,
   });
+  Future<void> updateTripPrice(int tripId, double newPrice, String token);
 }

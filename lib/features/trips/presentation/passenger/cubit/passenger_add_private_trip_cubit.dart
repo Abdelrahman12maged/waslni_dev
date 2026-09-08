@@ -1,4 +1,3 @@
-import 'package:car_app/core/network/api_client.dart';
 import 'package:car_app/features/map/domain/entities/location_result.dart';
 import 'package:car_app/features/map/domain/entities/place_suggestion.dart';
 import 'package:car_app/features/map/domain/services/map_service.dart';
@@ -12,7 +11,6 @@ import 'package:car_app/core/storage/local_storage.dart';
 import 'package:car_app/features/trips/presentation/passenger/cubit/passenger_add_private_trip_state.dart';
 import 'package:car_app/core/resources/images_manager.dart';
 import 'package:car_app/features/trips/domain/entities/trip.dart';
-import 'package:car_app/features/trips/data/models/trip_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
@@ -20,7 +18,6 @@ import 'package:geolocator/geolocator.dart';
 import 'package:intl/intl.dart';
 
 class PassengerAddPrivateTripCubit extends Cubit<PassengerAddPrivateTripState> {
-  final ApiClient _client;
   final LocalStorage _storage;
   final MapService _mapService;
   final CreateTripUseCase _createTripUseCase;
@@ -28,14 +25,12 @@ class PassengerAddPrivateTripCubit extends Cubit<PassengerAddPrivateTripState> {
   final ChangePassengerStatusUseCase _changePassengerStatusUseCase;
 
   PassengerAddPrivateTripCubit({
-    required ApiClient client,
     required LocalStorage storage,
     required MapService mapService,
     required CreateTripUseCase createTripUseCase,
     required GetTripDetailsUseCase getTripDetailsUseCase,
     required ChangePassengerStatusUseCase changePassengerStatusUseCase,
-  })  : _client = client,
-        _storage = storage,
+  })  : _storage = storage,
         _mapService = mapService,
         _createTripUseCase = createTripUseCase,
         _getTripDetailsUseCase = getTripDetailsUseCase,
@@ -480,7 +475,7 @@ class PassengerAddPrivateTripCubit extends Cubit<PassengerAddPrivateTripState> {
     if (tripDetails == null) return;
     final Trip? trip = tripDetails is Trip
         ? tripDetails
-        : (tripDetails is Map ? TripModel.fromJson(Map<String, dynamic>.from(tripDetails)) : null);
+        : (tripDetails is Map ? Trip.fromMap(Map<String, dynamic>.from(tripDetails)) : null);
     if (trip == null) return;
 
     startLocationController.text = trip.fromLocationName;

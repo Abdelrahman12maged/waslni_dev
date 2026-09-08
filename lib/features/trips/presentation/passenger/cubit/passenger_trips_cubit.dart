@@ -3,7 +3,6 @@ import 'dart:developer';
 
 import 'package:car_app/core/storage/local_storage.dart';
 import 'package:car_app/core/utils/trip_security_service.dart';
-import 'package:car_app/features/trips/data/models/trip_model.dart';
 import 'package:car_app/features/trips/domain/entities/trip.dart';
 import 'package:car_app/features/trips/domain/entities/offer.dart';
 import 'package:car_app/features/trips/domain/entities/trip_driver.dart';
@@ -19,7 +18,6 @@ import 'package:car_app/features/trips/domain/usecases/subscribe_trip_usecase.da
 import 'package:car_app/features/trips/presentation/passenger/cubit/passenger_trips_state.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:car_app/core/network/api_client.dart';
 import 'package:car_app/core/widgets/components.dart';
 import 'package:car_app/generated/l10n.dart';
 
@@ -27,6 +25,7 @@ import 'package:car_app/generated/l10n.dart';
 
 import 'package:car_app/core/utils/fcm_notification_service.dart';
 import 'package:car_app/core/di/injection_container.dart';
+import 'package:car_app/features/trips/domain/usecases/update_trip_price_usecase.dart';
 import 'package:car_app/core/utils/chat_channel_helper.dart';
 import 'package:car_app/features/chat/data/datasources/chat_remote_datasource.dart';
 
@@ -41,8 +40,8 @@ class PassengerTripsCubit extends Cubit<PassengerTripsState> {
   final ChangePassengerStatusUseCase _changePassengerStatus;
   final SubscribeTripUseCase _subscribeTrip;
   final MakeOfferUseCase _makeOffer;
+  final UpdateTripPriceUseCase _updateTripPrice;
   final LocalStorage _storage;
-  final ApiClient _client;
   final FcmNotificationService _fcmNotificationService;
 
   PassengerTripsCubit({
@@ -55,8 +54,8 @@ class PassengerTripsCubit extends Cubit<PassengerTripsState> {
     required ChangePassengerStatusUseCase changePassengerStatus,
     required SubscribeTripUseCase subscribeTrip,
     required MakeOfferUseCase makeOffer,
+    required UpdateTripPriceUseCase updateTripPrice,
     required LocalStorage storage,
-    required ApiClient client,
     required FcmNotificationService fcmNotificationService,
   })  : _getPassengerTrips = getPassengerTrips,
         _getOffersByTrip = getOffersByTrip,
@@ -67,8 +66,8 @@ class PassengerTripsCubit extends Cubit<PassengerTripsState> {
         _changePassengerStatus = changePassengerStatus,
         _subscribeTrip = subscribeTrip,
         _makeOffer = makeOffer,
+        _updateTripPrice = updateTripPrice,
         _storage = storage,
-        _client = client,
         _fcmNotificationService = fcmNotificationService,
         super(const PassengerTripsInitial());
 
@@ -429,17 +428,10 @@ class PassengerTripsCubit extends Cubit<PassengerTripsState> {
     required double newPrice,
   }) async {
     try {
-      final token = _storage.read(key: 'usertoken') ?? '';
-      await _client.post(
-        url: 'passenger/trips/$tripId/update-price',
-        token: token,
-        data: {
-          'price': newPrice,
-          'minimum_price': newPrice,
-          'maximum_price': newPrice,
-          'proposed_fare': newPrice,
-        },
-      );
+      final id = int.tryParse(tripId) ?? 0;
+      if (id > 0) {
+        await _updateTripPrice(tripId: id, newPrice: newPrice);
+      }
     } catch (e) {
       log('updateTripPrice: $e', name: 'PassengerTripsCubit');
     }

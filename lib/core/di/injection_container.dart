@@ -49,6 +49,7 @@ import 'package:car_app/features/trips/domain/usecases/get_nearby_shared_trips_u
 import 'package:car_app/features/trips/domain/usecases/make_offer_usecase.dart';
 import 'package:car_app/features/trips/domain/usecases/change_passenger_status_usecase.dart';
 import 'package:car_app/features/trips/domain/usecases/subscribe_trip_usecase.dart';
+import 'package:car_app/features/trips/domain/usecases/update_trip_price_usecase.dart';
 import 'package:car_app/features/trips/presentation/driver/cubit/driver_trips_cubit.dart';
 import 'package:car_app/features/trips/presentation/driver/cubit/driver_add_private_trip_cubit.dart';
 import 'package:car_app/features/trips/presentation/driver/cubit/driver_add_shared_trip_cubit.dart';
@@ -261,6 +262,7 @@ Future<void> initDI() async {
   sl.registerLazySingleton(() => GetTripsNearMeUseCase(sl()));
   sl.registerLazySingleton(() => GetNearbySharedTripsUseCase(sl()));
   sl.registerLazySingleton(() => MakeOfferUseCase(sl()));
+  sl.registerLazySingleton(() => UpdateTripPriceUseCase(sl()));
 
   // Cubits (factory — new instance per screen)
   sl.registerFactory(() => PassengerTripsCubit(
@@ -273,8 +275,8 @@ Future<void> initDI() async {
         changePassengerStatus: sl(),
         subscribeTrip: sl(),
         makeOffer: sl(),
+        updateTripPrice: sl(),
         storage: sl(),
-        client: sl(),
         fcmNotificationService: sl(),
       ));
 
@@ -289,11 +291,9 @@ Future<void> initDI() async {
         makeOffer: sl(),
         getOffersByTrip: sl(),
         storage: sl(),
-        client: sl(),
       ));
 
   sl.registerFactory(() => PassengerAddPrivateTripCubit(
-        client: sl(),
         storage: sl(),
         mapService: sl(),
         createTripUseCase: sl(),
@@ -302,7 +302,6 @@ Future<void> initDI() async {
       ));
 
   sl.registerFactory(() => DriverAddPrivateTripCubit(
-        client: sl(),
         storage: sl(),
         mapService: sl(),
         createTripUseCase: sl(),

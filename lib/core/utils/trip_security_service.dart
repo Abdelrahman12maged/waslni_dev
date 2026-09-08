@@ -5,7 +5,6 @@ import 'package:geolocator/geolocator.dart';
 import 'package:car_app/core/storage/local_storage.dart';
 import 'package:car_app/core/di/injection_container.dart' as di;
 import 'package:car_app/features/trips/domain/entities/trip.dart';
-import 'package:car_app/features/trips/data/models/trip_model.dart';
 
 /// Helper service for trip security: OTP verification, Geofencing & State persistence.
 class TripSecurityService {
@@ -79,7 +78,7 @@ class TripSecurityService {
       } else {
         return null;
       }
-      final trip = TripModel.fromJson(map);
+      final trip = Trip.fromMap(map);
       if (isPreTripTrackingActive(trip)) {
         return trip;
       } else {
@@ -142,7 +141,7 @@ class TripSecurityService {
       } else {
         return null;
       }
-      return TripModel.fromJson(map);
+      return Trip.fromMap(map);
     } catch (e) {
       log('Failed to get pending trip from storage: $e', name: 'TripSecurityService');
       return null;

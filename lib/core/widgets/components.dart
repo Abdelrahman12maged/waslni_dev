@@ -5,9 +5,8 @@ import 'package:flutter/foundation.dart';
 
 import 'package:car_app/generated/l10n.dart';
 import 'package:car_app/features/home/presentation/screens/passenger/user_layout.dart';
-import 'package:car_app/features/trips/data/models/trip_model.dart';
+import 'package:car_app/features/trips/domain/entities/trip.dart';
 import 'package:car_app/features/trips/presentation/driver/cubit/driver_trips_cubit.dart';
-import 'package:car_app/features/trips/presentation/driver/screens/private/driver_private_chat_screen.dart';
 import 'package:car_app/features/home/presentation/screens/driver/driver_layout.dart';
 import 'package:car_app/core/di/injection_container.dart' as di;
 import 'package:car_app/core/storage/local_storage.dart';
@@ -642,9 +641,12 @@ sharedDriverOfferPricingDialoge(
                                     note: note,
                                     price: price,
                                     percentage_added: percentage.toDouble(),
-                                    trip: tripDetails is Map<String, dynamic>
-                                        ? TripModel.fromJson(tripDetails)
-                                        : TripModel.fromJson({}));
+                                    trip: tripDetails is Trip
+                                        ? tripDetails
+                                        : (tripDetails is Map<String, dynamic>
+                                            ? Trip.fromMap(tripDetails)
+                                            : Trip.fromMap({})),
+                                  );
                                 Navigator.pop(context);
                               },
                               child: Text(
@@ -666,221 +668,7 @@ sharedDriverOfferPricingDialoge(
       });
 }
 
-// pricing Dialoug(),
-sharedDriverPricingDialoge(context) {
-  showDialog(
-      context: context,
-      builder: (BuildContext context) {
-        var errorPassText = null;
-        var errorConfPassText = null;
-        var percentage = 0;
-        RangeValues _currentRangeValues = const RangeValues(40, 80);
-        var note = null;
-        var price = null;
-        var percentage_added = null;
-        return StatefulBuilder(builder: (context, setState) {
-          return Dialog(
-              backgroundColor: Colors.white,
-              elevation: 0.0,
-              child: SingleChildScrollView(
-                reverse: true,
-                child: Container(
-                  width: MediaQuery.of(context).size.width / 1.2,
-                  height: MediaQuery.of(context).size.height / 2.5,
-                  padding: EdgeInsets.all(15),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [
-                      Text(
-                        S.of(context).averagePrice,
-                        style: TextStyle(
-                            color: Colors.black, fontWeight: FontWeight.bold),
-                      ),
-                      RangeSlider(
-                        activeColor: Color.fromRGBO(255, 221, 82, 1),
-                        values: _currentRangeValues,
-                        max: 100,
-                        divisions: 5,
-                        labels: RangeLabels(
-                          _currentRangeValues.start.round().toString() +
-                              S.of(context).jod,
-                          _currentRangeValues.end.round().toString() +
-                              S.of(context).jod,
-                        ),
-                        onChanged: (RangeValues values) {
-                          setState(() {
-                            _currentRangeValues = values;
-                          });
-                        },
-                      ),
-                      Row(
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Text(_currentRangeValues.start.toString() +
-                              S.of(context).jod),
-                          Text(_currentRangeValues.end.toString() +
-                              S.of(context).jod),
-                        ],
-                      ),
-                      Text(
-                        S.of(context).price,
-                        style: TextStyle(
-                            color: Colors.black, fontWeight: FontWeight.bold),
-                      ),
-                      Container(
-                          margin: EdgeInsets.only(left: 20, right: 20),
-                          height: MediaQuery.of(context).size.height / 10,
-                          alignment: Alignment.centerLeft,
-                          child: Row(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            children: [
-                              Container(
-                                width: MediaQuery.of(context).size.width / 5,
-                                height: MediaQuery.of(context).size.height / 20,
-                                child: TextFormField(
-                                    style: TextStyle(fontSize: 10),
-                                    decoration: InputDecoration(
-                                      // hintTextDirection: TextDirection.ltr,
-                                      hintStyle: TextStyle(color: mainColor),
-                                      enabledBorder: OutlineInputBorder(
-                                          borderSide: BorderSide(
-                                              width: 1, color: mainColor)),
-                                      border: OutlineInputBorder(
-                                          borderSide: BorderSide(
-                                              width: 1, color: mainColor)),
-                                      focusedBorder: OutlineInputBorder(
-                                          borderSide: BorderSide(
-                                              width: 1, color: mainColor)),
 
-                                      // errorText: errorPassText,
-                                      // errorStyle: TextStyle(fontSize: 9)
-                                    ),
-                                    keyboardType: TextInputType.number,
-                                    controller: TextEditingController()),
-                              ),
-                              Container(
-                                height: MediaQuery.of(context).size.height / 20,
-                                alignment: Alignment.center,
-                                color: mainColor,
-                                padding: EdgeInsets.all(5),
-                                child: Text(
-                                  S.of(context).jod,
-                                  textAlign: TextAlign.center,
-                                  style: TextStyle(
-                                    color: Colors.white,
-                                  ),
-                                ),
-                              ),
-                            ],
-                          )),
-                      Container(
-                        // width: MediaQuery.of(context).size.width,
-                        // margin: EdgeInsets.all(5),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            defaultText(
-                                text: S.of(context).newUserPercentage,
-                                textFontWeight: FontWeight.bold),
-                            Row(
-                              children: [
-                                //check box row start
-                                Row(
-                                  mainAxisSize: MainAxisSize.min,
-                                  mainAxisAlignment: MainAxisAlignment.start,
-                                  children: [
-                                    Checkbox.adaptive(
-                                      materialTapTargetSize:
-                                          MaterialTapTargetSize.shrinkWrap,
-                                      side: BorderSide(color: Colors.grey),
-                                      value: percentage == 0,
-                                      onChanged: (bool? value) {
-                                        setState(() {
-                                          percentage = 0;
-                                        });
-                                      },
-                                    ),
-                                    Text(
-                                      '0%',
-                                    )
-                                  ],
-                                ),
-                                //check box row end
-                                //check box row start
-                                Row(
-                                  mainAxisAlignment: MainAxisAlignment.start,
-                                  children: [
-                                    Checkbox(
-                                      side: BorderSide(color: Colors.grey),
-                                      value: percentage == 5,
-                                      onChanged: (bool? value) {
-                                        setState(() {
-                                          percentage = 5;
-                                        });
-                                      },
-                                    ),
-                                    defaultText(
-                                      text: '5%',
-                                    ),
-                                  ],
-                                ),
-                                //check box row end
-                                //check box row start
-                                Row(
-                                  mainAxisAlignment: MainAxisAlignment.start,
-                                  children: [
-                                    Checkbox(
-                                      side: BorderSide(color: Colors.grey),
-                                      value: percentage == 10,
-                                      onChanged: (bool? value) {
-                                        setState(() {
-                                          percentage = 10;
-                                        });
-                                      },
-                                    ),
-                                    defaultText(
-                                      text: '10%',
-                                    ),
-                                  ],
-                                ),
-                                //check box row end
-                              ],
-                            ),
-                          ],
-                        ),
-                      ),
-                      Row(
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          ElevatedButton(
-                              style: ButtonStyle(
-                                  backgroundColor:
-                                      MaterialStatePropertyAll(mainColor)),
-                              onPressed: () {
-                                loadingPricingdriverDialouge(context);
-                              },
-                              child: Text(
-                                S.of(context).send,
-                                style: TextStyle(color: Colors.white),
-                              )),
-                          ElevatedButton(
-                              onPressed: () {
-                                Navigator.pop(context);
-                              },
-                              child: Text(S.of(context).cancel)),
-                        ],
-                      ),
-                    ],
-                  ),
-                ),
-              ));
-        });
-      });
-}
 
 driverCancelationWarning(context, setdisableChat, id, {ischat = true}) {
   showDialog(
@@ -1508,79 +1296,6 @@ loadingfinddriverWithCheckDialouge(context, checkStatus) {
           );
         });
       });
-}
-
-loadingPricingdriverDialouge(context) {
-  showDialog(
-      barrierDismissible: false, // Prevents dialog from closing on tap outside
-      context: context,
-      builder: (context) {
-        return StatefulBuilder(builder: (context, setState) {
-          return AlertDialog(
-            backgroundColor: Colors.white,
-            surfaceTintColor: Colors.white,
-            iconPadding: EdgeInsets.all(0),
-            content: Container(
-                height: MediaQuery.of(context).size.height / 3,
-                color: Colors.white,
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    Container(
-                      margin: EdgeInsets.all(10),
-                      width: MediaQuery.of(context).size.width / 1.5,
-                      height: MediaQuery.of(context).size.height / 7,
-                      child: Image.asset(
-                        "assets/images/loading.gif",
-                        // height: 200.0,
-                        // width: 200.0,
-                      ),
-                    ),
-                    Text(
-                      S.of(context).pleaseWaitForUserApproval,
-                      style: TextStyle(),
-                      textAlign: TextAlign.center,
-                    ),
-                  ],
-                )),
-            // actions: [
-            //   TextButton(
-            //     onPressed: () {
-            //       Navigator.pop(context);
-            //     },
-            //     child: Text(S.of(context).cancel),
-            //   ),
-            //   TextButton(
-            //     onPressed: () async {
-            //      navigateToAndRemoveUntil(
-            //               context, UserLayout());
-            //     },
-            //     child: Text(S.of(context).ok),
-            //   ),
-            // ],
-          );
-        });
-      });
-  Future.delayed(Duration(seconds: 15), () {
-    if (int.parse(DateTime.now().millisecondsSinceEpoch.toString()) % 2 == 0) {
-      Future.delayed(Duration(seconds: 10), () {
-        // driverFoundDialouge(context);
-        successDialoug(context, S.of(context).priceAccepted);
-        navigateTo(context, DriverPrivateChatScreenClean());
-      });
-      // Future.delayed(Duration(seconds: 15), () {
-      //   driverRateDialouge(context);
-      // });
-    } else {
-      cantfinddealDialouge(context);
-      Future.delayed(Duration(seconds: 10), () {
-        pop(context);
-        pop(context);
-        // pop(context);
-        // navigateTo(context, DriverLayout());
-      });
-    }
-  });
 }
 
 Widget defaultText(

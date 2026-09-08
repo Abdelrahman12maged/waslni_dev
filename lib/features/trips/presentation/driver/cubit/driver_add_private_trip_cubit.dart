@@ -1,6 +1,5 @@
 import 'dart:developer';
 
-import 'package:car_app/core/network/api_client.dart';
 import 'package:car_app/core/storage/local_storage.dart';
 import 'package:car_app/features/map/domain/entities/location_result.dart';
 import 'package:car_app/features/map/domain/entities/place_suggestion.dart';
@@ -18,7 +17,6 @@ import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:intl/intl.dart';
 
 class DriverAddPrivateTripCubit extends Cubit<DriverAddPrivateTripState> {
-  final ApiClient _client;
   final LocalStorage _storage;
   final MapService _mapService;
   final CreateTripUseCase _createTripUseCase;
@@ -26,14 +24,12 @@ class DriverAddPrivateTripCubit extends Cubit<DriverAddPrivateTripState> {
   final ChangePassengerStatusUseCase _changePassengerStatusUseCase;
 
   DriverAddPrivateTripCubit({
-    required ApiClient client,
     required LocalStorage storage,
     required MapService mapService,
     required CreateTripUseCase createTripUseCase,
     required GetTripDetailsUseCase getTripDetailsUseCase,
     required ChangePassengerStatusUseCase changePassengerStatusUseCase,
-  })  : _client = client,
-        _storage = storage,
+  })  : _storage = storage,
         _mapService = mapService,
         _createTripUseCase = createTripUseCase,
         _getTripDetailsUseCase = getTripDetailsUseCase,
